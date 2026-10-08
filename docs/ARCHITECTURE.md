@@ -31,5 +31,5 @@ flowchart LR
 
 The system has five boundaries: input readers, normalized domain core, public metadata adapters, relationship/evidence resolution, and presentation. Adapters return evidence-bearing data; they do not decide truth independently. The core is deterministic and side-effect-light. Network access is injected behind explicit interfaces so tests use fixtures.
 
-Suggested `fundgraph-core` layout: `src/domain` for models and validation, `src/inputs` for manifest/lockfile readers, `src/adapters` for registries/providers, `src/resolution` for relationship rules, `src/reporting` for serializers, and repository-local fixtures for deterministic inputs/responses. Suggested `fundgraph-cli` layout: `src/commands`, `src/config`, `src/output`, and `src/main`.
+`fundgraph-core` uses `src/domain` for models and validation, `src/inputs` for manifest/lockfile readers, `src/metadata` for registry/repository normalization, `src/adapters` for later live providers, `src/resolution` for relationship rules, `src/reporting` for serializers, and repository-local fixtures for deterministic inputs/responses. `fundgraph-cli` uses `src/commands`, `src/config`, `src/output`, and `src/main`.
 

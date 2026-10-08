@@ -38,3 +38,7 @@ Date: 2026-10-08. The Phase 2 CLI accepts a JSON model document from a bounded f
 
 Date: 2026-10-08. Phase 3 supports local npm, PyPI, and Cargo dependency discovery only. Lockfiles provide resolved versions and transitive edges when valid; missing or malformed lockfiles produce diagnostics rather than guessed versions. Registry metadata, repository normalization, and funding evidence remain separate adapter phases.
 
+## D-0009 — Phase 4 metadata boundary
+
+Date: 2026-10-08. Phase 4 parsers consume recorded JSON payloads through an injected context rather than performing live network requests. They allow only HTTPS sources for the relevant public registry, retain the raw payload and observation timestamp as evidence, normalize repository URLs without inferring people, and emit diagnostics for malformed or incomplete metadata.
+

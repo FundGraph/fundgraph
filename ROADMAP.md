@@ -64,7 +64,7 @@ The dependency direction is `fundgraph-cli` → `fundgraph-core`. The project-le
 
 **Implemented:** `fundgraph-core` now discovers npm, PyPI, and Cargo dependency graphs from local manifests and lockfiles. It handles npm aliases, npm/Cargo workspaces, optional dependencies, transitive lockfile edges, missing lockfiles, malformed lockfiles, bounded inputs, and source paths/locators. `fundgraph-cli analyze <directory>` delegates to this API. **Acceptance/exit:** supported fixtures produce correct graph nodes/edges and actionable diagnostics. Verified with `npm test` in core (8 passing tests) and CLI (5 passing tests). **Artifacts:** `fundgraph-core/src/inputs`, deterministic fixtures under `fundgraph-core/test/fixtures`, discovery tests, and CLI integration tests. **Next:** Phase 4. **Skip/re-scope:** an ecosystem may be deferred only with explicit fixture and user-value evidence.
 
-## PHASE 4 — Initial Ecosystem Parsers
+## PHASE 4 — Initial Ecosystem Parsers — COMPLETE
 
 **Purpose:** normalize package metadata and repository links across the selected ecosystems. **Prerequisites:** Phase 3.
 
@@ -74,7 +74,7 @@ The dependency direction is `fundgraph-cli` → `fundgraph-core`. The project-le
 
 **Security:** allowlist hosts/methods; bound response size; never execute fetched content.
 
-**Acceptance/exit:** each v0.1 ecosystem has a parser with deterministic normalized output. **Next:** Phase 5.
+**Implemented:** `fundgraph-core` now normalizes recorded npm, PyPI, and Cargo registry payloads into versioned registry, package, and repository models. It retains raw payloads, source URLs, parser identifiers, and observation timestamps as evidence; canonicalizes repository URLs; tolerates missing/malformed fields; bounds payloads; and restricts metadata sources to HTTPS registry allowlists. **Acceptance/exit:** each v0.1 ecosystem has a parser with deterministic normalized output. Verified with `npm test` in core (11 passing tests), including recorded responses, scoped names, alternate repository URLs, missing metadata, unsafe sources, and oversized payloads. **Artifacts:** `fundgraph-core/src/metadata`, recorded metadata fixtures, and metadata tests. **Next:** Phase 5.
 
 ## PHASE 5 — Funding Evidence Providers
 
