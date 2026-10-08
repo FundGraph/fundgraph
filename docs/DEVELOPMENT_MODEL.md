@@ -6,3 +6,7 @@ Changes should follow dependency direction: implement and release compatible `fu
 
 Codex is the primary engineering agent. Other assistants may help with scoped edits, but may not silently redefine architecture, evidence authority, security boundaries, or product scope.
 
+External contributors start with the issue template and identify the owning repository. They use `docs/GOOD_FIRST_ISSUES.md`
+for bounded work, `docs/ADAPTER_GUIDE.md` for new fixtures/providers, and `docs/COMPATIBILITY_POLICY.md` for public
+contract changes. Maintainers use `docs/MAINTAINER_RUNBOOK.md` for escalation, triage, and release handoff.
+

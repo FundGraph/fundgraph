@@ -158,13 +158,21 @@ The dependency direction is `fundgraph-cli` → `fundgraph-core`. The project-le
 
 **Implemented:** the project README and demo now use the current CLI contract; stale Phase 2 wording and fictional output were removed; release notes and `FINAL_AUDIT.md` record the verified local release candidate, limitations, security posture, and maintainer-owned publication work. Core and CLI package tarballs were installed in isolated temporary projects, and the documented local checks passed. GitHub organization/repository creation, remote CI execution, and publication remain explicitly pending external maintainer action. **Acceptance/exit:** `FINAL_AUDIT.md` is honest, the checklist is complete except for the explicitly re-scoped external publication prerequisite, release artifacts are installable, and no unverified product claims remain. **Artifacts:** `RELEASE_NOTES_v0.1.0.md`, `FINAL_AUDIT.md`, updated README/demo/checklist, and verified npm artifacts. **Next:** Phase 13.
 
-## PHASE 13 — External Contributor Readiness
+## PHASE 13 — External Contributor Readiness — COMPLETE
 
 **Purpose:** make outside contribution safe and efficient. **Prerequisites:** Phase 12.
 
 **Objectives:** issue templates, governance escalation, good-first issues, adapter guide, compatibility policy, maintainer runbook.
 
-**Acceptance/exit:** a new contributor can run tests and add a fixture/provider from docs. **Next:** Phase 14.
+**Implemented:** project and repository contribution entry points now include issue forms, pull-request checklists,
+good-first contribution shapes, adapter/fixture guidance, compatibility policy, and maintainer escalation/release
+runbooks. The adapter guide identifies the owning source directories, fixture matrix, required evidence, security rules,
+and exact verification commands. Core and CLI contributor guides preserve the three-repository dependency direction.
+**Acceptance/exit:** a new contributor can identify the owning repository, run the documented checks, and add a recorded
+fixture or provider using the documented workflow. Verified with 38 core tests, 6 CLI tests, lint/typecheck/build checks,
+and documentation/link/template inspection. **Artifacts:** issue/PR templates in all repositories, `docs/ADAPTER_GUIDE.md`,
+`docs/COMPATIBILITY_POLICY.md`, `docs/MAINTAINER_RUNBOOK.md`, `docs/GOOD_FIRST_ISSUES.md`, and repository contributor
+guides. **Next:** Phase 14.
 
 ## PHASE 14 — v1 Expansion
 

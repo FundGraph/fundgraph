@@ -1,0 +1,29 @@
+name: Feature request
+description: Propose a focused improvement aligned with the FundGraph mission
+title: "feature: "
+labels:
+  - enhancement
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem and user
+      description: Who needs this and what is currently difficult?
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence and scope
+      description: Explain user evidence, affected repository, security impact, and compatibility impact.
+    validations:
+      required: true
+  - type: checkboxes
+    id: boundaries
+    attributes:
+      label: Product boundaries
+      options:
+        - label: This does not add payment execution, wallet management, or automatic donation.
+          required: true
+        - label: This does not make AI authoritative for dependency, identity, funding, or security truth.
+          required: true

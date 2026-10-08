@@ -1,10 +1,10 @@
 # Project state
 
 ```yaml
-current_phase: 12
+current_phase: 13
 current_status: complete
-last_completed_phase: 12
-current_objective: Prepare Phase 13 external contributor readiness.
+last_completed_phase: 13
+current_objective: Evaluate evidence and usage needs before defining Phase 14 v1 expansion.
 completed:
   - Phase 0 documentation and research foundation created
   - Project charter, requirements, architecture, data/evidence/security models documented
@@ -27,10 +27,11 @@ completed:
   - Phase 10 executable fixture matrix, npm/PyPI/Cargo end-to-end pipeline tests, failure-category coverage, deterministic repeat-run checks, and shared-fixture CLI smoke tests completed
   - Phase 11 cross-platform CI workflows, Node 20/22 matrices, lint/typecheck/test/build/package checks, sibling-core CLI installation verification, and npm artifact jobs completed
   - Phase 12 v0.1 documentation/demo verification, release notes, final audit, local artifact installation checks, and release limitations completed
+  - Phase 13 external contributor issue/PR templates, adapter and fixture guide, compatibility policy, good-first issues, and maintainer runbook completed
 in_progress: []
 blocked: []
-next_phase: 13
-next_recommended_action: Execute Phase 13: External Contributor Readiness
+next_phase: 14
+next_recommended_action: Evaluate and document Phase 14: v1 Expansion before implementation
 release_target: v0.1.0 by 2026-10-09T12:00:00+01:00
 known_risks:
   - Deadline leaves little time for broad ecosystem support

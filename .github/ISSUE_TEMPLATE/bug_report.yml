@@ -1,0 +1,35 @@
+name: Bug report
+description: Report a reproducible defect in FundGraph
+title: "bug: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: Provide a minimal public fixture or sanitized reproduction. Do not include credentials or private source.
+  - type: input
+    id: repository
+    attributes:
+      label: Affected repository
+      description: fundgraph, fundgraph-core, or fundgraph-cli
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction
+      description: Commands, fixture path, expected result, and actual result
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: OS, Node version, package version, and commit
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant output
+      description: Redact secrets and private paths

@@ -77,3 +77,11 @@ current CLI behavior, core and CLI npm artifacts install in isolated projects, a
 GitHub organization/repository creation, remote CI execution, npm publication, signing, and pushing remain maintainer
 actions outside this task; the release is therefore ready locally but not published.
 
+## D-0018 - Phase 13 contributor readiness
+
+Date: 2026-10-08. Contributor governance is project-level, while each independent repository owns its repository-specific
+entry points. The project repository owns the adapter guide, compatibility policy, good-first contribution guidance, and
+maintainer runbook. All three repositories receive issue/PR templates because they may later have independent GitHub
+repositories. New adapters remain fixture-first, evidence-bearing, deterministic, and subject to compatibility/security
+review before implementation.
+
