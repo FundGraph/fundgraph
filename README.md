@@ -16,7 +16,7 @@ It answers: **who maintains the software I depend on, where can it be funded, an
 
 ## Status
 
-Phase 0 is complete; implementation begins in Phase 1. The v0.1 target is npm, PyPI, and Cargo, subject to the Phase 1 architecture review. The CLI commands below are the planned interface and are not available until Phase 2.
+Phase 0 and Phase 1 are complete. The reusable domain/model API is implemented in `fundgraph-core`; CLI behavior remains planned for Phase 2. The v0.1 target is npm, PyPI, and Cargo, subject to the roadmap acceptance criteria.
 
 ## Product flow
 

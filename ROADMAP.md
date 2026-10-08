@@ -26,7 +26,7 @@ The dependency direction is `fundgraph-cli` → `fundgraph-core`. The project-le
 
 **Acceptance/exit:** all required project documents exist in `fundgraph`, scope is explicit, research is recorded, all three repositories have independent Git roots and README files, the workspace has no `.git`, state says complete, and Phase 1 is actionable. **Artifacts:** the three-repository workspace. **Next:** Phase 1. **Skip/re-scope:** only if an existing authoritative repository is discovered; preserve its history and document the migration.
 
-## PHASE 1 — Architecture + Domain Model
+## PHASE 1 — Architecture + Domain Model — COMPLETE
 
 **Purpose:** turn the documented model into versioned TypeScript types and validation. **Why:** parsers and reporters need one stable contract. **Prerequisites:** Phase 0.
 
@@ -38,7 +38,7 @@ The dependency direction is `fundgraph-cli` → `fundgraph-core`. The project-le
 
 **Security:** reject unsafe URLs and oversized/untrusted fields; avoid logging secrets.
 
-**Acceptance/exit:** models validate, serialize deterministically, and are consumed by a small library API. **Next:** Phase 2. **Skip/re-scope:** if a simpler representation demonstrably preserves versioning and evidence semantics.
+**Implemented:** `fundgraph-core` now contains strict TypeScript models for all nine required entities, schema version `1.0`, model validation, deterministic serialization, typed errors, a small public API, and tests. **Acceptance/exit:** models validate, serialize deterministically, and are consumed by a small library API. Verified with `npm run typecheck`, `npm test` (4 passing tests), and `npm pack --dry-run`. **Artifacts:** `fundgraph-core/src`, `fundgraph-core/test`, generated package declarations/build output, and package metadata. **Next:** Phase 2. **Skip/re-scope:** if a simpler representation demonstrably preserves versioning and evidence semantics.
 
 ## PHASE 2 — CLI Foundation
 

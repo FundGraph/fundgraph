@@ -26,3 +26,7 @@ Date: 2026-10-08. FundGraph is a multi-repository project consisting of three in
 
 The split is not a monorepo: each repository has its own `.git`, history, branch, README, and release boundary. The parent workspace has no `.git`. Project-level documents are owned by `fundgraph`; repository-specific usage and development documentation is owned by the relevant implementation repository.
 
+## D-0006 — Phase 1 model contract
+
+Date: 2026-10-08. `fundgraph-core` uses schema version `1.0` and requires stable IDs on all domain entities, including `Confidence`. Validation rejects unsupported versions, unsafe URLs, oversized values, and malformed models. Contradictory relationships remain explicit through `status: contradictory` and `confidence.level: unknown`; they are never merged into a positive claim.
+
