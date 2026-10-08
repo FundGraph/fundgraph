@@ -1,5 +1,9 @@
 # Decision log
 
+## D-0015 - Phase 10 fixture and integration boundary
+
+Date: 2026-10-08. The Phase 10 fixture matrix is owned by `fundgraph-core/test/fixtures` and is executed by a cross-stage integration suite. Integration tests use fixed repository fixtures for deterministic output, while temporary copies remain reserved for tests that intentionally exercise malformed or mutable inputs. The CLI smoke suite may consume the core repository’s fixtures but does not duplicate them.
+
 ## D-0014 - Phase 9 secure network boundary
 
 Date: 2026-10-08. Network requests default to public credential-free HTTPS, reject private/local destinations and redirects, and enforce response-size limits. HTTP, provider host access, and cache use require explicit caller configuration. Authenticated requests bypass caches entirely. DNS resolution is intentionally outside this pure library boundary; callers needing DNS-rebinding protection must use controlled allowlists and network policy.

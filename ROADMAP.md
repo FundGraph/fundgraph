@@ -134,13 +134,13 @@ The dependency direction is `fundgraph-cli` → `fundgraph-core`. The project-le
 
 **Implemented:** the Phase 9 audit is recorded in `SECURITY_AUDIT.md`. `fundgraph-core/src/network` now rejects private/loopback/local destinations, credential-bearing URLs, and redirects by default; supports explicit host allowlists; bounds response and cache sizes; bypasses cache reads and writes for authenticated requests; and preserves secure timeout, retry, and cancellation controls. Adversarial tests cover unsafe URLs, allowlists, redirects, oversized responses, credential leakage, and cache bypass. `npm audit --omit=dev --package-lock=false` reports zero vulnerabilities in both implementation repositories. **Acceptance/exit:** findings are documented, high-risk issues are fixed, and residual DNS/operational risks are explicitly accepted. Verified with 35 core tests, 5 CLI tests, typechecks, and package audits. **Next:** Phase 10.
 
-## PHASE 10 — Comprehensive Fixtures + Integration Tests
+## PHASE 10 — Comprehensive Fixtures + Integration Tests — COMPLETE
 
 **Purpose:** validate end-to-end behavior. **Prerequisites:** Phase 9.
 
 **Objectives:** complete fixture matrix; integration tests across all ecosystems; CLI smoke tests; coverage review.
 
-**Acceptance/exit:** required fixture categories pass and failures are diagnosable. **Next:** Phase 11.
+**Implemented:** `fundgraph-core/test/fixtures/integration/fixture-matrix.json` identifies every required fixture category and physical fixture. `test/integration.test.js` executes discovery, metadata normalization, funding evidence parsing, relationship resolution, and report creation for npm, PyPI, and Cargo, then repeats the pipeline to verify deterministic output. It also verifies unfunded, multi-source, contradictory, missing-repository, and malformed-lockfile behavior. `fundgraph-cli` adds a smoke test against the shared npm workspace fixture and verifies report output. **Acceptance/exit:** required fixture categories pass and failures are diagnosable; verified with 38 core tests and 6 CLI tests. **Next:** Phase 11.
 
 ## PHASE 11 — CI + Cross-Platform Packaging
 

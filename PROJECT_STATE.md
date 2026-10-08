@@ -1,10 +1,10 @@
 # Project state
 
 ```yaml
-current_phase: 9
+current_phase: 10
 current_status: complete
-last_completed_phase: 9
-current_objective: Complete the fixture matrix and end-to-end integration coverage across all supported ecosystems.
+last_completed_phase: 10
+current_objective: Establish CI, cross-platform packaging, supported Node validation, and reproducible release artifacts.
 completed:
   - Phase 0 documentation and research foundation created
   - Project charter, requirements, architecture, data/evidence/security models documented
@@ -24,10 +24,11 @@ completed:
   - Phase 7 deterministic report document, text/JSON renderers, stable ordering, summaries, evidence drill-down, limitations, action links, fixtures, and CLI integration implemented
   - Phase 8 typed network errors, bounded retries, rate-limit backoff, opt-in TTL cache, cache invalidation, offline replay, cancellation, and partial-result batch semantics implemented and tested
   - Phase 9 trust-boundary audit, secure URL and redirect policy, response/cache resource limits, authenticated-cache protection, adversarial fixtures, dependency audit, and residual-risk documentation completed
+  - Phase 10 executable fixture matrix, npm/PyPI/Cargo end-to-end pipeline tests, failure-category coverage, deterministic repeat-run checks, and shared-fixture CLI smoke tests completed
 in_progress: []
 blocked: []
-next_phase: 10
-next_recommended_action: Execute Phase 10: Comprehensive Fixtures + Integration Tests
+next_phase: 11
+next_recommended_action: Execute Phase 11: CI + Cross-Platform Packaging
 release_target: v0.1.0 by 2026-10-09T12:00:00+01:00
 known_risks:
   - Deadline leaves little time for broad ecosystem support

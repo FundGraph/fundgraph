@@ -16,7 +16,7 @@ It answers: **who maintains the software I depend on, where can it be funded, an
 
 ## Status
 
-Phases 0–9 are complete. The reusable domain/model API, dependency discovery, recorded registry metadata normalization, evidence-backed funding parsers, explicit relationship resolution, deterministic reports, opt-in network reliability, and security hardening are implemented in `fundgraph-core`; `fundgraph-cli` renders the report while retaining its stable summary contract. The v0.1 target is npm, PyPI, and Cargo, subject to the roadmap acceptance criteria.
+Phases 0–10 are complete. The reusable domain/model API, dependency discovery, recorded registry metadata normalization, evidence-backed funding parsers, explicit relationship resolution, deterministic reports, opt-in network reliability, security hardening, and comprehensive integration fixtures are implemented in `fundgraph-core`; `fundgraph-cli` renders the report while retaining its stable summary contract. The v0.1 target is npm, PyPI, and Cargo, subject to the roadmap acceptance criteria.
 
 ## Product flow
 
