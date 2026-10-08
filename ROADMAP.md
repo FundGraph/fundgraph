@@ -112,7 +112,7 @@ The dependency direction is `fundgraph-cli` → `fundgraph-core`. The project-le
 
 **Implemented:** `fundgraph-core/src/reporting` now creates a versioned `FundGraphReport`, sorts all report collections deterministically, computes relationship status summaries, preserves diagnostics and contradictory states, exposes evidence references with source drill-down, and emits explicit limitations and review/inspect actions. Text output escapes control characters; JSON uses stable serialization. `fundgraph-cli` includes the report document in JSON output and renders the deterministic report after its compatibility summary. **Acceptance/exit:** same inputs and fixture data produce identical reports; verified with 25 core tests, 5 CLI tests, and TypeScript typechecks. **Artifacts:** reporting API, reporting fixtures/tests, and CLI integration. **Next:** Phase 8.
 
-## PHASE 8 — Error Handling + Caching + Rate Limits
+## PHASE 8 — Error Handling + Caching + Rate Limits — COMPLETE
 
 **Purpose:** make network-assisted analysis reliable. **Prerequisites:** Phase 7.
 
@@ -122,7 +122,7 @@ The dependency direction is `fundgraph-cli` → `fundgraph-core`. The project-le
 
 **Security:** cache redaction and permissions; do not persist credentials or private source.
 
-**Acceptance/exit:** failures are actionable and do not erase successful partial evidence. **Next:** Phase 9.
+**Implemented:** `fundgraph-core/src/network` provides typed `FundGraphError` codes for network failures, timeouts, rate limits, cancellation, and cache faults. `NetworkClient` uses injected fetch/sleep/clock dependencies, bounded retries, capped exponential backoff, `Retry-After` handling, request timeouts, external cancellation, and non-retryable HTTP handling. Caching is opt-in, filesystem-backed, written with restrictive permissions and atomic replacement, keyed by URL hash, bounded by TTL, refreshed online, invalidated explicitly, and replayable offline with stale diagnostics. Authenticated requests are rejected for caching. `jsonBatch` preserves successful results and reports failures separately. **Acceptance/exit:** failures are actionable and do not erase successful partial evidence; verified with 31 core tests and 5 CLI tests. **Next:** Phase 9.
 
 ## PHASE 9 — Security Hardening
 

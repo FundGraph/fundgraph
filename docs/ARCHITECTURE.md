@@ -29,7 +29,7 @@ flowchart LR
   H --> I[Text/JSON output]
 ```
 
-The system has five boundaries: input readers, normalized domain core, public metadata adapters, relationship/evidence resolution, and presentation. Adapters return evidence-bearing data; they do not decide truth independently. The core is deterministic and side-effect-light. Network access is injected behind explicit interfaces so tests use fixtures.
+The system has six boundaries: input readers, normalized domain core, public metadata adapters, relationship/evidence resolution, network reliability, and presentation. Adapters return evidence-bearing data; they do not decide truth independently. The core is deterministic and side-effect-light. Network access is injected behind explicit interfaces so tests use fixtures. The network boundary owns retries, timeout/cancellation behavior, rate-limit backoff, opt-in cache policy, offline replay, and partial-result semantics; parsers remain pure.
 
-`fundgraph-core` uses `src/domain` for models and validation, `src/inputs` for manifest/lockfile readers, `src/metadata` for registry/repository normalization, `src/adapters` for later live providers, `src/resolution` for relationship rules, `src/reporting` for serializers, and repository-local fixtures for deterministic inputs/responses. `fundgraph-cli` uses `src/commands`, `src/config`, `src/output`, and `src/main`.
+`fundgraph-core` uses `src/domain` for models and validation, `src/inputs` for manifest/lockfile readers, `src/metadata` for registry/repository normalization, `src/funding` for evidence parsers, `src/resolution` for relationship rules, `src/reporting` for serializers, `src/network` for injected request reliability and cache controls, and repository-local fixtures for deterministic inputs/responses. `fundgraph-cli` uses `src/options` and `src/main`.
 

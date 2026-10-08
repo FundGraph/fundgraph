@@ -1,10 +1,10 @@
 # Project state
 
 ```yaml
-current_phase: 7
+current_phase: 8
 current_status: complete
-last_completed_phase: 7
-current_objective: Harden failure handling, caching, and rate-limit behavior without losing partial evidence.
+last_completed_phase: 8
+current_objective: Audit the trust boundary, resource limits, URL policy, and malicious-input behavior.
 completed:
   - Phase 0 documentation and research foundation created
   - Project charter, requirements, architecture, data/evidence/security models documented
@@ -22,10 +22,11 @@ completed:
   - Phase 5 package funding metadata, GitHub FUNDING.yml, public provider-response parsing, provenance, diagnostics, fixtures, and tests implemented
   - Phase 6 package/repository/funding relationship resolution, confidence, ambiguity, contradiction, unresolved states, fixtures, and tests implemented
   - Phase 7 deterministic report document, text/JSON renderers, stable ordering, summaries, evidence drill-down, limitations, action links, fixtures, and CLI integration implemented
+  - Phase 8 typed network errors, bounded retries, rate-limit backoff, opt-in TTL cache, cache invalidation, offline replay, cancellation, and partial-result batch semantics implemented and tested
 in_progress: []
 blocked: []
-next_phase: 8
-next_recommended_action: Execute Phase 8: Error Handling + Caching + Rate Limits
+next_phase: 9
+next_recommended_action: Execute Phase 9: Security Hardening
 release_target: v0.1.0 by 2026-10-09T12:00:00+01:00
 known_risks:
   - Deadline leaves little time for broad ecosystem support

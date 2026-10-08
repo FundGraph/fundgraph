@@ -1,5 +1,9 @@
 # Decision log
 
+## D-0013 - Phase 8 network reliability boundary
+
+Date: 2026-10-08. Live JSON request reliability is centralized in `fundgraph-core/src/network` and is opt-in. The boundary owns bounded retries, `Retry-After` handling, timeout/cancellation, typed failures, filesystem cache TTL/invalidation, offline replay, and batch partial-result semantics. Parsers remain pure and receive injected responses. Cache writes reject authorization/cookie-bearing requests, use restrictive permissions and atomic replacement, and stale offline data is labeled with a diagnostic rather than silently treated as fresh.
+
 ## D-0012 - Phase 7 report contract
 
 Date: 2026-10-08. Reports are versioned `FundGraphReport` documents owned by `fundgraph-core`. The report contains stable arrays for domain records, relationship status summaries, evidence records referenced by relationship IDs, diagnostics, explicit limitations, and informational review/inspect actions. Text rendering escapes terminal control characters; JSON rendering uses deterministic object-key serialization. Actions are never executed by the library or CLI.
