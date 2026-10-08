@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300" role="img" aria-labelledby="title desc">
+  <title id="title">FundGraph project</title>
+  <desc id="desc">A dependency graph flowing through evidence into a clear report.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0b1220"/><stop offset="1" stop-color="#142640"/></linearGradient>
+    <linearGradient id="line" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#56d6be"/><stop offset="1" stop-color="#83a8ff"/></linearGradient>
+  </defs>
+  <rect width="1200" height="300" rx="28" fill="url(#bg)"/>
+  <g fill="none" stroke="url(#line)" stroke-width="3" opacity=".8">
+    <path d="M760 83 865 150 975 86M760 217 865 150 975 214M975 86l105 64-105 64"/>
+    <path d="M865 150h215" stroke-dasharray="6 8"/>
+  </g>
+  <g fill="#101b2b" stroke="#56d6be" stroke-width="3">
+    <circle cx="760" cy="83" r="21"/><circle cx="760" cy="217" r="21"/><circle cx="865" cy="150" r="25"/>
+    <circle cx="975" cy="86" r="21"/><circle cx="975" cy="214" r="21"/><rect x="1070" y="124" width="74" height="52" rx="12"/>
+  </g>
+  <g fill="#d9fff7"><circle cx="760" cy="83" r="5"/><circle cx="760" cy="217" r="5"/><circle cx="865" cy="150" r="7"/><circle cx="975" cy="86" r="5"/><circle cx="975" cy="214" r="5"/></g>
+  <text x="72" y="126" fill="#f3f7ff" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="54" font-weight="700">FundGraph</text>
+  <text x="74" y="174" fill="#b8c7dc" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="23">Follow dependencies to funding declarations—with evidence.</text>
+  <text x="74" y="232" fill="#70e1c8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" letter-spacing="2">LOCAL FIRST  ·  EVIDENCE FIRST  ·  OPEN SOURCE</text>
+</svg>

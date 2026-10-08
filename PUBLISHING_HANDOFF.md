@@ -17,6 +17,9 @@ GITHUB_ORG/fundgraph-cli
 Do not create a fourth parent repository. The local parent `C:\Users\user\Projects\FundGraph` remains only a workspace
 container.
 
+Use [`GITHUB_REPOSITORY_METADATA.md`](GITHUB_REPOSITORY_METADATA.md) to set the GitHub About descriptions and topics for
+each repository after creation.
+
 ## Add remotes and push
 
 Run these commands from each repository after replacing `<your-org>`:
