@@ -70,3 +70,10 @@ Date: 2026-10-08. Funding providers emit declared URLs plus immutable evidence, 
 
 Date: 2026-10-08. Relationship resolution accepts explicit repository candidates and funding claims. A single usable package→repository candidate is supported; multiple candidates are ambiguous; missing candidates are unresolved; and candidates referencing absent repositories are contradictory. Multiple explicit funding sources for one repository remain ambiguous. The resolver never selects a source based only on provider name or infers a human maintainer.
 
+## D-0017 - Phase 12 local release candidate
+
+Date: 2026-10-08. Phase 12 is complete for the local release candidate. The README and demo are verified against the
+current CLI behavior, core and CLI npm artifacts install in isolated projects, and limitations are stated explicitly.
+GitHub organization/repository creation, remote CI execution, npm publication, signing, and pushing remain maintainer
+actions outside this task; the release is therefore ready locally but not published.
+

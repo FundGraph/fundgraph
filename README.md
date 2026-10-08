@@ -16,7 +16,9 @@ It answers: **who maintains the software I depend on, where can it be funded, an
 
 ## Status
 
-Phases 0–11 are complete. The reusable domain/model API, dependency discovery, recorded registry metadata normalization, evidence-backed funding parsers, explicit relationship resolution, deterministic reports, opt-in network reliability, security hardening, comprehensive integration fixtures, and cross-platform CI are implemented in `fundgraph-core`; `fundgraph-cli` renders the report while retaining its stable summary contract. The v0.1 target is npm, PyPI, and Cargo, subject to the roadmap acceptance criteria.
+Phases 0–12 are complete. The reusable domain/model API, dependency discovery, recorded registry metadata normalization, evidence-backed funding parsers, explicit relationship resolution, deterministic reports, opt-in network reliability, security hardening, comprehensive integration fixtures, and cross-platform CI are implemented in `fundgraph-core`; `fundgraph-cli` renders the report while retaining its stable summary contract. The v0.1 target is npm, PyPI, and Cargo, subject to the roadmap acceptance criteria.
+
+See [RELEASE_NOTES_v0.1.0.md](RELEASE_NOTES_v0.1.0.md) and [FINAL_AUDIT.md](FINAL_AUDIT.md) for the local release candidate status and known limitations.
 
 ## Product flow
 
@@ -43,20 +45,28 @@ flowchart TD
   S --> T[Report]
 ```
 
-## Planned 60-second example
+## 60-second example
 
 ```text
-$ fundgraph analyze . --format text
-FundGraph analysis: 18 dependencies, 7 funding pathways
+$ fundgraph analyze ./my-project --format text --offline
+FundGraph analysis
+Input: ./my-project
+Models: 3
+Edges: 2
+Ecosystems: npm
+Offline: yes
 
-lodash -> https://github.com/lodash/lodash
-  funding: https://opencollective.com/lodash
-  confidence: medium
-  evidence: package.metadata.funding, repository.url
-  note: review endpoint before taking action
+FundGraph report
+Schema: 1.0
+Dependencies: 2
+Packages: 0
+Repositories: 0
+Funding sources: 0
+Evidence: 0
+Relationships: 0
 ```
 
-The example becomes executable when Phase 2 and the relevant adapters land; until then it is an interface sketch, not a claim about current output.
+The exact counts depend on the local project. Text output preserves diagnostics and limitations; JSON output adds the versioned `report` object for automation.
 
 ## Documentation ownership
 
@@ -64,7 +74,14 @@ Project-level documentation lives in the `fundgraph` repository. Repository-spec
 
 ## Installation and development
 
-Installation will be documented with the first packaged release. During Phase 0 there is no executable package. The development contract is recorded in [`docs/TESTING.md`](docs/TESTING.md); planned checks are `npm run lint`, `npm run typecheck`, `npm test`, and `npm run build` after Phase 1 establishes tooling.
+For the v0.1 release, install the independently published packages after the maintainer creates the GitHub/npm release:
+
+```text
+npm install -g fundgraph
+fundgraph analyze ./my-project --format text --offline
+```
+
+For local development, build `fundgraph-core`, install it into `fundgraph-cli` from the sibling path, then run the checks documented in [`docs/TESTING.md`](docs/TESTING.md). The project repository itself is coordination documentation, not the executable package.
 
 ## Evidence and security
 

@@ -16,8 +16,9 @@ All notable changes are recorded here. The format follows Keep a Changelog conve
 - Phase 9 security hardening completed with secure URL/redirect policy, SSRF-oriented destination checks, response/cache resource limits, authenticated-cache protection, adversarial fixtures, dependency audits, and documented residual risks.
 - Phase 10 comprehensive fixture matrix and end-to-end integration coverage completed across npm, PyPI, Cargo, core report generation, malformed/failure categories, deterministic repeat runs, and CLI shared-fixture smoke tests.
 - Phase 11 CI and packaging workflows completed for Ubuntu, Windows, and macOS on Node 20/22 with lint, typecheck, tests, builds, npm package checks, and artifact jobs.
+- Phase 12 v0.1 product readiness completed with verified README/demo commands, release notes, final audit, local npm artifact installation checks, and documented publication limitations.
 
 ## [0.1.0] - Unreleased
 
-- Planned release; implementation has not begun.
+- Release candidate prepared locally; publication remains pending maintainer-created GitHub/npm resources.
 

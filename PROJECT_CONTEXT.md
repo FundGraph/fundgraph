@@ -33,7 +33,9 @@ The repositories work together as `fundgraph-cli` → `fundgraph-core`; `fundgra
 
 ## Current status
 
-Phase 0 documentation and repository foundation are complete. Implementation has not started. v0.1 is planned for npm, PyPI, and Cargo, subject to Phase 1 validation.
+Phases 0–12 are complete for a local v0.1.0 release candidate. The implementation supports npm, PyPI, and Cargo
+discovery and evidence/reporting workflows across `fundgraph-core` and `fundgraph-cli`. The candidate is not published:
+GitHub/npm resources, remote CI execution, and publication remain maintainer-owned external actions.
 
 ## Relationship to other projects
 

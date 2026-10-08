@@ -150,13 +150,13 @@ The dependency direction is `fundgraph-cli` → `fundgraph-core`. The project-le
 
 **Implemented:** both implementation repositories now contain GitHub Actions workflows covering Ubuntu, Windows, and macOS on Node 20 and Node 22. Workflows run lint, typecheck, tests, builds, package dry-runs, and artifact packaging with read-only permissions. `fundgraph-core` uses its committed lockfile with `npm ci`; `fundgraph-cli` checks out and installs the independently versioned sibling core repository before verification. Local sibling installation was verified on Windows. **Acceptance/exit:** clean-checkout workflows are defined, package installation works through the documented sibling-core path, and package artifacts are reproducible; verified with local lint/typecheck/test/build/package commands in both repositories. **Next:** Phase 12.
 
-## PHASE 12 — v0.1 Product Readiness
+## PHASE 12 — v0.1 Product Readiness — COMPLETE
 
 **Purpose:** release a credible, narrow product. **Prerequisites:** Phase 11.
 
 **Objectives:** complete README demo; verify docs commands; remove placeholders; update changelog; prepare release notes; run final audit; document limitations and funding positioning.
 
-**Acceptance/exit:** `FINAL_AUDIT.md` is honest, checklist passes, release artifact is installable, and no unverified claims remain. **Next:** Phase 13.
+**Implemented:** the project README and demo now use the current CLI contract; stale Phase 2 wording and fictional output were removed; release notes and `FINAL_AUDIT.md` record the verified local release candidate, limitations, security posture, and maintainer-owned publication work. Core and CLI package tarballs were installed in isolated temporary projects, and the documented local checks passed. GitHub organization/repository creation, remote CI execution, and publication remain explicitly pending external maintainer action. **Acceptance/exit:** `FINAL_AUDIT.md` is honest, the checklist is complete except for the explicitly re-scoped external publication prerequisite, release artifacts are installable, and no unverified product claims remain. **Artifacts:** `RELEASE_NOTES_v0.1.0.md`, `FINAL_AUDIT.md`, updated README/demo/checklist, and verified npm artifacts. **Next:** Phase 13.
 
 ## PHASE 13 — External Contributor Readiness
 
