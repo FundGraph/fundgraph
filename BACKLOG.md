@@ -8,4 +8,6 @@ Backlog items are candidates, not commitments. A phase or decision must promote 
 - Investigate provider-specific verification adapters without making providers authoritative.
 - Add repository history signals only if they can be presented as non-authoritative evidence.
 - Measure parser coverage and report confidence calibration from real fixtures.
+- Define a cross-repository compatibility matrix for `fundgraph-cli` and `fundgraph-core`.
+- Add release automation that publishes core before CLI and records the compatible core range.
 

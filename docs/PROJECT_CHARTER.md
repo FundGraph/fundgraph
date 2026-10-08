@@ -2,6 +2,8 @@
 
 FundGraph is an open-source local-first CLI/library for answering where dependency funding pathways are declared and what evidence supports them.
 
+FundGraph is a multi-repository project consisting of three independent repositories contained within the `FundGraph` workspace. The project repository coordinates the independently publishable core library and CLI package.
+
 ## Product promise
 
 Given a project and its dependency inputs, FundGraph produces a reviewable graph and report connecting dependency package, repository, funding source, evidence, and confidence. It is an analysis and discovery tool, not a financial intermediary.

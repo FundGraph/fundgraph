@@ -2,11 +2,21 @@
 
 This is an executable roadmap. A phase is complete only when its acceptance and exit criteria are verified against the repository, tests, and documentation. If a phase is skipped or re-scoped, record why in `DECISION_LOG.md` and update `PROJECT_STATE.md`.
 
+## Workspace architecture
+
+FundGraph is a multi-repository project consisting of three independent repositories contained within the `FundGraph` workspace:
+
+- `fundgraph`: project-level documentation, governance, roadmap, release coordination, examples, and integration fixtures.
+- `fundgraph-core`: reusable and publishable library/domain package with parsers, evidence, resolution, reports, and library tests.
+- `fundgraph-cli`: publishable executable package providing the `fundgraph` command and CLI-specific tests.
+
+The dependency direction is `fundgraph-cli` → `fundgraph-core`. The project-level `fundgraph` repository coordinates both and must not become a fourth implementation package. The workspace directory itself must not contain `.git`.
+
 ## PHASE 0 — Repository + Documentation Foundation — COMPLETE
 
 **Purpose:** establish the durable source of truth before implementation. **Why:** future agents and contributors need product, security, scope, and release context without relying on chat history. **Prerequisites:** none.
 
-**Objectives and tasks:** initialize a standalone Git repository; create governance files; research adjacent tools; define v0.1 scope, architecture, data/evidence models, security, testing, contribution, release, and funding positioning; create state and roadmap records.
+**Objectives and tasks:** create governance files; research adjacent tools; define v0.1 scope, architecture, data/evidence models, security, testing, contribution, release, and funding positioning; establish the three-repository architecture and documentation ownership; create state and roadmap records.
 
 **Expected files:** root governance files and `docs/PROJECT_CHARTER.md`, `REQUIREMENTS.md`, `ARCHITECTURE.md`, `DATA_MODEL.md`, `EVIDENCE_MODEL.md`, `CLI_SPEC.md`, `SECURITY.md`, `COMPETITIVE_LANDSCAPE.md`, `TESTING.md`, `CONTRIBUTOR_GUIDE.md`, `RELEASE_PROCESS.md`, `DEVELOPMENT_MODEL.md`, `DEMO.md`.
 
@@ -14,7 +24,7 @@ This is an executable roadmap. A phase is complete only when its acceptance and 
 
 **Security:** no remote, credentials, private data, payment execution, or identity inference.
 
-**Acceptance/exit:** all required documents exist, scope is explicit, research is recorded, state says complete, and Phase 1 is actionable. **Artifacts:** this repository. **Next:** Phase 1. **Skip/re-scope:** only if an existing authoritative repository is discovered; preserve its history and document the migration.
+**Acceptance/exit:** all required project documents exist in `fundgraph`, scope is explicit, research is recorded, all three repositories have independent Git roots and README files, the workspace has no `.git`, state says complete, and Phase 1 is actionable. **Artifacts:** the three-repository workspace. **Next:** Phase 1. **Skip/re-scope:** only if an existing authoritative repository is discovered; preserve its history and document the migration.
 
 ## PHASE 1 — Architecture + Domain Model
 
@@ -22,7 +32,7 @@ This is an executable roadmap. A phase is complete only when its acceptance and 
 
 **Objectives:** create package/tooling baseline; define versioned `Project`, `Dependency`, `Package`, `Registry`, `Repository`, `FundingSource`, `Evidence`, `Relationship`, and `Confidence`; implement validation and stable serialization; define error taxonomy.
 
-**Expected changes:** `package.json`, `tsconfig.json`, `src/domain`, `src/core`, schema tests, docs updates.
+**Expected changes in `fundgraph-core`:** `package.json`, `tsconfig.json`, `src/domain`, `src/core`, schema tests, package README and repository-specific docs. Update project-level docs in `fundgraph` when contracts change.
 
 **Tests:** valid/invalid model fixtures, schema compatibility, deterministic serialization, contradictory evidence representation.
 
