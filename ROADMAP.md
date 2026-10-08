@@ -40,7 +40,7 @@ The dependency direction is `fundgraph-cli` → `fundgraph-core`. The project-le
 
 **Implemented:** `fundgraph-core` now contains strict TypeScript models for all nine required entities, schema version `1.0`, model validation, deterministic serialization, typed errors, a small public API, and tests. **Acceptance/exit:** models validate, serialize deterministically, and are consumed by a small library API. Verified with `npm run typecheck`, `npm test` (4 passing tests), and `npm pack --dry-run`. **Artifacts:** `fundgraph-core/src`, `fundgraph-core/test`, generated package declarations/build output, and package metadata. **Next:** Phase 2. **Skip/re-scope:** if a simpler representation demonstrably preserves versioning and evidence semantics.
 
-## PHASE 2 — CLI Foundation
+## PHASE 2 — CLI Foundation — COMPLETE
 
 **Purpose:** provide a stable command surface. **Prerequisites:** Phase 1.
 
@@ -50,7 +50,7 @@ The dependency direction is `fundgraph-cli` → `fundgraph-core`. The project-le
 
 **Security:** no shell evaluation of input; bounded file reads; clear network opt-in.
 
-**Acceptance/exit:** CLI invokes library without duplicating business logic and works from a clean checkout. **Next:** Phase 3. **Skip/re-scope:** never skip the stable command contract; reduce options if deadline pressure requires it.
+**Implemented:** `fundgraph-cli` now provides `--help`, `version`, and `analyze`; accepts stdin or bounded JSON file input; supports text/JSON output, offline, and strict flags; invokes `@fundgraph/core` validation; and returns documented exit codes. **Acceptance/exit:** CLI invokes library validation without duplicating domain logic and passes help, version, stdin/path, format, invalid-argument, partial, and strict tests. Verified with `npm run typecheck` and `npm test` (4 passing tests). **Artifacts:** `fundgraph-cli/src`, `fundgraph-cli/test`, package/bin metadata, and repository README. **Next:** Phase 3. **Skip/re-scope:** never skip the stable command contract; reduce options if deadline pressure requires it.
 
 ## PHASE 3 — Dependency Discovery
 

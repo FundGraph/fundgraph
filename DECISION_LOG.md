@@ -30,3 +30,7 @@ The split is not a monorepo: each repository has its own `.git`, history, branch
 
 Date: 2026-10-08. `fundgraph-core` uses schema version `1.0` and requires stable IDs on all domain entities, including `Confidence`. Validation rejects unsupported versions, unsafe URLs, oversized values, and malformed models. Contradictory relationships remain explicit through `status: contradictory` and `confidence.level: unknown`; they are never merged into a positive claim.
 
+## D-0007 — Phase 2 input boundary
+
+Date: 2026-10-08. The Phase 2 CLI accepts a JSON model document from a bounded file or stdin and delegates validation to `fundgraph-core`. It does not inspect manifests, perform dependency discovery, or access the network. This keeps the command contract testable while reserving ecosystem input handling for Phase 3.
+
