@@ -142,13 +142,13 @@ The dependency direction is `fundgraph-cli` → `fundgraph-core`. The project-le
 
 **Implemented:** `fundgraph-core/test/fixtures/integration/fixture-matrix.json` identifies every required fixture category and physical fixture. `test/integration.test.js` executes discovery, metadata normalization, funding evidence parsing, relationship resolution, and report creation for npm, PyPI, and Cargo, then repeats the pipeline to verify deterministic output. It also verifies unfunded, multi-source, contradictory, missing-repository, and malformed-lockfile behavior. `fundgraph-cli` adds a smoke test against the shared npm workspace fixture and verifies report output. **Acceptance/exit:** required fixture categories pass and failures are diagnosable; verified with 38 core tests and 6 CLI tests. **Next:** Phase 11.
 
-## PHASE 11 — CI + Cross-Platform Packaging
+## PHASE 11 — CI + Cross-Platform Packaging — COMPLETE
 
 **Purpose:** make the project reproducible for contributors and users. **Prerequisites:** Phase 10.
 
 **Objectives:** CI for lint/typecheck/test/build; supported Node versions; npm packaging; Windows/macOS/Linux verification; provenance and release artifacts.
 
-**Acceptance/exit:** clean checkout passes and package installation works. **Next:** Phase 12.
+**Implemented:** both implementation repositories now contain GitHub Actions workflows covering Ubuntu, Windows, and macOS on Node 20 and Node 22. Workflows run lint, typecheck, tests, builds, package dry-runs, and artifact packaging with read-only permissions. `fundgraph-core` uses its committed lockfile with `npm ci`; `fundgraph-cli` checks out and installs the independently versioned sibling core repository before verification. Local sibling installation was verified on Windows. **Acceptance/exit:** clean-checkout workflows are defined, package installation works through the documented sibling-core path, and package artifacts are reproducible; verified with local lint/typecheck/test/build/package commands in both repositories. **Next:** Phase 12.
 
 ## PHASE 12 — v0.1 Product Readiness
 

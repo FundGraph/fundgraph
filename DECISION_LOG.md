@@ -1,5 +1,9 @@
 # Decision log
 
+## D-0016 - Phase 11 CI and package boundaries
+
+Date: 2026-10-08. Each implementation repository owns its CI workflow and package artifact. `fundgraph-core` uses a committed npm lockfile and `npm ci`. `fundgraph-cli` installs a checked-out sibling `fundgraph-core` repository in CI and locally until the core package is published; it does not vendor or duplicate core source. CI verifies but does not publish, tag, push, or create GitHub resources.
+
 ## D-0015 - Phase 10 fixture and integration boundary
 
 Date: 2026-10-08. The Phase 10 fixture matrix is owned by `fundgraph-core/test/fixtures` and is executed by a cross-stage integration suite. Integration tests use fixed repository fixtures for deterministic output, while temporary copies remain reserved for tests that intentionally exercise malformed or mutable inputs. The CLI smoke suite may consume the core repository’s fixtures but does not duplicate them.

@@ -1,10 +1,10 @@
 # Project state
 
 ```yaml
-current_phase: 10
+current_phase: 11
 current_status: complete
-last_completed_phase: 10
-current_objective: Establish CI, cross-platform packaging, supported Node validation, and reproducible release artifacts.
+last_completed_phase: 11
+current_objective: Prepare v0.1 product readiness, final audit, release notes, and verified documentation/demo commands.
 completed:
   - Phase 0 documentation and research foundation created
   - Project charter, requirements, architecture, data/evidence/security models documented
@@ -25,10 +25,11 @@ completed:
   - Phase 8 typed network errors, bounded retries, rate-limit backoff, opt-in TTL cache, cache invalidation, offline replay, cancellation, and partial-result batch semantics implemented and tested
   - Phase 9 trust-boundary audit, secure URL and redirect policy, response/cache resource limits, authenticated-cache protection, adversarial fixtures, dependency audit, and residual-risk documentation completed
   - Phase 10 executable fixture matrix, npm/PyPI/Cargo end-to-end pipeline tests, failure-category coverage, deterministic repeat-run checks, and shared-fixture CLI smoke tests completed
+  - Phase 11 cross-platform CI workflows, Node 20/22 matrices, lint/typecheck/test/build/package checks, sibling-core CLI installation verification, and npm artifact jobs completed
 in_progress: []
 blocked: []
-next_phase: 11
-next_recommended_action: Execute Phase 11: CI + Cross-Platform Packaging
+next_phase: 12
+next_recommended_action: Execute Phase 12: v0.1 Product Readiness
 release_target: v0.1.0 by 2026-10-09T12:00:00+01:00
 known_risks:
   - Deadline leaves little time for broad ecosystem support

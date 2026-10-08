@@ -4,3 +4,5 @@ Releases are prepared from clean tagged commits in the relevant repository. `fun
 
 Versioning follows SemVer once the package API exists. Domain schema changes require migration notes and compatibility decisions.
 
+Phase 11 CI runs independently in `fundgraph-core` and `fundgraph-cli` across Ubuntu, Windows, and macOS on Node 20 and Node 22. Core is installed with its lockfile; the CLI installs the checked-out compatible sibling core package. CI uploads tarball artifacts for inspection but does not publish them.
+

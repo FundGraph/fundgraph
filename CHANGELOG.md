@@ -15,6 +15,7 @@ All notable changes are recorded here. The format follows Keep a Changelog conve
 - Phase 8 network reliability boundary implemented with typed failures, bounded retries, rate-limit backoff, opt-in TTL caching, cache invalidation, offline replay, cancellation, partial-result batches, and deterministic tests.
 - Phase 9 security hardening completed with secure URL/redirect policy, SSRF-oriented destination checks, response/cache resource limits, authenticated-cache protection, adversarial fixtures, dependency audits, and documented residual risks.
 - Phase 10 comprehensive fixture matrix and end-to-end integration coverage completed across npm, PyPI, Cargo, core report generation, malformed/failure categories, deterministic repeat runs, and CLI shared-fixture smoke tests.
+- Phase 11 CI and packaging workflows completed for Ubuntu, Windows, and macOS on Node 20/22 with lint, typecheck, tests, builds, npm package checks, and artifact jobs.
 
 ## [0.1.0] - Unreleased
 
