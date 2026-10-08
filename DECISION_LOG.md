@@ -1,5 +1,9 @@
 # Decision log
 
+## D-0014 - Phase 9 secure network boundary
+
+Date: 2026-10-08. Network requests default to public credential-free HTTPS, reject private/local destinations and redirects, and enforce response-size limits. HTTP, provider host access, and cache use require explicit caller configuration. Authenticated requests bypass caches entirely. DNS resolution is intentionally outside this pure library boundary; callers needing DNS-rebinding protection must use controlled allowlists and network policy.
+
 ## D-0013 - Phase 8 network reliability boundary
 
 Date: 2026-10-08. Live JSON request reliability is centralized in `fundgraph-core/src/network` and is opt-in. The boundary owns bounded retries, `Retry-After` handling, timeout/cancellation, typed failures, filesystem cache TTL/invalidation, offline replay, and batch partial-result semantics. Parsers remain pure and receive injected responses. Cache writes reject authorization/cookie-bearing requests, use restrictive permissions and atomic replacement, and stale offline data is labeled with a diagnostic rather than silently treated as fresh.

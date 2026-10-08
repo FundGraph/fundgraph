@@ -124,7 +124,7 @@ The dependency direction is `fundgraph-cli` → `fundgraph-core`. The project-le
 
 **Implemented:** `fundgraph-core/src/network` provides typed `FundGraphError` codes for network failures, timeouts, rate limits, cancellation, and cache faults. `NetworkClient` uses injected fetch/sleep/clock dependencies, bounded retries, capped exponential backoff, `Retry-After` handling, request timeouts, external cancellation, and non-retryable HTTP handling. Caching is opt-in, filesystem-backed, written with restrictive permissions and atomic replacement, keyed by URL hash, bounded by TTL, refreshed online, invalidated explicitly, and replayable offline with stale diagnostics. Authenticated requests are rejected for caching. `jsonBatch` preserves successful results and reports failures separately. **Acceptance/exit:** failures are actionable and do not erase successful partial evidence; verified with 31 core tests and 5 CLI tests. **Next:** Phase 9.
 
-## PHASE 9 — Security Hardening
+## PHASE 9 — Security Hardening — COMPLETE
 
 **Purpose:** audit the trust boundary. **Prerequisites:** Phase 8.
 
@@ -132,7 +132,7 @@ The dependency direction is `fundgraph-cli` → `fundgraph-core`. The project-le
 
 **Tests:** adversarial inputs and regression tests.
 
-**Acceptance/exit:** findings are documented and high-risk issues are fixed or explicitly accepted. **Next:** Phase 10.
+**Implemented:** the Phase 9 audit is recorded in `SECURITY_AUDIT.md`. `fundgraph-core/src/network` now rejects private/loopback/local destinations, credential-bearing URLs, and redirects by default; supports explicit host allowlists; bounds response and cache sizes; bypasses cache reads and writes for authenticated requests; and preserves secure timeout, retry, and cancellation controls. Adversarial tests cover unsafe URLs, allowlists, redirects, oversized responses, credential leakage, and cache bypass. `npm audit --omit=dev --package-lock=false` reports zero vulnerabilities in both implementation repositories. **Acceptance/exit:** findings are documented, high-risk issues are fixed, and residual DNS/operational risks are explicitly accepted. Verified with 35 core tests, 5 CLI tests, typechecks, and package audits. **Next:** Phase 10.
 
 ## PHASE 10 — Comprehensive Fixtures + Integration Tests
 

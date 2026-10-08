@@ -1,10 +1,10 @@
 # Project state
 
 ```yaml
-current_phase: 8
+current_phase: 9
 current_status: complete
-last_completed_phase: 8
-current_objective: Audit the trust boundary, resource limits, URL policy, and malicious-input behavior.
+last_completed_phase: 9
+current_objective: Complete the fixture matrix and end-to-end integration coverage across all supported ecosystems.
 completed:
   - Phase 0 documentation and research foundation created
   - Project charter, requirements, architecture, data/evidence/security models documented
@@ -23,10 +23,11 @@ completed:
   - Phase 6 package/repository/funding relationship resolution, confidence, ambiguity, contradiction, unresolved states, fixtures, and tests implemented
   - Phase 7 deterministic report document, text/JSON renderers, stable ordering, summaries, evidence drill-down, limitations, action links, fixtures, and CLI integration implemented
   - Phase 8 typed network errors, bounded retries, rate-limit backoff, opt-in TTL cache, cache invalidation, offline replay, cancellation, and partial-result batch semantics implemented and tested
+  - Phase 9 trust-boundary audit, secure URL and redirect policy, response/cache resource limits, authenticated-cache protection, adversarial fixtures, dependency audit, and residual-risk documentation completed
 in_progress: []
 blocked: []
-next_phase: 9
-next_recommended_action: Execute Phase 9: Security Hardening
+next_phase: 10
+next_recommended_action: Execute Phase 10: Comprehensive Fixtures + Integration Tests
 release_target: v0.1.0 by 2026-10-09T12:00:00+01:00
 known_risks:
   - Deadline leaves little time for broad ecosystem support
