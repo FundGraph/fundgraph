@@ -1,5 +1,9 @@
 # Decision log
 
+## D-0012 - Phase 7 report contract
+
+Date: 2026-10-08. Reports are versioned `FundGraphReport` documents owned by `fundgraph-core`. The report contains stable arrays for domain records, relationship status summaries, evidence records referenced by relationship IDs, diagnostics, explicit limitations, and informational review/inspect actions. Text rendering escapes terminal control characters; JSON rendering uses deterministic object-key serialization. Actions are never executed by the library or CLI.
+
 ## D-0001 — Standalone repository
 
 Date: 2026-10-08. FundGraph lives in `C:\Users\user\Projects\FundGraph` as one repository and will later map to `GITHUB_REPO=fundgraph`. No GitHub organization or remote is created by this project.

@@ -4,7 +4,7 @@ Backlog items are candidates, not commitments. A phase or decision must promote 
 
 - Add Go modules after v0.1 if fixture and maintainer demand justify it.
 - Explore offline registry snapshots for reproducible audits.
-- Add SARIF or machine-readable report export if consumers need it.
+- Add SARIF export if consumers need a format beyond the Phase 7 machine-readable JSON report.
 - Investigate provider-specific verification adapters without making providers authoritative.
 - Add repository history signals only if they can be presented as non-authoritative evidence.
 - Measure parser coverage and report confidence calibration from real fixtures.

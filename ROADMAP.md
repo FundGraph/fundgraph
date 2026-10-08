@@ -100,7 +100,7 @@ The dependency direction is `fundgraph-cli` → `fundgraph-core`. The project-le
 
 **Implemented:** `fundgraph-core` now resolves explicit package→repository and repository→funding claims. It emits versioned relationships with rule IDs, evidence IDs, confidence, and supported/ambiguous/contradictory/unresolved status. Direct compatible evidence is high or medium confidence; missing identities are unresolved; multiple repository candidates and multiple funding claims remain ambiguous; missing referenced entities are contradictory. **Acceptance/exit:** relationship decisions are explainable from evidence and stable across runs. Verified with `npm test` in core (22 passing tests). **Artifacts:** `fundgraph-core/src/resolution`, resolver tests, and updated public API. **Next:** Phase 7.
 
-## PHASE 7 — Deterministic Reports
+## PHASE 7 — Deterministic Reports — COMPLETE
 
 **Purpose:** make findings useful to humans and automation. **Prerequisites:** Phase 6.
 
@@ -110,7 +110,7 @@ The dependency direction is `fundgraph-cli` → `fundgraph-core`. The project-le
 
 **Security:** escape terminal and structured output; never render metadata as executable markup.
 
-**Acceptance/exit:** same inputs and fixture data produce identical reports. **Next:** Phase 8.
+**Implemented:** `fundgraph-core/src/reporting` now creates a versioned `FundGraphReport`, sorts all report collections deterministically, computes relationship status summaries, preserves diagnostics and contradictory states, exposes evidence references with source drill-down, and emits explicit limitations and review/inspect actions. Text output escapes control characters; JSON uses stable serialization. `fundgraph-cli` includes the report document in JSON output and renders the deterministic report after its compatibility summary. **Acceptance/exit:** same inputs and fixture data produce identical reports; verified with 25 core tests, 5 CLI tests, and TypeScript typechecks. **Artifacts:** reporting API, reporting fixtures/tests, and CLI integration. **Next:** Phase 8.
 
 ## PHASE 8 — Error Handling + Caching + Rate Limits
 

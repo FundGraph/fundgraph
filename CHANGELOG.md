@@ -11,6 +11,7 @@ All notable changes are recorded here. The format follows Keep a Changelog conve
 - Phase 4 ecosystem metadata adapters implemented for npm, PyPI, and Cargo with normalized package/repository identities, source evidence, timestamps, URL allowlists, payload limits, fixtures, and tests.
 - Phase 5 funding evidence providers implemented for package metadata, GitHub FUNDING.yml, and recorded public provider responses with provenance, diagnostics, conflict preservation, fixtures, and tests.
 - Phase 6 funding relationship resolution implemented with explicit rules, confidence levels, evidence links, ambiguity, contradiction, unresolved states, fixtures, and deterministic tests.
+- Phase 7 deterministic reports implemented with a versioned machine-readable schema, text/JSON rendering, stable ordering, summaries, evidence drill-down, limitations, actions, diagnostics, fixtures, tests, and CLI integration.
 
 ## [0.1.0] - Unreleased
 
