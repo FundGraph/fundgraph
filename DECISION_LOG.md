@@ -85,3 +85,11 @@ maintainer runbook. All three repositories receive issue/PR templates because th
 repositories. New adapters remain fixture-first, evidence-bearing, deterministic, and subject to compatibility/security
 review before implementation.
 
+## D-0019 - Phase 14 baseline Go discovery
+
+Date: 2026-10-08. Phase 14 promotes baseline Go module discovery from the backlog. `fundgraph-core` parses local
+`go.mod` module and `require` directives, preserves Go module-path identity, records requested/resolved versions and
+source locators, and emits deterministic malformed-input diagnostics. It does not invoke the Go toolchain, fetch modules,
+parse `go.work`, derive transitive Go edges, or claim Go registry/funding support. Those capabilities require separate
+evidence, fixtures, and acceptance criteria.
+

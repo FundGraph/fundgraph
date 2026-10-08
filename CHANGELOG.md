@@ -18,6 +18,7 @@ All notable changes are recorded here. The format follows Keep a Changelog conve
 - Phase 11 CI and packaging workflows completed for Ubuntu, Windows, and macOS on Node 20/22 with lint, typecheck, tests, builds, npm package checks, and artifact jobs.
 - Phase 12 v0.1 product readiness completed with verified README/demo commands, release notes, final audit, local npm artifact installation checks, and documented publication limitations.
 - Phase 13 external contributor readiness completed with issue/PR templates, adapter and fixture guidance, compatibility policy, good-first contribution guidance, and maintainer escalation/release runbooks.
+- Phase 14 baseline Go module discovery added with deterministic `go.mod` parsing, malformed-input diagnostics, stable module-path identity, fixtures, tests, CLI integration, and explicit re-scoping of Go metadata/funding/workspace features.
 
 ## [0.1.0] - Unreleased
 

@@ -16,7 +16,7 @@ It answers: **who maintains the software I depend on, where can it be funded, an
 
 ## Status
 
-Phases 0–13 are complete. The reusable domain/model API, dependency discovery, recorded registry metadata normalization, evidence-backed funding parsers, explicit relationship resolution, deterministic reports, opt-in network reliability, security hardening, comprehensive integration fixtures, and cross-platform CI are implemented in `fundgraph-core`; `fundgraph-cli` renders the report while retaining its stable summary contract. The v0.1 target is npm, PyPI, and Cargo, subject to the roadmap acceptance criteria.
+Phases 0–14 are complete. The reusable domain/model API, dependency discovery, recorded registry metadata normalization, evidence-backed funding parsers, explicit relationship resolution, deterministic reports, opt-in network reliability, security hardening, comprehensive integration fixtures, and cross-platform CI are implemented in `fundgraph-core`; `fundgraph-cli` renders the report while retaining its stable summary contract. Baseline Go `go.mod` discovery is available as the first v1 expansion; Go metadata/funding support remains future scope.
 
 See [RELEASE_NOTES_v0.1.0.md](RELEASE_NOTES_v0.1.0.md) and [FINAL_AUDIT.md](FINAL_AUDIT.md) for the local release candidate status and known limitations.
 

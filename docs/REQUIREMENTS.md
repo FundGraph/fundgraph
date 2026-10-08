@@ -2,7 +2,7 @@
 
 ## Functional
 
-1. Accept a supported project path and discover dependency inputs.
+1. Accept a supported project path and discover dependency inputs for npm, PyPI, Cargo, and baseline Go modules.
 2. Normalize package and repository identities without asserting human identity.
 3. Collect funding declarations and preserve their source.
 4. Represent conflicts, ambiguity, missing data, and partial failures.

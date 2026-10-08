@@ -174,13 +174,17 @@ and documentation/link/template inspection. **Artifacts:** issue/PR templates in
 `docs/COMPATIBILITY_POLICY.md`, `docs/MAINTAINER_RUNBOOK.md`, `docs/GOOD_FIRST_ISSUES.md`, and repository contributor
 guides. **Next:** Phase 14.
 
-## PHASE 14 — v1 Expansion
+## PHASE 14 — v1 Expansion — COMPLETE
 
 **Purpose:** expand only where evidence supports demand. **Prerequisites:** Phase 13 and usage feedback.
 
 **Candidates:** Go modules, richer workspace support, more providers, offline registry snapshots, report integrations. Each candidate requires a new decision and acceptance criteria.
 
-**Skip/re-scope:** skip any expansion without maintainer or user evidence; preserve v0.1 simplicity.
+**Decision and scope:** baseline Go module discovery was promoted from the backlog because it extends the existing input boundary with a deterministic, local-only parser and a useful fourth ecosystem. The slice supports `go.mod` module and `require` directives, block and single-line requirements, indirect requirements, bounded input, malformed-manifest diagnostics, stable module-path identity, and CLI directory integration. It deliberately does not invoke Go, fetch modules, parse `go.work`, resolve transitive Go graph edges, normalize Go registry metadata, or collect Go funding evidence. Those remain future candidates and are not implied by this phase.
+
+**Acceptance/exit:** a Go project with a valid `go.mod` produces deterministic dependency nodes with requested/resolved versions and source locators; malformed or oversized input produces diagnostics without guessed dependencies; existing ecosystem behavior remains unchanged; CLI integration continues to pass; and the scope/limitations are documented. Verified with the Go fixture and malformed-input tests, 40 core tests, 6 CLI tests, lint, typecheck, and builds. **Artifacts:** `fundgraph-core/src/inputs/go.ts`, `test/fixtures/go-module/go.mod`, discovery tests, updated fixture matrix, and compatibility/architecture/CLI documentation. **Next:** Phase 15+.
+
+**Skip/re-scope:** skip any expansion without maintainer or user evidence; preserve v0.1 simplicity. Future Go metadata, funding, and workspace work is explicitly re-scoped rather than assumed complete.
 
 ## PHASE 15+ — Long-Term Development
 
