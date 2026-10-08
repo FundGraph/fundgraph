@@ -46,3 +46,7 @@ Date: 2026-10-08. Phase 4 parsers consume recorded JSON payloads through an inje
 
 Date: 2026-10-08. Funding providers emit declared URLs plus immutable evidence, but do not verify ownership, infer human identity, execute payments, or silently merge contradictory declarations. Package metadata, GitHub `FUNDING.yml`, and public provider responses are separate evidence kinds. Live network orchestration remains outside these pure parsers and will require the later error, cache, and rate-limit phase.
 
+## D-0011 — Phase 6 resolution rules
+
+Date: 2026-10-08. Relationship resolution accepts explicit repository candidates and funding claims. A single usable package→repository candidate is supported; multiple candidates are ambiguous; missing candidates are unresolved; and candidates referencing absent repositories are contradictory. Multiple explicit funding sources for one repository remain ambiguous. The resolver never selects a source based only on provider name or infers a human maintainer.
+

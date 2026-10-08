@@ -14,3 +14,5 @@ All models have a schema version and stable identifiers.
 
 No model may require a person name or infer a person’s identity. Contradictions are represented as separate evidence and relationship status, never overwritten.
 
+Phase 6 resolution inputs include explicit `RepositoryCandidate` records and `FundingClaim` records. A candidate or claim contains the entity IDs, evidence IDs, and rule ID that justify the proposed edge. The resolver emits `Relationship` records and never treats a provider label as proof of ownership.
+

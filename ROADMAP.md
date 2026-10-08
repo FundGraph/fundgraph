@@ -88,7 +88,7 @@ The dependency direction is `fundgraph-cli` → `fundgraph-core`. The project-le
 
 **Implemented:** `fundgraph-core` now parses npm/PyPI/Cargo funding metadata, GitHub `FUNDING.yml`, and recorded public provider responses. Every emitted funding source points to evidence containing the source, timestamp, parser, and raw observed payload. Multiple declarations remain separate; malformed files, unsafe URLs, oversized payloads, unfunded packages, and provider failures are explicit. **Acceptance/exit:** every emitted funding source points to one or more evidence records and no conflict is silently discarded. Verified with `npm test` in core (16 passing tests). **Artifacts:** `fundgraph-core/src/funding`, funding fixtures, and funding tests. **Next:** Phase 6.
 
-## PHASE 6 — Funding Relationship Resolution
+## PHASE 6 — Funding Relationship Resolution — COMPLETE
 
 **Purpose:** connect package → repository → funding source without overclaiming identity. **Prerequisites:** Phase 5.
 
@@ -98,7 +98,7 @@ The dependency direction is `fundgraph-cli` → `fundgraph-core`. The project-le
 
 **Security:** no human identity inference; no authority based solely on a provider name.
 
-**Acceptance/exit:** relationship decisions are explainable from evidence and stable across runs. **Next:** Phase 7.
+**Implemented:** `fundgraph-core` now resolves explicit package→repository and repository→funding claims. It emits versioned relationships with rule IDs, evidence IDs, confidence, and supported/ambiguous/contradictory/unresolved status. Direct compatible evidence is high or medium confidence; missing identities are unresolved; multiple repository candidates and multiple funding claims remain ambiguous; missing referenced entities are contradictory. **Acceptance/exit:** relationship decisions are explainable from evidence and stable across runs. Verified with `npm test` in core (22 passing tests). **Artifacts:** `fundgraph-core/src/resolution`, resolver tests, and updated public API. **Next:** Phase 7.
 
 ## PHASE 7 — Deterministic Reports
 
