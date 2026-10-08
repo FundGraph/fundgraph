@@ -76,7 +76,7 @@ The dependency direction is `fundgraph-cli` → `fundgraph-core`. The project-le
 
 **Implemented:** `fundgraph-core` now normalizes recorded npm, PyPI, and Cargo registry payloads into versioned registry, package, and repository models. It retains raw payloads, source URLs, parser identifiers, and observation timestamps as evidence; canonicalizes repository URLs; tolerates missing/malformed fields; bounds payloads; and restricts metadata sources to HTTPS registry allowlists. **Acceptance/exit:** each v0.1 ecosystem has a parser with deterministic normalized output. Verified with `npm test` in core (11 passing tests), including recorded responses, scoped names, alternate repository URLs, missing metadata, unsafe sources, and oversized payloads. **Artifacts:** `fundgraph-core/src/metadata`, recorded metadata fixtures, and metadata tests. **Next:** Phase 5.
 
-## PHASE 5 — Funding Evidence Providers
+## PHASE 5 — Funding Evidence Providers — COMPLETE
 
 **Purpose:** collect declared funding sources. **Prerequisites:** Phase 4.
 
@@ -86,7 +86,7 @@ The dependency direction is `fundgraph-cli` → `fundgraph-core`. The project-le
 
 **Security:** public network only by default, URL validation, SSRF controls, rate-limit handling, no credential requirement.
 
-**Acceptance/exit:** every emitted funding source points to one or more evidence records and no conflict is silently discarded. **Next:** Phase 6.
+**Implemented:** `fundgraph-core` now parses npm/PyPI/Cargo funding metadata, GitHub `FUNDING.yml`, and recorded public provider responses. Every emitted funding source points to evidence containing the source, timestamp, parser, and raw observed payload. Multiple declarations remain separate; malformed files, unsafe URLs, oversized payloads, unfunded packages, and provider failures are explicit. **Acceptance/exit:** every emitted funding source points to one or more evidence records and no conflict is silently discarded. Verified with `npm test` in core (16 passing tests). **Artifacts:** `fundgraph-core/src/funding`, funding fixtures, and funding tests. **Next:** Phase 6.
 
 ## PHASE 6 — Funding Relationship Resolution
 

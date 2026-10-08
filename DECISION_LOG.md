@@ -42,3 +42,7 @@ Date: 2026-10-08. Phase 3 supports local npm, PyPI, and Cargo dependency discove
 
 Date: 2026-10-08. Phase 4 parsers consume recorded JSON payloads through an injected context rather than performing live network requests. They allow only HTTPS sources for the relevant public registry, retain the raw payload and observation timestamp as evidence, normalize repository URLs without inferring people, and emit diagnostics for malformed or incomplete metadata.
 
+## D-0010 — Phase 5 funding evidence boundary
+
+Date: 2026-10-08. Funding providers emit declared URLs plus immutable evidence, but do not verify ownership, infer human identity, execute payments, or silently merge contradictory declarations. Package metadata, GitHub `FUNDING.yml`, and public provider responses are separate evidence kinds. Live network orchestration remains outside these pure parsers and will require the later error, cache, and rate-limit phase.
+

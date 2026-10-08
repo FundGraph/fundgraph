@@ -1,10 +1,10 @@
 # Project state
 
 ```yaml
-current_phase: 4
+current_phase: 5
 current_status: complete
-last_completed_phase: 4
-current_objective: Preserve normalized metadata evidence and prepare funding evidence providers.
+last_completed_phase: 5
+current_objective: Preserve evidence-backed funding declarations and prepare relationship resolution.
 completed:
   - Phase 0 documentation and research foundation created
   - Project charter, requirements, architecture, data/evidence/security models documented
@@ -19,10 +19,11 @@ completed:
   - Phase 2 CLI command surface, input handling, output formats, exit codes, and tests implemented
   - Phase 3 npm, PyPI, and Cargo dependency discovery, workspace handling, lockfile diagnostics, fixtures, and CLI integration implemented
   - Phase 4 npm, PyPI, and Cargo metadata adapters, repository normalization, source evidence, timestamps, allowlists, fixtures, and tests implemented
+  - Phase 5 package funding metadata, GitHub FUNDING.yml, public provider-response parsing, provenance, diagnostics, fixtures, and tests implemented
 in_progress: []
 blocked: []
-next_phase: 5
-next_recommended_action: Execute Phase 5: Funding Evidence Providers
+next_phase: 6
+next_recommended_action: Execute Phase 6: Funding Relationship Resolution
 release_target: v0.1.0 by 2026-10-09T12:00:00+01:00
 known_risks:
   - Deadline leaves little time for broad ecosystem support
