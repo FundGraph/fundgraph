@@ -4,5 +4,5 @@ Tests are fixture-first and deterministic. Unit tests cover model validation, pa
 
 Required fixture categories: funded, unfunded, multiple sources, contradictory metadata, missing repository, malformed lockfile, aliases, workspaces, optional dependencies, rate limits, and network failure. Fixtures must be synthetic or public and must not contain credentials.
 
-The Phase 1 core commands are `npm run typecheck`, `npm test`, `npm run build`, and `npm pack --dry-run` in `fundgraph-core`. CLI and cross-repository integration commands will be added in later phases. Phase 1 currently has four tests covering valid models, invalid schema/URLs, deterministic serialization, and contradictory relationships.
+The core commands are `npm run typecheck`, `npm test`, `npm run build`, and `npm pack --dry-run` in `fundgraph-core`. Phase 3 has eight core tests covering the model contract plus npm, PyPI, and Cargo fixtures, workspaces, aliases, optional dependencies, transitive edges, missing lockfiles, and malformed lockfiles. The CLI has five tests covering its command contract and directory discovery integration.
 

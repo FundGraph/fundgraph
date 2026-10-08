@@ -34,3 +34,7 @@ Date: 2026-10-08. `fundgraph-core` uses schema version `1.0` and requires stable
 
 Date: 2026-10-08. The Phase 2 CLI accepts a JSON model document from a bounded file or stdin and delegates validation to `fundgraph-core`. It does not inspect manifests, perform dependency discovery, or access the network. This keeps the command contract testable while reserving ecosystem input handling for Phase 3.
 
+## D-0008 — Phase 3 discovery boundary
+
+Date: 2026-10-08. Phase 3 supports local npm, PyPI, and Cargo dependency discovery only. Lockfiles provide resolved versions and transitive edges when valid; missing or malformed lockfiles produce diagnostics rather than guessed versions. Registry metadata, repository normalization, and funding evidence remain separate adapter phases.
+

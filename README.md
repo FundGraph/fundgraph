@@ -16,7 +16,7 @@ It answers: **who maintains the software I depend on, where can it be funded, an
 
 ## Status
 
-Phases 0–2 are complete. The reusable domain/model API is implemented in `fundgraph-core`, and the CLI foundation is implemented in `fundgraph-cli`. Dependency discovery remains the next phase. The v0.1 target is npm, PyPI, and Cargo, subject to the roadmap acceptance criteria.
+Phases 0–3 are complete. The reusable domain/model API and dependency discovery are implemented in `fundgraph-core`, and the CLI foundation is implemented in `fundgraph-cli`. Registry metadata and repository normalization remain the next phase. The v0.1 target is npm, PyPI, and Cargo, subject to the roadmap acceptance criteria.
 
 ## Product flow
 

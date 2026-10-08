@@ -52,7 +52,7 @@ The dependency direction is `fundgraph-cli` → `fundgraph-core`. The project-le
 
 **Implemented:** `fundgraph-cli` now provides `--help`, `version`, and `analyze`; accepts stdin or bounded JSON file input; supports text/JSON output, offline, and strict flags; invokes `@fundgraph/core` validation; and returns documented exit codes. **Acceptance/exit:** CLI invokes library validation without duplicating domain logic and passes help, version, stdin/path, format, invalid-argument, partial, and strict tests. Verified with `npm run typecheck` and `npm test` (4 passing tests). **Artifacts:** `fundgraph-cli/src`, `fundgraph-cli/test`, package/bin metadata, and repository README. **Next:** Phase 3. **Skip/re-scope:** never skip the stable command contract; reduce options if deadline pressure requires it.
 
-## PHASE 3 — Dependency Discovery
+## PHASE 3 — Dependency Discovery — COMPLETE
 
 **Purpose:** discover direct/transitive dependencies from supported project inputs. **Prerequisites:** Phase 1–2.
 
@@ -62,7 +62,7 @@ The dependency direction is `fundgraph-cli` → `fundgraph-core`. The project-le
 
 **Security:** treat manifests and lockfiles as hostile data; no code execution; path traversal protection; size limits.
 
-**Acceptance/exit:** supported fixtures produce correct graph nodes/edges and actionable errors. **Next:** Phase 4. **Skip/re-scope:** an ecosystem may be deferred only with explicit fixture and user-value evidence.
+**Implemented:** `fundgraph-core` now discovers npm, PyPI, and Cargo dependency graphs from local manifests and lockfiles. It handles npm aliases, npm/Cargo workspaces, optional dependencies, transitive lockfile edges, missing lockfiles, malformed lockfiles, bounded inputs, and source paths/locators. `fundgraph-cli analyze <directory>` delegates to this API. **Acceptance/exit:** supported fixtures produce correct graph nodes/edges and actionable diagnostics. Verified with `npm test` in core (8 passing tests) and CLI (5 passing tests). **Artifacts:** `fundgraph-core/src/inputs`, deterministic fixtures under `fundgraph-core/test/fixtures`, discovery tests, and CLI integration tests. **Next:** Phase 4. **Skip/re-scope:** an ecosystem may be deferred only with explicit fixture and user-value evidence.
 
 ## PHASE 4 — Initial Ecosystem Parsers
 
