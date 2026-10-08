@@ -18,5 +18,6 @@ Evidence before assertion; deterministic output; local-first defaults; bounded p
 
 ## v0.1 boundary
 
-The working boundary is npm, PyPI, and Cargo with package metadata, repository metadata, GitHub funding declarations, and selected public provider links. Phase 1 may narrow this if implementation evidence requires it.
-
+The v0.1 boundary is npm, PyPI, and Cargo with package metadata, repository metadata, GitHub funding declarations, and
+selected public provider links. Baseline Go `go.mod` discovery is the first v1 expansion; Go metadata and funding
+providers remain future scope. See `FUNDING_SUBMISSION.md` for the factual submission position.

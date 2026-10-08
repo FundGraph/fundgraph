@@ -2,9 +2,9 @@
 
 ```yaml
 current_phase: 14
-current_status: complete
+current_status: pre-publication-ready
 last_completed_phase: 14
-current_objective: Derive and document the next long-term phase from backlog, usage evidence, and implementation state.
+current_objective: Complete maintainer-owned GitHub publication and submission handoff; do not push without explicit authorization.
 completed:
   - Phase 0 documentation and research foundation created
   - Project charter, requirements, architecture, data/evidence/security models documented
@@ -32,7 +32,7 @@ completed:
 in_progress: []
 blocked: []
 next_phase: 15+
-next_recommended_action: Derive and document the next long-term development phase before implementation
+next_recommended_action: Create the GitHub organization/repositories, add remotes, run remote CI, then review the funding submission brief before applying
 release_target: v0.1.0 by 2026-10-09T12:00:00+01:00
 known_risks:
   - Deadline leaves little time for broad ecosystem support
@@ -42,4 +42,3 @@ known_risks:
 ```
 
 State is updated after every phase. This file is both human-readable and intentionally simple to parse.
-

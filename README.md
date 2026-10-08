@@ -20,6 +20,8 @@ Phases 0–14 are complete. The reusable domain/model API, dependency discovery,
 
 See [RELEASE_NOTES_v0.1.0.md](RELEASE_NOTES_v0.1.0.md) and [FINAL_AUDIT.md](FINAL_AUDIT.md) for the local release candidate status and known limitations.
 
+For funding applications, see [FUNDING_SUBMISSION.md](FUNDING_SUBMISSION.md). It contains factual positioning and proposed milestones without claiming adoption, eligibility, or acceptance.
+
 ## Product flow
 
 ```mermaid
@@ -94,4 +96,3 @@ The complete executable plan is in [`ROADMAP.md`](ROADMAP.md). Current state is 
 ## Contributing
 
 See [`CONTRIBUTING.md`](CONTRIBUTING.md), [`docs/CONTRIBUTOR_GUIDE.md`](docs/CONTRIBUTOR_GUIDE.md), and [`CODE_OF_CONDUCT.md`](CODE_OF_CONDUCT.md). FundGraph is independent of the author's other projects. The project is intentionally split into three independent repositories, not a monorepo.
-

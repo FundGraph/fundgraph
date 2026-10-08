@@ -9,7 +9,8 @@ FundGraph has three independently versioned repositories. The project-level `fun
 
 - Node.js 20 and 22 are the supported runtime versions for v0.1.
 - Windows, macOS, and Linux are covered by the repository CI definitions.
-- v0.1 ecosystems are npm, PyPI, and Cargo.
+- v0.1 ecosystems are npm, PyPI, and Cargo; baseline Go `go.mod` discovery is a v1 expansion and does not imply Go
+  metadata or funding-provider support.
 - Core schema version `1.0` and the published `@fundgraph/core` package version `0.1.x` are the compatibility baseline.
 
 ## Change rules

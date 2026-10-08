@@ -1,7 +1,7 @@
 # FundGraph v0.1.0 Final Audit
 
 Date: 2026-10-08
-Status: release candidate prepared locally; not published
+Status: pre-publication release candidate; technically ready for publication after maintainer GitHub setup
 
 ## Scope
 
@@ -14,7 +14,7 @@ This audit covers the three-repository FundGraph workspace:
 ## Completed features
 
 - Versioned domain models, validation, deterministic serialization, and typed errors.
-- Local npm, PyPI, and Cargo dependency discovery, including documented workspace, alias, optional, and malformed-input behavior.
+- Local npm, PyPI, Cargo, and baseline Go module discovery, including documented workspace, alias, optional, and malformed-input behavior.
 - Recorded registry metadata normalization with repository identity evidence.
 - Funding declarations from package metadata and GitHub `FUNDING.yml`, with provenance and contradiction preservation.
 - Explicit relationship resolution with confidence, ambiguity, contradiction, and unresolved states.
@@ -22,16 +22,21 @@ This audit covers the three-repository FundGraph workspace:
 - Opt-in network reliability primitives with retries, rate-limit handling, cache policy, cancellation, and offline replay.
 - Security controls for URL destinations, redirects, payload/cache limits, and authenticated-cache handling.
 - Cross-platform CI definitions, package checks, and release artifact jobs.
+- External contributor onboarding, issue/PR templates, adapter guidance, compatibility policy, and maintainer runbook.
 
 ## Verification results
 
-- `fundgraph-core`: lint, typecheck, build, and 38 tests passed locally.
+- `fundgraph-core`: lint, typecheck, build, and 40 tests passed locally.
 - `fundgraph-cli`: lint, typecheck, build, and 6 tests passed locally.
 - Core clean installation with `npm ci` passed.
 - CLI installation through the documented sibling-core development path passed.
 - Core and CLI `npm pack --dry-run` checks passed.
 - Both generated npm tarballs installed successfully in isolated temporary projects; the packaged CLI reported version `0.1.0` and exposed its executable bin entries.
 - README/demo commands and CLI help/error/report behavior were checked against the current implementation.
+- CLI Go fixture smoke test passed with three discovered Go dependencies and no diagnostics.
+- Phase 9 production dependency audits reported zero vulnerabilities. A fresh audit was attempted during this handoff but
+  npm's Windows cache/registry endpoint failed before returning a result; that infrastructure failure is not treated as a
+  new vulnerability finding.
 - CI workflows define Ubuntu, Windows, and macOS jobs on Node 20 and Node 22, but remote CI has not run because no GitHub remotes exist.
 
 ## Incomplete or deliberately pending work
@@ -59,11 +64,24 @@ documented rather than claimed solved.
 
 ## Release decision
 
-The v0.1 acceptance criteria are satisfied for a local release candidate. The release is not publicly published because
-the required GitHub/npm resources are external maintainer actions and no publication authorization was given. The release
-checklist records that prerequisite as intentionally pending.
+The v0.1 acceptance criteria are satisfied for a pre-publication release candidate. The implementation, documentation,
+tests, package artifacts, security controls, contributor workflow, and submission materials are ready for public release.
+The release is not publicly published because the required GitHub/npm resources are external maintainer actions. No
+remote, tag, or push was created by this task.
 
-## Next recommended phase
+## Funding-submission readiness
 
-Phase 12 is complete. The next phase is **Phase 13 — External Contributor Readiness**: issue templates, contributor
-runbooks, adapter guidance, compatibility policy, and a documented path for adding fixtures and providers.
+The project is ready to prepare applications, but funding is never guaranteed. The application must accurately describe
+FundGraph as a local-first evidence and discovery tool, not as a payment protocol. No adoption, traction, user count,
+grant eligibility, or acceptance is claimed. The prepared submission brief is in `FUNDING_SUBMISSION.md`.
+
+## Final maintainer actions
+
+1. Create the GitHub organization and three public repositories.
+2. Add remotes and push the clean commits from all three repositories.
+3. Run and review remote CI.
+4. Publish `@fundgraph/core` before `fundgraph`, following the compatibility policy.
+5. Claim the public GitHub project on Drips if applying to an eligible round.
+6. Add the public repository and scoped contribution opportunities to GrantFox if the relevant campaign accepts them.
+
+No step above has been performed by Codex.
