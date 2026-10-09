@@ -2,9 +2,9 @@
 
 ```yaml
 current_phase: 14
-current_status: public-repositories-audit-complete
+current_status: public-repositories-audit-remediated
 last_completed_phase: 14
-current_objective: Review the independent readiness audit branch, merge approved fixes, and decide whether to publish npm packages.
+current_objective: Decide on npm publication, branch-protection configuration, and funding-submission timing after the merged audit remediation.
 completed:
   - Phase 0 documentation and research foundation created
   - Project charter, requirements, architecture, data/evidence/security models documented
@@ -32,11 +32,12 @@ completed:
   - Public FundGraph organization and three repositories verified on GitHub
   - Remote CLI CI verified across Ubuntu, Windows, and macOS on Node 20 and Node 22, including package artifact creation
   - Independent engineering and security audit completed; findings recorded in AUDIT_REPORT.md
-in_progress:
-  - Audit corrections are prepared on branch audit/2026-10-09-readiness in all three repositories
+  - Audit corrections merged through GitHub pull requests into all three main branches
+  - Audit branches deleted remotely and locally after merge verification
+in_progress: []
 blocked: []
 next_phase: 15+
-next_recommended_action: Review and merge the audit/2026-10-09-readiness branches, then decide on npm publication and funding submission timing
+next_recommended_action: Configure remaining GitHub protections, decide on npm publication, and prepare an evidence-based funding submission
 release_target: v0.1.0 by 2026-10-09T12:00:00+01:00
 known_risks:
   - Deadline leaves little time for broad ecosystem support
