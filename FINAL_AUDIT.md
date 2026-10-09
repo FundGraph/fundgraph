@@ -1,7 +1,7 @@
 # FundGraph v0.1.0 Final Audit
 
-Date: 2026-10-08
-Status: pre-publication release candidate; technically ready for publication after maintainer GitHub setup
+Date: 2026-10-09
+Status: public repository release candidate; npm publication and merge/release governance remain pending
 
 ## Scope
 
@@ -42,8 +42,8 @@ This audit covers the three-repository FundGraph workspace:
 ## Incomplete or deliberately pending work
 
 - The packages have not been published to npm.
-- No GitHub organization, repository, remote, tag, or push was created by this task.
-- Remote CI execution and hosted release automation remain pending the maintainer's repository setup.
+- The GitHub organization and three public repositories exist, and the local repositories track their `main` branches.
+- Remote CI has run successfully for `fundgraph-cli`; the current audit records the accessible organization state and limitations in `AUDIT_REPORT.md`.
 - The CLI's default directory analysis is local/offline; live provider orchestration is not wired into the user-facing command.
 - Signing/provenance publication and final external release review remain maintainer actions.
 
@@ -77,11 +77,10 @@ grant eligibility, or acceptance is claimed. The prepared submission brief is in
 
 ## Final maintainer actions
 
-1. Create the GitHub organization and three public repositories.
-2. Add remotes and push the clean commits from all three repositories.
-3. Run and review remote CI.
-4. Publish `@fundgraph/core` before `fundgraph`, following the compatibility policy.
-5. Claim the public GitHub project on Drips if applying to an eligible round.
-6. Add the public repository and scoped contribution opportunities to GrantFox if the relevant campaign accepts them.
+1. Review and merge the dedicated audit-fix branches; do not merge without maintainer review.
+2. Publish `@fundgraph/core` before `fundgraph`, following the compatibility policy, if npm publication is desired.
+3. Configure branch protection/rulesets, repository topics, organization profile metadata, Dependabot/security reporting, and any release provenance settings not yet enabled.
+4. Claim the public GitHub project on Drips if applying to an eligible round.
+5. Add the public repository and scoped contribution opportunities to GrantFox if the relevant campaign accepts them.
 
-No step above has been performed by Codex.
+The original local publication steps have been completed. The remaining steps are maintainer decisions or settings that this audit did not change.
