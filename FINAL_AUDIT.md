@@ -83,4 +83,4 @@ grant eligibility, or acceptance is claimed. The prepared submission brief is in
 4. Claim the public GitHub project on Drips if applying to an eligible round.
 5. Add the public repository and scoped contribution opportunities to GrantFox if the relevant campaign accepts them.
 
-The original local publication steps have been completed. The remaining steps are maintainer decisions or settings that this audit did not change.
+The original local publication steps have been completed. The audit remediation was merged through normal pull requests and the temporary audit branches were cleaned up. The remaining steps are maintainer decisions or settings that this audit did not change.

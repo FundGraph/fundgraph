@@ -66,7 +66,7 @@ Correction: state, changelog, decision records, and final-audit publication word
 
 Evidence: the three GitHub repositories had no visible `SECURITY.md` in the implementation repositories and no Dependabot configuration. This creates contributor ambiguity and delays dependency/action update visibility.
 
-Correction: concise security policies and monthly npm/GitHub Actions Dependabot configuration were added to `fundgraph-core` and `fundgraph-cli`. They are on the dedicated audit branch and are not merged into `main` by this audit.
+Correction: concise security policies and monthly npm/GitHub Actions Dependabot configuration were added to `fundgraph-core` and `fundgraph-cli`, then merged through pull request #1 in each implementation repository.
 
 ### P1 — CLI dependency lockfile is absent — outstanding
 
@@ -111,7 +111,7 @@ Residual risks remain: hostname checks do not resolve DNS and therefore do not i
 
 ## GitHub operations
 
-No default branch was changed. A dedicated local branch named `audit/2026-10-09-readiness` was created in each repository. Audit changes are intended for review and may be pushed as branch updates; no release, tag, force-push, merge, or repository/security-policy weakening was performed.
+The audit changes were reviewed and merged through normal pull request #1 flows. The verified merge commits are `017652e` (`fundgraph`), `dab328b` (`fundgraph-core`), and `5a54c15` (`fundgraph-cli`). The remote audit branches were removed by GitHub after merge, and the local audit branches were deleted only after local `main` was fast-forwarded to the merged commits. No release, tag, force-push, or security-policy weakening was performed.
 
 ## Funding-program readiness
 
@@ -126,9 +126,8 @@ FundGraph has a substantiated public-good problem statement and public source co
 
 ## Owner actions
 
-1. Review the audit branch in all three repositories and merge only the approved changes through pull requests.
-2. Configure branch protection/rulesets and repository security reporting in GitHub.
-3. Decide the npm publication/release path, then add the CLI lockfile and provenance/release checks.
-4. Re-run production dependency audits from a functioning network environment.
-5. Add organization profile metadata and repository topics if desired.
-6. Prepare funding submissions using the factual limitations above.
+1. Configure remaining branch protection/ruleset requirements and review repository security reporting in GitHub.
+2. Decide the npm publication/release path, then add the CLI lockfile and provenance/release checks.
+3. Re-run production dependency audits from a functioning network environment.
+4. Add organization profile metadata and repository topics if desired.
+5. Prepare funding submissions using the factual limitations above.
