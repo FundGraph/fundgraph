@@ -2,9 +2,9 @@
 
 ```yaml
 current_phase: 14
-current_status: pre-publication-ready
+current_status: public-repositories-audit-complete
 last_completed_phase: 14
-current_objective: Complete maintainer-owned GitHub publication and submission handoff; do not push without explicit authorization.
+current_objective: Review the independent readiness audit branch, merge approved fixes, and decide whether to publish npm packages.
 completed:
   - Phase 0 documentation and research foundation created
   - Project charter, requirements, architecture, data/evidence/security models documented
@@ -29,16 +29,23 @@ completed:
   - Phase 12 v0.1 documentation/demo verification, release notes, final audit, local artifact installation checks, and release limitations completed
   - Phase 13 external contributor issue/PR templates, adapter and fixture guide, compatibility policy, good-first issues, and maintainer runbook completed
   - Phase 14 baseline Go module discovery, malformed-input coverage, CLI integration, compatibility documentation, and explicit future-scope boundaries completed
-in_progress: []
+  - Public FundGraph organization and three repositories verified on GitHub
+  - Remote CLI CI verified across Ubuntu, Windows, and macOS on Node 20 and Node 22, including package artifact creation
+  - Independent engineering and security audit completed; findings recorded in AUDIT_REPORT.md
+in_progress:
+  - Audit corrections are prepared on branch audit/2026-10-09-readiness in all three repositories
 blocked: []
 next_phase: 15+
-next_recommended_action: Create the GitHub organization/repositories, add remotes, run remote CI, then review the funding submission brief before applying
+next_recommended_action: Review and merge the audit/2026-10-09-readiness branches, then decide on npm publication and funding submission timing
 release_target: v0.1.0 by 2026-10-09T12:00:00+01:00
 known_risks:
   - Deadline leaves little time for broad ecosystem support
   - Registry metadata and repository links can be stale or contradictory
   - Lockfile formats and workspace semantics vary by ecosystem
   - Network services can rate-limit or fail
+  - CLI has no committed package-lock.json until the @fundgraph/core publication dependency is resolved
+  - GitHub default branches currently have no branch protection/ruleset verified by this audit
+  - GitHub repository topics and organization profile metadata remain unset
 ```
 
 State is updated after every phase. This file is both human-readable and intentionally simple to parse.

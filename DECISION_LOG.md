@@ -93,3 +93,10 @@ source locators, and emits deterministic malformed-input diagnostics. It does no
 parse `go.work`, derive transitive Go edges, or claim Go registry/funding support. Those capabilities require separate
 evidence, fixtures, and acceptance criteria.
 
+## D-0020 - Public three-repository architecture confirmed
+
+Date: 2026-10-09. The authoritative current architecture is the three independent public repositories `FundGraph/fundgraph`,
+`FundGraph/fundgraph-core`, and `FundGraph/fundgraph-cli`. No `fundgraph-docs`, `fundgraph-action`, or Go-based core repository
+was found in the local workspace or accessible FundGraph organization. Older standalone-repository wording in D-0001 is superseded
+for the current public layout; the parent `FundGraph` directory remains a local workspace container without `.git`. No architecture
+migration is authorized by this audit.

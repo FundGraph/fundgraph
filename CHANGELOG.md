@@ -4,6 +4,8 @@ All notable changes are recorded here. The format follows Keep a Changelog conve
 
 ## [Unreleased]
 
+- Independent readiness audit completed on 2026-10-09; public repository state, remote CI, implementation claims, security controls, and release limitations are recorded in `AUDIT_REPORT.md`.
+- Audit branch adds repository-level security policies and Dependabot configuration to `fundgraph-core` and `fundgraph-cli`.
 - Repository and documentation foundation established.
 - Phase 1 core domain model, validation, deterministic serialization, error taxonomy, tests, and package baseline implemented.
 - Phase 2 CLI foundation implemented with help/version commands, bounded JSON input, text/JSON output, offline/strict flags, exit codes, and CLI tests.
