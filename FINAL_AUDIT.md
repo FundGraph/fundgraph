@@ -54,6 +54,14 @@ does not infer human identity, move money, manage wallets, donate, or execute ac
 be stale, missing, malformed, or contradictory. Public services can fail or rate-limit requests. DNS rebinding and
 deployment-specific network policy remain caller/operational responsibilities as documented in `SECURITY_AUDIT.md`.
 
+The current release candidate also has these explicit limitations:
+
+- npm packages are not yet published.
+- Go metadata and Go funding providers are not implemented.
+- Non-GitHub repository funding-file retrieval is not yet orchestrated.
+- Funding URLs require human review; FundGraph does not verify legitimacy or maintainer identity.
+- Live GitHub API inspection was unavailable during the latest local audit pass; current PR, ruleset, and organization claims must be rechecked before release.
+
 ## Security findings
 
 No unresolved high-risk finding was identified in the Phase 9 audit. The implementation rejects unsafe/local destinations

@@ -48,6 +48,9 @@ known_risks:
   - CLI has no committed package-lock.json until the @fundgraph/core publication dependency is resolved
   - Publication, release/tag creation, and funding-program submission remain owner-controlled actions
   - GitHub repository topics and organization profile metadata remain unset
+  - npm packages remain unpublished; Go metadata/funding and non-GitHub funding-file orchestration remain out of scope
+  - Funding URLs require human review and do not establish maintainer identity or legitimacy
+  - Latest local audit pass could not inspect the live GitHub API; PR, ruleset, and organization status require re-verification
 ```
 
 State is updated after every phase. This file is both human-readable and intentionally simple to parse.

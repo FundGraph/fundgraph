@@ -22,6 +22,9 @@ Status: pre-publication release candidate; technically ready for publication aft
 - FundGraph does not identify or verify individual humans, move money, manage wallets, or execute payments.
 - DNS rebinding protection is a deployment responsibility; explicit host allowlists are available for network callers.
 - GitHub organization/repositories, npm publication, and release signing remain maintainer actions.
+- Non-GitHub repository funding-file retrieval is not yet orchestrated.
+- Funding URLs require human review; FundGraph does not verify legitimacy or maintainer identity.
+- Live GitHub API inspection must be rechecked before release because it was unavailable during the latest local audit pass.
 
 ## Verification
 

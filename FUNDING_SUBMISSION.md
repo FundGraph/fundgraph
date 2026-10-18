@@ -73,4 +73,4 @@ on an idea or private roadmap. Campaign-specific rules must be checked at submis
 
 The project has no claimed external adoption, usage metrics, revenue, prior funding, or acceptance. The local release
 candidate is not the same as a public release. Funding declarations are not endorsements or proof of current maintainer
-status. The CLI directory workflow is offline/local by default; `--network` is an explicit public-metadata opt-in. Go metadata/funding support is not yet implemented.
+status. The CLI directory workflow is offline/local by default; `--network` is an explicit public-metadata opt-in. npm packages are not yet published; Go metadata/funding support and non-GitHub repository funding-file retrieval are not yet implemented. Funding URLs remain declarations for human review, not verified identities or endorsements. Live GitHub organization/PR/ruleset status must be rechecked before submission.

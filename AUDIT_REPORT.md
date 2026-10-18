@@ -131,3 +131,11 @@ FundGraph has a substantiated public-good problem statement and public source co
 3. Re-run production dependency audits from a functioning network environment.
 4. Add organization profile metadata and repository topics if desired.
 5. Prepare funding submissions using the factual limitations above.
+
+## Latest local-audit limitation update
+
+The later local orchestration audit could not connect to the live GitHub API from the execution environment. Therefore,
+current pull requests, rulesets, organization settings, and remote synchronization must be re-verified before release.
+The release candidate also remains limited by unpublished npm packages, discovery-only Go support, and the absence of
+non-GitHub repository funding-file orchestration. Funding URLs remain declarations requiring human review and do not
+establish maintainer identity or legitimacy.
