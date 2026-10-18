@@ -33,3 +33,9 @@ The system has six boundaries: input readers, normalized domain core, public met
 
 `fundgraph-core` uses `src/domain` for models and validation, `src/inputs` for manifest/lockfile readers, `src/metadata` for registry/repository normalization, `src/funding` for evidence parsers, `src/resolution` for relationship rules, `src/reporting` for serializers, `src/network` for injected request reliability and cache controls, and repository-local fixtures for deterministic inputs/responses. Phase 14 adds baseline Go `go.mod` discovery in `src/inputs/go.ts`; it does not execute the Go toolchain, fetch modules, parse `go.work`, or add Go metadata/funding providers. `fundgraph-cli` uses `src/options` and `src/main`.
 
+The `analyzeProject` orchestration API composes these boundaries for npm, PyPI, and Cargo: it discovers the local graph,
+fetches allowlisted registry payloads through `NetworkClient`, parses metadata and declared package funding, resolves
+relationships, and creates the report. The CLI exposes this only through explicit `--network`; its default directory
+mode remains local-only. Go discovery is intentionally not included in network orchestration because Go metadata and
+funding providers are not implemented.
+

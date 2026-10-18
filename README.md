@@ -13,9 +13,8 @@
 FundGraph is a local-first CLI and TypeScript library for dependency and funding-pathway analysis. It keeps source claims,
 conflicts, and uncertainty visible so maintainers and funders can review the result.
 
-> Current scope: the CLI discovers dependency graphs locally. Core library APIs parse recorded npm/PyPI/Cargo metadata
-> and funding evidence, resolve relationships, and create reports. The CLI does not yet orchestrate that full funding
-> analysis for arbitrary projects.
+> Current scope: the CLI discovers dependency graphs locally by default. With explicit `--network`, it orchestrates
+> npm/PyPI/Cargo metadata and declared funding evidence into a deterministic report. Go remains discovery-only.
 
 ## At a glance
 
@@ -40,8 +39,9 @@ flowchart LR
   G --> H[Versioned report API]
 ```
 
-The current command analyzes local inputs for npm, PyPI, Cargo, and baseline Go `go.mod` requirements. The evidence and
-relationship APIs support recorded npm/PyPI/Cargo data. Go metadata and funding providers are future scope.
+The current command analyzes local inputs for npm, PyPI, Cargo, and baseline Go `go.mod` requirements. Add explicit
+`--network` to orchestrate npm/PyPI/Cargo metadata and declared funding evidence into the report. Go metadata and
+funding providers remain future scope.
 
 ## Try it locally
 
@@ -58,6 +58,7 @@ npm run build
 node dist/main.js --help
 node dist/main.js analyze ../fundgraph-core/test/fixtures/npm-workspace --format text --offline
 node dist/main.js analyze ../fundgraph-core/test/fixtures/npm-workspace --format json --offline
+node dist/main.js analyze ./my-project --format json --network
 ```
 
 After the maintainer publishes compatible npm packages, installation will be:
@@ -72,7 +73,7 @@ fundgraph analyze ./my-project --format text --offline
 - Funding URLs are declarations to review, not endorsements or verified payment destinations.
 - Multiple or contradictory sources stay separate; ambiguous relationships are not silently guessed.
 - The system does not infer human identity, move money, manage wallets, or execute payments.
-- Project files are treated as data. Directory analysis is local and does not make hidden network requests.
+- Project files are treated as data. Directory analysis is local by default; `--network` is the explicit public-metadata opt-in.
 - Network helpers live in core and require explicit caller configuration; DNS isolation remains an operational responsibility.
 
 ## Documentation

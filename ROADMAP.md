@@ -182,11 +182,25 @@ guides. **Next:** Phase 14.
 
 **Decision and scope:** baseline Go module discovery was promoted from the backlog because it extends the existing input boundary with a deterministic, local-only parser and a useful fourth ecosystem. The slice supports `go.mod` module and `require` directives, block and single-line requirements, indirect requirements, bounded input, malformed-manifest diagnostics, stable module-path identity, and CLI directory integration. It deliberately does not invoke Go, fetch modules, parse `go.work`, resolve transitive Go graph edges, normalize Go registry metadata, or collect Go funding evidence. Those remain future candidates and are not implied by this phase.
 
-**Acceptance/exit:** a Go project with a valid `go.mod` produces deterministic dependency nodes with requested/resolved versions and source locators; malformed or oversized input produces diagnostics without guessed dependencies; existing ecosystem behavior remains unchanged; CLI integration continues to pass; and the scope/limitations are documented. Verified with the Go fixture and malformed-input tests, 40 core tests, 6 CLI tests, lint, typecheck, and builds. **Artifacts:** `fundgraph-core/src/inputs/go.ts`, `test/fixtures/go-module/go.mod`, discovery tests, updated fixture matrix, and compatibility/architecture/CLI documentation. **Next:** Phase 15+.
+**Acceptance/exit:** a Go project with a valid `go.mod` produces deterministic dependency nodes with requested/resolved versions and source locators; malformed or oversized input produces diagnostics without guessed dependencies; existing ecosystem behavior remains unchanged; CLI integration continues to pass; and the scope/limitations are documented. Verified with the Go fixture and malformed-input tests, 40 core tests, 6 CLI tests, lint, typecheck, and builds. **Artifacts:** `fundgraph-core/src/inputs/go.ts`, `test/fixtures/go-module/go.mod`, discovery tests, updated fixture matrix, and compatibility/architecture/CLI documentation. **Next:** Phase 15 end-to-end orchestration.
 
 **Skip/re-scope:** skip any expansion without maintainer or user evidence; preserve v0.1 simplicity. Future Go metadata, funding, and workspace work is explicitly re-scoped rather than assumed complete.
 
-## PHASE 15+ — Long-Term Development
+## PHASE 15 — End-to-End Funding Analysis Orchestration — COMPLETE
+
+**Purpose:** make the implemented core stages usable as one product workflow for arbitrary supported projects. **Prerequisites:** Phases 1–14.
+
+**Implemented:** `fundgraph-core` now exposes `analyzeProject`, which composes local dependency discovery, allowlisted npm/PyPI/Cargo registry metadata retrieval, package funding metadata parsing, evidence collection, relationship resolution, and deterministic report creation. `fundgraph-cli analyze --network` invokes this pipeline explicitly; default directory analysis remains local-only. Go remains discovery-only because Go metadata and funding providers are not implemented.
+
+**Security:** network access is opt-in and uses the existing bounded `NetworkClient`; registry hosts are allowlisted, responses are bounded, cache/offline controls remain available to library callers, and reports never endorse or execute funding actions.
+
+**Tests and acceptance:** the orchestration regression test uses a mocked registry response and verifies package, funding-source, evidence, and supported relationship output. Core passes 41 tests, lint, typecheck, build, and package dry-run. CLI passes 6 tests, lint, typecheck, and build. The CLI help and documentation expose the explicit `--network` contract.
+
+**Artifacts:** `fundgraph-core/src/analysis.ts`, `fundgraph-core/test/analysis.test.js`, exported core API, CLI network option, updated CLI/project documentation. **Next:** Phase 16+.
+
+**Skip/re-scope:** do not add Go metadata/funding, automatic provider endorsement, payments, or hidden network access without a separately documented decision and acceptance criteria.
+
+## PHASE 16+ — Long-Term Development
 
 **Purpose:** derive the next phase from the mission, requirements, architecture, backlog, issues, implementation state, ecosystem changes, and user needs. **Rule:** document the proposed phase in this roadmap before implementation. Never treat the end of this list as the end of the project.
 

@@ -41,7 +41,7 @@ Older project wording in decision D-0001 described a standalone repository. D-00
 
 ### Partially implemented or deliberately limited
 
-- The CLI directory workflow is local/offline and does not orchestrate live registry/provider requests. The core library has lower-level network and recorded-evidence APIs, but this is not the same as an end-to-end live CLI funding analysis.
+- The CLI directory workflow is local/offline by default. With explicit `--network`, it orchestrates registry metadata, package funding declarations, and GitHub `FUNDING.yml` evidence for npm, PyPI, and Cargo through the core library; Go remains discovery-only.
 - Go support is baseline dependency discovery only. It does not claim Go registry metadata, funding metadata, workspace, or provider support.
 - Funding URLs are declarations and evidence sources, not proof of current maintainer identity, ownership, endorsement, or payment legitimacy.
 - DNS rebinding protection is not complete in the library's hostname-only private-address check; callers requiring that guarantee need explicit allowlists and network-level controls.

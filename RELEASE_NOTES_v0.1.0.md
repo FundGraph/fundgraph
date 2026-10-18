@@ -17,7 +17,7 @@ Status: pre-publication release candidate; technically ready for publication aft
 
 ## Deliberate limitations
 
-- The current CLI directory analyzer is local/offline and does not silently fetch live registry or provider data.
+- The current CLI directory analyzer is local/offline by default; explicit `--network` fetches public registry metadata and GitHub `FUNDING.yml` evidence for the implemented npm, PyPI, and Cargo pipeline.
 - Funding endpoints are declarations to review, not verified payment destinations or endorsements.
 - FundGraph does not identify or verify individual humans, move money, manage wallets, or execute payments.
 - DNS rebinding protection is a deployment responsibility; explicit host allowlists are available for network callers.
@@ -25,4 +25,4 @@ Status: pre-publication release candidate; technically ready for publication aft
 
 ## Verification
 
-The release candidate was verified locally on Windows with core lint/typecheck/build, 40 core tests, CLI lint/typecheck/build, 6 CLI tests, `npm ci` for core, sibling-core CLI installation, Go fixture CLI smoke analysis, package dry-runs, and production dependency audits. CI is configured for Ubuntu, Windows, and macOS on Node 20 and Node 22 but has not run remotely because no GitHub remotes exist yet.
+The release candidate was verified locally on Windows with core lint/typecheck/build, 41 core tests, CLI lint/typecheck/build, 6 CLI tests, `npm ci` for core, sibling-core CLI installation, Go fixture CLI smoke analysis, package dry-runs, and production dependency audits. CI is configured for Ubuntu, Windows, and macOS on Node 20 and Node 22. Remote publication and release execution remain maintainer-controlled actions.

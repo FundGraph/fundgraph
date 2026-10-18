@@ -4,6 +4,8 @@ All notable changes are recorded here. The format follows Keep a Changelog conve
 
 ## [Unreleased]
 
+- Added end-to-end opt-in project analysis for npm, PyPI, and Cargo: dependency discovery now composes registry metadata, package funding declarations, GitHub `FUNDING.yml` evidence, relationship resolution, and deterministic reports through `--network`.
+- Kept local/offline analysis as the CLI default and documented Go as discovery-only.
 - Independent readiness audit completed on 2026-10-09; public repository state, remote CI, implementation claims, security controls, and release limitations are recorded in `AUDIT_REPORT.md`.
 - Audit branch adds repository-level security policies and Dependabot configuration to `fundgraph-core` and `fundgraph-cli`.
 - Audit remediation was merged through pull requests into all three `main` branches; the temporary audit branches were then removed after verification.

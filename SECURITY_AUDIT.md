@@ -27,7 +27,7 @@ This review covers the Phase 8 network and cache boundary, model validation, CLI
 
 ## Findings and residual risks
 
-No high-risk findings remain from this review. Hostname-based private-address checks do not perform DNS resolution, so callers requiring protection against DNS rebinding must use an explicit allowlist and a controlled network environment. Redirects are rejected rather than dynamically revalidated. The CLI’s current directory analysis remains offline and does not invoke live network requests.
+No high-risk findings remain from this review. Hostname-based private-address checks do not perform DNS resolution, so callers requiring protection against DNS rebinding must use an explicit allowlist and a controlled network environment. Redirects are rejected rather than dynamically revalidated. The CLI’s directory analysis remains offline by default; live registry and GitHub metadata requests require explicit `--network`.
 
 ## Decision
 
