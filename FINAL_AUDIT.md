@@ -33,6 +33,7 @@ This audit covers the three-repository FundGraph workspace:
 - Core and CLI `npm pack --dry-run` checks passed.
 - Both generated npm tarballs installed successfully in isolated temporary projects; the published CLI `fundgraph@0.1.1` and core `@fundgraph/core@0.1.0` were also installed through npm.
 - A clean Windows global-install smoke test passed: `fundgraph --version` returned `0.1.1` and `fundgraph --help` rendered the command contract.
+- Phase 16 validation repeated package installation and verified deterministic offline analysis of the shared fixture and representative repositories; the CLI repository's expected `LOCKFILE_MISSING` partial result was classified rather than treated as a failure.
 - README/demo commands and CLI help/error/report behavior were checked against the current implementation.
 - CLI Go fixture smoke test passed with three discovered Go dependencies and no diagnostics.
 - Phase 9 production dependency audits reported zero vulnerabilities. A fresh audit was attempted during this handoff but
@@ -60,6 +61,8 @@ The current release candidate also has these explicit limitations:
 - Go metadata and Go funding providers are not implemented.
 - Non-GitHub repository funding-file retrieval is not yet orchestrated.
 - Funding URLs require human review; FundGraph does not verify legitimacy or maintainer identity.
+- Published npm metadata does not currently expose repository URLs; this is a release-polish finding for a future patch release.
+- The CLI repository has no committed lockfile, so its own offline analysis can report `LOCKFILE_MISSING` without guessing versions.
 - Live GitHub API inspection was unavailable during the latest local audit pass; current PR, ruleset, and organization claims must be rechecked before release.
 
 ## Security findings

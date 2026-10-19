@@ -1,10 +1,10 @@
 # Project state
 
 ```yaml
-current_phase: 15
-current_status: published-v0.1-release-with-post-publication-validation
-last_completed_phase: 15
-current_objective: Complete post-publication validation and prepare evidence-based Drips/GrantFox submission materials without overstating adoption or eligibility.
+current_phase: 16
+current_status: phase-16-complete-with-release-polish-findings
+last_completed_phase: 16
+current_objective: Review the Phase 17 release metadata and compatibility proposal before implementing any expansion.
 completed:
   - Phase 0 documentation and research foundation created
   - Project charter, requirements, architecture, data/evidence/security models documented
@@ -39,10 +39,13 @@ completed:
   - Published fundgraph@0.1.1 to npm with the Windows executable fix
   - Merged the CLI Windows entrypoint fix through PR #9 as commit ff189c1
   - Verified clean global installation, fundgraph --version, and fundgraph --help on Windows
+  - Phase 16 post-release validation completed; results recorded in PHASE_16_VALIDATION.md
+  - Deterministic published-CLI fixture analysis verified with repeated identical JSON output
+  - Representative core and CLI repository analyses completed offline with expected diagnostics classified
 in_progress: []
 blocked: []
-next_phase: 16+
-next_recommended_action: Prepare the factual Drips/GrantFox submission, collect real usage feedback, and define Phase 16 before adding features
+next_phase: 17
+next_recommended_action: Review and approve or re-scope Phase 17 release metadata and compatibility hardening; do not add ecosystems yet
 release_target: npm @fundgraph/core@0.1.0 and fundgraph@0.1.1 published; no GitHub release/tag claimed
 known_risks:
   - Deadline leaves little time for broad ecosystem support
@@ -54,7 +57,9 @@ known_risks:
   - GitHub repository topics and organization profile metadata remain unset
   - Go metadata/funding and non-GitHub funding-file orchestration remain out of scope
   - Funding URLs require human review and do not establish maintainer identity or legitimacy
-  - Latest local audit pass could not inspect the live GitHub API; PR, ruleset, and organization status require re-verification
+  - Published npm metadata does not currently expose repository URLs
+  - CLI has no committed package-lock.json; repository analysis reports LOCKFILE_MISSING as an explicit partial result
+  - No external adoption or maintainer feedback has been verified
 ```
 
 State is updated after every phase. This file is both human-readable and intentionally simple to parse.

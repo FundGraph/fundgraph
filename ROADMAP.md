@@ -196,11 +196,11 @@ guides. **Next:** Phase 14.
 
 **Tests and acceptance:** the orchestration regression test uses a mocked registry response and verifies package, funding-source, evidence, and supported relationship output. Core passes 41 tests, lint, typecheck, build, and package dry-run. CLI passes 6 tests, lint, typecheck, and build. The CLI help and documentation expose the explicit `--network` contract.
 
-**Artifacts:** `fundgraph-core/src/analysis.ts`, `fundgraph-core/test/analysis.test.js`, exported core API, CLI network option, updated CLI/project documentation. **Next:** Phase 16+.
+**Artifacts:** `fundgraph-core/src/analysis.ts`, `fundgraph-core/test/analysis.test.js`, exported core API, CLI network option, updated CLI/project documentation. **Next:** Phase 16.
 
 **Skip/re-scope:** do not add Go metadata/funding, automatic provider endorsement, payments, or hidden network access without a separately documented decision and acceptance criteria.
 
-## PHASE 16 — Post-release Validation and Submission Readiness — PROPOSED
+## PHASE 16 — Post-release Validation and Submission Readiness — COMPLETE
 
 **Purpose:** validate the first public npm package workflow with reproducible usage evidence before expanding product scope.
 
@@ -242,7 +242,31 @@ guides. **Next:** Phase 14.
 
 **Skip/re-scope:** skip expansion work if no representative usage evidence exists; re-scope to release correction if package installation, CLI behavior, security, or documentation defects are found.
 
-## PHASE 17+ — Long-Term Development
+**Completed:** published package installation, registry visibility, CLI help/version, deterministic fixture analysis, representative offline repository analysis, package compatibility review, submission-material review, and implementation verification were completed. The validation record is [`PHASE_16_VALIDATION.md`](PHASE_16_VALIDATION.md). The CLI repository's missing-lockfile partial result and npm repository-metadata omissions are recorded as remaining P1 release-polish findings. No contributor issues or ecosystem expansion were created.
+
+## PHASE 17 — Release Metadata and Compatibility Hardening — PROPOSED
+
+**Purpose:** address the concrete Phase 16 release-quality findings before selecting a new ecosystem or funding provider.
+
+**Why it exists:** published packages work, but npm repository metadata is absent and the CLI has no committed lockfile. These issues affect discoverability and reproducibility more directly than speculative feature expansion.
+
+**Prerequisites:** Phase 16 complete; owner approval for any new npm patch publication or lockfile policy change; no need to create contributor issues.
+
+**Objectives:** decide and document the CLI lockfile strategy; add verified repository metadata to future package manifests; define a cross-repository compatibility matrix; collect real maintainer/user feedback when available; keep funding claims and adoption statements factual.
+
+**Expected files/components:** `fundgraph-core/package.json`, `fundgraph-cli/package.json`, lockfile policy/compatibility documentation, release notes, and package metadata tests. New package versions or publication are owner-controlled actions.
+
+**Tests required:** package metadata assertions, clean-install tests, core/CLI compatibility checks, lint/typecheck/test/build/package dry-runs, and a repeated CLI smoke analysis.
+
+**Security considerations:** repository URLs must be verified before publication; lockfiles must not contain credentials or private registry data; no private source may be sent to external services.
+
+**Acceptance criteria:** the lockfile decision is explicit; verified repository metadata is present in the next package release or intentionally deferred with rationale; compatible core/CLI versions are documented; no unsupported ecosystem/provider is added.
+
+**Exit criteria:** release-polish findings are resolved or explicitly accepted, and only then is a demand-backed feature phase proposed.
+
+**Skip/re-scope:** if package metadata and reproducibility are acceptable to the owner, skip implementation and record the decision; if real usage identifies a more urgent correctness defect, re-scope to that defect with regression coverage.
+
+## PHASE 18+ — Long-Term Development
 
 **Purpose:** derive each later phase from the mission, requirements, architecture, backlog, verified usage evidence, ecosystem changes, and user needs. **Rule:** document the proposed phase in this roadmap before implementation. Never treat the end of this list as the end of the project.
 
