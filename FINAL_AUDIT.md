@@ -1,7 +1,7 @@
 # FundGraph v0.1.0 Final Audit
 
-Date: 2026-10-18
-Status: pre-publication release candidate; end-to-end opt-in analysis is implemented, while npm publication and final release governance remain pending
+Date: 2026-10-19
+Status: published npm package baseline with post-publication validation; end-to-end opt-in analysis is implemented, while GitHub release/tag governance remains pending
 
 ## Scope
 
@@ -31,7 +31,8 @@ This audit covers the three-repository FundGraph workspace:
 - Core clean installation with `npm ci` passed.
 - CLI installation through the documented sibling-core development path passed.
 - Core and CLI `npm pack --dry-run` checks passed.
-- Both generated npm tarballs installed successfully in isolated temporary projects; the packaged CLI reported version `0.1.0` and exposed its executable bin entries.
+- Both generated npm tarballs installed successfully in isolated temporary projects; the published CLI `fundgraph@0.1.1` and core `@fundgraph/core@0.1.0` were also installed through npm.
+- A clean Windows global-install smoke test passed: `fundgraph --version` returned `0.1.1` and `fundgraph --help` rendered the command contract.
 - README/demo commands and CLI help/error/report behavior were checked against the current implementation.
 - CLI Go fixture smoke test passed with three discovered Go dependencies and no diagnostics.
 - Phase 9 production dependency audits reported zero vulnerabilities. A fresh audit was attempted during this handoff but
@@ -41,7 +42,7 @@ This audit covers the three-repository FundGraph workspace:
 
 ## Incomplete or deliberately pending work
 
-- The packages have not been published to npm.
+- npm packages are published: `@fundgraph/core@0.1.0` and `fundgraph@0.1.1`.
 - The GitHub organization and three public repositories exist, and the local repositories track their `main` branches.
 - Remote CI has run successfully for `fundgraph-cli`; the current audit records the accessible organization state and limitations in `AUDIT_REPORT.md`.
 - The CLI's default directory analysis is local/offline; explicit `--network` now orchestrates registry metadata, package funding, and GitHub `FUNDING.yml` evidence for npm, PyPI, and Cargo.
@@ -56,7 +57,6 @@ deployment-specific network policy remain caller/operational responsibilities as
 
 The current release candidate also has these explicit limitations:
 
-- npm packages are not yet published.
 - Go metadata and Go funding providers are not implemented.
 - Non-GitHub repository funding-file retrieval is not yet orchestrated.
 - Funding URLs require human review; FundGraph does not verify legitimacy or maintainer identity.
@@ -72,10 +72,9 @@ documented rather than claimed solved.
 
 ## Release decision
 
-The v0.1 acceptance criteria are satisfied for a pre-publication release candidate. The implementation, documentation,
-tests, package artifacts, security controls, contributor workflow, and submission materials are ready for public release.
-The release is not publicly published because the required GitHub/npm resources are external maintainer actions. No
-remote, tag, or push was created by this task.
+The v0.1 implementation and npm package acceptance criteria are satisfied for the published package baseline. The
+implementation, documentation, tests, package artifacts, security controls, contributor workflow, and submission
+materials are ready for public evaluation. No GitHub release/tag or funding-program submission is claimed.
 
 ## Funding-submission readiness
 
@@ -85,10 +84,11 @@ grant eligibility, or acceptance is claimed. The prepared submission brief is in
 
 ## Final maintainer actions
 
-1. Review and merge the dedicated audit-fix branches; do not merge without maintainer review.
-2. Publish `@fundgraph/core` before `fundgraph`, following the compatibility policy, if npm publication is desired.
-3. Configure branch protection/rulesets, repository topics, organization profile metadata, Dependabot/security reporting, and any release provenance settings not yet enabled.
-4. Claim the public GitHub project on Drips if applying to an eligible round.
-5. Add the public repository and scoped contribution opportunities to GrantFox if the relevant campaign accepts them.
+1. Decide whether to create a GitHub release/tag for the published package baseline.
+2. Configure repository topics, organization profile metadata, Dependabot/security reporting, and any release provenance settings not yet enabled.
+3. Claim the public GitHub project on Drips if applying to an eligible round.
+4. Add the public repository and scoped contribution opportunities to GrantFox if the relevant campaign accepts them.
 
-The original local publication steps have been completed. The audit remediation was merged through normal pull requests and the temporary audit branches were cleaned up. The remaining steps are maintainer decisions or settings that this audit did not change.
+The npm publication steps have been completed. The audit remediation and CLI executable fix were merged through normal
+pull requests. The remaining steps are maintainer decisions, platform settings, and submission actions that this audit
+did not change.

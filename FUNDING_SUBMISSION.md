@@ -28,6 +28,7 @@ useful without credentials and does not move money, manage wallets, execute paym
 - Deterministic reports with evidence drill-down and limitations.
 - Secure, opt-in network primitives with bounded retries, cache controls, and offline replay.
 - TypeScript core library plus `fundgraph` CLI in three independent repositories.
+- Published npm packages: `@fundgraph/core@0.1.0` and `fundgraph@0.1.1`; clean Windows global installation verified.
 - 41 core tests and 6 CLI tests passing locally, with lint/typecheck/build/package checks.
 
 ## Why public-good funding would help
@@ -41,8 +42,8 @@ fund through existing workflows.
 
 These are proposed work packages, not completed work:
 
-1. **Public release and validation:** publish the three repositories, run remote CI, publish compatible npm artifacts,
-   and collect feedback from maintainers.
+1. **Post-publication validation:** collect feedback from maintainers and verify the published CLI/core workflow in
+   representative public projects without claiming adoption metrics.
 2. **Evidence coverage:** add more recorded ecosystem/provider fixtures and improve contradiction and missing-data reports.
 3. **Contributor growth:** maintain contributor documentation, add bounded issues, and review external adapter/fixture PRs.
 4. **Reproducible sustainability reports:** improve offline snapshots or export integrations only after real user demand.
@@ -71,6 +72,9 @@ on an idea or private roadmap. Campaign-specific rules must be checked at submis
 
 ## Honest limitations
 
-The project has no claimed external adoption, usage metrics, revenue, prior funding, or acceptance. The local release
-candidate is not the same as a public release. Funding declarations are not endorsements or proof of current maintainer
-status. The CLI directory workflow is offline/local by default; `--network` is an explicit public-metadata opt-in. npm packages are not yet published; Go metadata/funding support and non-GitHub repository funding-file retrieval are not yet implemented. Funding URLs remain declarations for human review, not verified identities or endorsements. Live GitHub organization/PR/ruleset status must be rechecked before submission.
+The project has no claimed external adoption, usage metrics, revenue, prior funding, or acceptance. Published packages are
+available, but publication is not evidence of adoption. Funding declarations are not endorsements or proof of current
+maintainer status. The CLI directory workflow is offline/local by default; `--network` is an explicit public-metadata
+opt-in. Go metadata/funding support and non-GitHub repository funding-file retrieval are not yet implemented. Funding
+URLs remain declarations for human review, not verified identities or endorsements. Live GitHub organization, ruleset,
+and campaign requirements must be rechecked before submission.

@@ -1,6 +1,6 @@
 # FundGraph v0.1.0 release notes
 
-Status: pre-publication release candidate; technically ready for publication after maintainer GitHub setup.
+Status: published package baseline. `@fundgraph/core@0.1.0` and `fundgraph@0.1.1` are available on npm.
 
 ## Included
 
@@ -21,11 +21,11 @@ Status: pre-publication release candidate; technically ready for publication aft
 - Funding endpoints are declarations to review, not verified payment destinations or endorsements.
 - FundGraph does not identify or verify individual humans, move money, manage wallets, or execute payments.
 - DNS rebinding protection is a deployment responsibility; explicit host allowlists are available for network callers.
-- GitHub organization/repositories, npm publication, and release signing remain maintainer actions.
+- GitHub release/tag creation and release signing remain maintainer actions.
 - Non-GitHub repository funding-file retrieval is not yet orchestrated.
 - Funding URLs require human review; FundGraph does not verify legitimacy or maintainer identity.
-- Live GitHub API inspection must be rechecked before release because it was unavailable during the latest local audit pass.
+- Live GitHub organization, ruleset, and campaign requirements must be rechecked before submission.
 
 ## Verification
 
-The release candidate was verified locally on Windows with core lint/typecheck/build, 41 core tests, CLI lint/typecheck/build, 6 CLI tests, `npm ci` for core, sibling-core CLI installation, Go fixture CLI smoke analysis, package dry-runs, and production dependency audits. CI is configured for Ubuntu, Windows, and macOS on Node 20 and Node 22. Remote publication and release execution remain maintainer-controlled actions.
+The release was verified locally on Windows with core lint/typecheck/build, 41 core tests, CLI lint/typecheck/build, 6 CLI tests, `npm ci` for core, sibling-core CLI installation, Go fixture CLI smoke analysis, package dry-runs, and production dependency audits. CI is configured for Ubuntu, Windows, and macOS on Node 20 and Node 22. A clean global installation of `fundgraph@0.1.1` was verified; GitHub release/tag creation and funding-program submission remain maintainer-controlled actions.

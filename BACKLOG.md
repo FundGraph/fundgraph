@@ -2,6 +2,9 @@
 
 Backlog items are candidates, not commitments. A phase or decision must promote an item before implementation.
 
+Phase 16 validation gate: collect reproducible post-publication usage evidence before promoting any expansion item.
+Do not create contributor issues as part of this gate without separate authorization.
+
 - Extend Go support with `go.work`, module graph edges, registry metadata, and funding evidence only after the baseline discovery slice demonstrates demand.
 - Explore offline registry snapshots for reproducible audits.
 - Add SARIF export if consumers need a format beyond the Phase 7 machine-readable JSON report.

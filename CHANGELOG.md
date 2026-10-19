@@ -25,7 +25,9 @@ All notable changes are recorded here. The format follows Keep a Changelog conve
 - Phase 13 external contributor readiness completed with issue/PR templates, adapter and fixture guidance, compatibility policy, good-first contribution guidance, and maintainer escalation/release runbooks.
 - Phase 14 baseline Go module discovery added with deterministic `go.mod` parsing, malformed-input diagnostics, stable module-path identity, fixtures, tests, CLI integration, and explicit re-scoping of Go metadata/funding/workspace features.
 - Pre-publication readiness completed with a corrected final audit, funding submission brief, publishing handoff, current artifact installation verification, and explicit external-publication boundaries.
+- Published `@fundgraph/core@0.1.0` and `fundgraph@0.1.1` to npm. Verified a clean Windows global installation and merged the CLI executable fix through PR #9.
 
-## [0.1.0] - Unreleased
+## [0.1.0] - Published package baseline
 
-- Release candidate prepared locally; publication remains pending maintainer-created GitHub/npm resources.
+- Core library package published as `@fundgraph/core@0.1.0`.
+- CLI package baseline published as `fundgraph@0.1.0`; the corrected Windows executable is published as `fundgraph@0.1.1`.
