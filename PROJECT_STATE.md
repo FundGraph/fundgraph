@@ -1,10 +1,10 @@
 # Project state
 
 ```yaml
-current_phase: 16
-current_status: phase-16-complete-with-release-polish-findings
-last_completed_phase: 16
-current_objective: Review the Phase 17 release metadata and compatibility proposal before implementing any expansion.
+current_phase: 17
+current_status: phase-17-complete
+last_completed_phase: 17
+current_objective: Collect real usage feedback and derive the next demand-backed phase without speculative ecosystem expansion.
 completed:
   - Phase 0 documentation and research foundation created
   - Project charter, requirements, architecture, data/evidence/security models documented
@@ -42,23 +42,25 @@ completed:
   - Phase 16 post-release validation completed; results recorded in PHASE_16_VALIDATION.md
   - Deterministic published-CLI fixture analysis verified with repeated identical JSON output
   - Representative core and CLI repository analyses completed offline with expected diagnostics classified
+  - Phase 17 release metadata and compatibility hardening completed; results recorded in PHASE_17_VALIDATION.md
+  - Published @fundgraph/core@0.1.1 verified in the public npm registry
+  - Published fundgraph@0.1.2 verified as the public npm latest version
+  - CLI repository metadata, explicit executable mapping, registry lockfile, and metadata regression tests merged through PR #10
+  - Clean Windows global installation of fundgraph@0.1.2 verified with @fundgraph/core@0.1.1
 in_progress: []
 blocked: []
-next_phase: 17
-next_recommended_action: Review and approve or re-scope Phase 17 release metadata and compatibility hardening; do not add ecosystems yet
-release_target: npm @fundgraph/core@0.1.0 and fundgraph@0.1.1 published; no GitHub release/tag claimed
+next_phase: 18
+next_recommended_action: Collect real usage feedback and document a demand-backed Phase 18 before implementation; do not add ecosystems speculatively
+release_target: npm @fundgraph/core@0.1.1 and fundgraph@0.1.2 published and publicly verified; no GitHub release/tag claimed
 known_risks:
   - Deadline leaves little time for broad ecosystem support
   - Registry metadata and repository links can be stale or contradictory
   - Lockfile formats and workspace semantics vary by ecosystem
   - Network services can rate-limit or fail
-  - CLI has no committed package-lock.json until the @fundgraph/core publication dependency is resolved
   - GitHub release/tag creation and funding-program submission remain owner-controlled actions
   - GitHub repository topics and organization profile metadata remain unset
   - Go metadata/funding and non-GitHub funding-file orchestration remain out of scope
   - Funding URLs require human review and do not establish maintainer identity or legitimacy
-  - Published npm metadata does not currently expose repository URLs
-  - CLI has no committed package-lock.json; repository analysis reports LOCKFILE_MISSING as an explicit partial result
   - No external adoption or maintainer feedback has been verified
 ```
 

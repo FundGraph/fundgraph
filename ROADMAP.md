@@ -244,7 +244,7 @@ guides. **Next:** Phase 14.
 
 **Completed:** published package installation, registry visibility, CLI help/version, deterministic fixture analysis, representative offline repository analysis, package compatibility review, submission-material review, and implementation verification were completed. The validation record is [`PHASE_16_VALIDATION.md`](PHASE_16_VALIDATION.md). The CLI repository's missing-lockfile partial result and npm repository-metadata omissions are recorded as remaining P1 release-polish findings. No contributor issues or ecosystem expansion were created.
 
-## PHASE 17 — Release Metadata and Compatibility Hardening — PROPOSED
+## PHASE 17 — Release Metadata and Compatibility Hardening — COMPLETE
 
 **Purpose:** address the concrete Phase 16 release-quality findings before selecting a new ecosystem or funding provider.
 
@@ -265,6 +265,10 @@ guides. **Next:** Phase 14.
 **Exit criteria:** release-polish findings are resolved or explicitly accepted, and only then is a demand-backed feature phase proposed.
 
 **Skip/re-scope:** if package metadata and reproducibility are acceptable to the owner, skip implementation and record the decision; if real usage identifies a more urgent correctness defect, re-scope to that defect with regression coverage.
+
+**Completed:** `@fundgraph/core@0.1.1` and `fundgraph@0.1.2` were published and verified in the public npm registry. The CLI gained canonical npm discoverability metadata, an explicit `fundgraph` executable mapping, a committed registry lockfile pinned to `@fundgraph/core@0.1.1`, and package metadata regression tests. PR #10 merged the CLI changes through the normal GitHub path as `ed3e2e02d9b2666f4400c751c8aab7089d4d92e5`. Local validation, cross-platform CI, package-artifact checks, public npm metadata checks, and a clean Windows global install all passed. Detailed evidence is in [`PHASE_17_VALIDATION.md`](PHASE_17_VALIDATION.md). No contributor issues or ecosystem expansion were created.
+
+**Next:** Phase 18 must be derived from real usage feedback and documented before implementation. Candidate directions remain non-GitHub funding-file orchestration, complete Go metadata/funding support, improved CLI report usability, or offline registry snapshots, but none is approved until demand and acceptance criteria are recorded.
 
 ## PHASE 18+ — Long-Term Development
 

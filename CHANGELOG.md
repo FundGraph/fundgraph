@@ -4,6 +4,10 @@ All notable changes are recorded here. The format follows Keep a Changelog conve
 
 ## [Unreleased]
 
+- Completed Phase 17 release metadata and compatibility hardening. Published and publicly verified `@fundgraph/core@0.1.1` and `fundgraph@0.1.2`.
+- Added canonical CLI npm metadata, an explicit executable mapping, a committed registry lockfile pinned to `@fundgraph/core@0.1.1`, and package metadata regression coverage.
+- Verified CLI lint, typecheck, tests, build, package dry-run, cross-platform CI, package-artifact checks, and a clean Windows global install.
+
 - Added end-to-end opt-in project analysis for npm, PyPI, and Cargo: dependency discovery now composes registry metadata, package funding declarations, GitHub `FUNDING.yml` evidence, relationship resolution, and deterministic reports through `--network`.
 - Kept local/offline analysis as the CLI default and documented Go as discovery-only.
 - Independent readiness audit completed on 2026-10-09; public repository state, remote CI, implementation claims, security controls, and release limitations are recorded in `AUDIT_REPORT.md`.

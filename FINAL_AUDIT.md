@@ -1,7 +1,7 @@
 # FundGraph v0.1.0 Final Audit
 
 Date: 2026-10-19
-Status: published npm package baseline with post-publication validation; end-to-end opt-in analysis is implemented, while GitHub release/tag governance remains pending
+Status: published npm package baseline with Phase 17 release-polish validation complete; GitHub release/tag governance remains pending
 
 ## Scope
 
@@ -34,6 +34,8 @@ This audit covers the three-repository FundGraph workspace:
 - Both generated npm tarballs installed successfully in isolated temporary projects; the published CLI `fundgraph@0.1.1` and core `@fundgraph/core@0.1.0` were also installed through npm.
 - A clean Windows global-install smoke test passed: `fundgraph --version` returned `0.1.1` and `fundgraph --help` rendered the command contract.
 - Phase 16 validation repeated package installation and verified deterministic offline analysis of the shared fixture and representative repositories; the CLI repository's expected `LOCKFILE_MISSING` partial result was classified rather than treated as a failure.
+- Phase 17 published and publicly verified `@fundgraph/core@0.1.1` and `fundgraph@0.1.2`; the CLI now has canonical npm metadata, an explicit executable mapping, and a committed registry lockfile. PR #10 merged as `ed3e2e02d9b2666f4400c751c8aab7089d4d92e5`.
+- Phase 17 clean-user verification passed on Windows: global `fundgraph@0.1.2` installed `@fundgraph/core@0.1.1`, `fundgraph --version` returned `0.1.2`, and `fundgraph --help` rendered successfully.
 - README/demo commands and CLI help/error/report behavior were checked against the current implementation.
 - CLI Go fixture smoke test passed with three discovered Go dependencies and no diagnostics.
 - Phase 9 production dependency audits reported zero vulnerabilities. A fresh audit was attempted during this handoff but
@@ -43,7 +45,7 @@ This audit covers the three-repository FundGraph workspace:
 
 ## Incomplete or deliberately pending work
 
-- npm packages are published: `@fundgraph/core@0.1.0` and `fundgraph@0.1.1`.
+- npm packages are published: `@fundgraph/core@0.1.1` and `fundgraph@0.1.2`.
 - The GitHub organization and three public repositories exist, and the local repositories track their `main` branches.
 - Remote CI has run successfully for `fundgraph-cli`; the current audit records the accessible organization state and limitations in `AUDIT_REPORT.md`.
 - The CLI's default directory analysis is local/offline; explicit `--network` now orchestrates registry metadata, package funding, and GitHub `FUNDING.yml` evidence for npm, PyPI, and Cargo.
@@ -61,8 +63,6 @@ The current release candidate also has these explicit limitations:
 - Go metadata and Go funding providers are not implemented.
 - Non-GitHub repository funding-file retrieval is not yet orchestrated.
 - Funding URLs require human review; FundGraph does not verify legitimacy or maintainer identity.
-- Published npm metadata does not currently expose repository URLs; this is a release-polish finding for a future patch release.
-- The CLI repository has no committed lockfile, so its own offline analysis can report `LOCKFILE_MISSING` without guessing versions.
 - Live GitHub API inspection was unavailable during the latest local audit pass; current PR, ruleset, and organization claims must be rechecked before release.
 
 ## Security findings
