@@ -29,6 +29,8 @@ useful without credentials and does not move money, manage wallets, execute paym
 - Secure, opt-in network primitives with bounded retries, cache controls, and offline replay.
 - TypeScript core library plus `fundgraph` CLI in three independent repositories.
 - Published npm packages: `@fundgraph/core@0.1.0` and `fundgraph@0.1.1`; clean Windows global installation verified.
+- Phase 16 validation verified deterministic offline fixture analysis and representative repository analysis; no external
+  adoption or maintainer-feedback claim is made.
 - 41 core tests and 6 CLI tests passing locally, with lint/typecheck/build/package checks.
 
 ## Why public-good funding would help

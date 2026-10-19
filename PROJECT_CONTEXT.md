@@ -36,8 +36,9 @@ The repositories work together as `fundgraph-cli` → `fundgraph-core`; `fundgra
 Phases 0–15 are complete for the published v0.1 package baseline. The implementation supports npm, PyPI, Cargo, and
 baseline Go module discovery, while metadata/funding evidence remains implemented for the original v0.1 ecosystems.
 `@fundgraph/core@0.1.0` and `fundgraph@0.1.1` are published on npm, and clean Windows installation is verified.
-Contributor onboarding, adapter guidance, compatibility policy, and maintainer escalation are documented. Phase 16 is
-post-release validation and submission readiness; it is proposed, not complete.
+Contributor onboarding, adapter guidance, compatibility policy, and maintainer escalation are documented. Phase 16
+post-release validation and submission readiness is complete; Phase 17 release metadata and compatibility hardening is
+proposed, not started.
 
 ## Relationship to other projects
 
