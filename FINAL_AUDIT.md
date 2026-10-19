@@ -1,7 +1,7 @@
 # FundGraph v0.1.0 Final Audit
 
-Date: 2026-10-09
-Status: public repository release candidate; npm publication and merge/release governance remain pending
+Date: 2026-10-18
+Status: pre-publication release candidate; end-to-end opt-in analysis is implemented, while npm publication and final release governance remain pending
 
 ## Scope
 
@@ -26,7 +26,7 @@ This audit covers the three-repository FundGraph workspace:
 
 ## Verification results
 
-- `fundgraph-core`: lint, typecheck, build, and 40 tests passed locally.
+- `fundgraph-core`: lint, typecheck, build, and 41 tests passed locally; two cache tests are environment-blocked under the restricted Windows sandbox because atomic rename is denied.
 - `fundgraph-cli`: lint, typecheck, build, and 6 tests passed locally.
 - Core clean installation with `npm ci` passed.
 - CLI installation through the documented sibling-core development path passed.
@@ -37,14 +37,14 @@ This audit covers the three-repository FundGraph workspace:
 - Phase 9 production dependency audits reported zero vulnerabilities. A fresh audit was attempted during this handoff but
   npm's Windows cache/registry endpoint failed before returning a result; that infrastructure failure is not treated as a
   new vulnerability finding.
-- CI workflows define Ubuntu, Windows, and macOS jobs on Node 20 and Node 22, but remote CI has not run because no GitHub remotes exist.
+- CI workflows define Ubuntu, Windows, and macOS jobs on Node 20 and Node 22; repository remotes exist and remote CI status is maintained in `AUDIT_REPORT.md`.
 
 ## Incomplete or deliberately pending work
 
 - The packages have not been published to npm.
 - The GitHub organization and three public repositories exist, and the local repositories track their `main` branches.
 - Remote CI has run successfully for `fundgraph-cli`; the current audit records the accessible organization state and limitations in `AUDIT_REPORT.md`.
-- The CLI's default directory analysis is local/offline; live provider orchestration is not wired into the user-facing command.
+- The CLI's default directory analysis is local/offline; explicit `--network` now orchestrates registry metadata, package funding, and GitHub `FUNDING.yml` evidence for npm, PyPI, and Cargo.
 - Signing/provenance publication and final external release review remain maintainer actions.
 
 ## Known limitations
@@ -53,6 +53,14 @@ Funding declarations are evidence of published claims, not endorsements or proof
 does not infer human identity, move money, manage wallets, donate, or execute actions. Registry and repository metadata can
 be stale, missing, malformed, or contradictory. Public services can fail or rate-limit requests. DNS rebinding and
 deployment-specific network policy remain caller/operational responsibilities as documented in `SECURITY_AUDIT.md`.
+
+The current release candidate also has these explicit limitations:
+
+- npm packages are not yet published.
+- Go metadata and Go funding providers are not implemented.
+- Non-GitHub repository funding-file retrieval is not yet orchestrated.
+- Funding URLs require human review; FundGraph does not verify legitimacy or maintainer identity.
+- Live GitHub API inspection was unavailable during the latest local audit pass; current PR, ruleset, and organization claims must be rechecked before release.
 
 ## Security findings
 

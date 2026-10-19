@@ -1,5 +1,10 @@
 # Decision log
 
+## D-0020 - Explicit end-to-end analysis orchestration
+
+Date: 2026-10-18. The project now exposes `analyzeProject` in `@fundgraph/core` and an explicit CLI `--network` path. The orchestration composes local dependency discovery with allowlisted npm, PyPI, and Cargo registry metadata, package funding declarations, GitHub `FUNDING.yml` evidence, relationship resolution, and deterministic reports. The default CLI remains local/offline, Go remains discovery-only, and funding URLs remain published claims rather than endorsements. Network failures and missing GitHub funding files remain non-authoritative diagnostics; no human identity or legitimacy is inferred.
+
+
 ## D-0016 - Phase 11 CI and package boundaries
 
 Date: 2026-10-08. Each implementation repository owns its CI workflow and package artifact. `fundgraph-core` uses a committed npm lockfile and `npm ci`. `fundgraph-cli` installs a checked-out sibling `fundgraph-core` repository in CI and locally until the core package is published; it does not vendor or duplicate core source. CI verifies but does not publish, tag, push, or create GitHub resources.
@@ -100,3 +105,7 @@ Date: 2026-10-09. The authoritative current architecture is the three independen
 was found in the local workspace or accessible FundGraph organization. Older standalone-repository wording in D-0001 is superseded
 for the current public layout; the parent `FundGraph` directory remains a local workspace container without `.git`. No architecture
 migration is authorized by this audit.
+## D-0020 - Explicit end-to-end analysis orchestration
+
+Date: 2026-10-18. The project now exposes `analyzeProject` in `@fundgraph/core` and an explicit CLI `--network` path. The orchestration composes local dependency discovery with allowlisted npm, PyPI, and Cargo registry metadata, package funding declarations, GitHub `FUNDING.yml` evidence, relationship resolution, and deterministic reports. The default CLI remains local/offline, Go remains discovery-only, and funding URLs remain published claims rather than endorsements. Network failures and missing GitHub funding files remain non-authoritative diagnostics; no human identity or legitimacy is inferred.
+

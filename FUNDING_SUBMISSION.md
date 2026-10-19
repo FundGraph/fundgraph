@@ -23,12 +23,12 @@ useful without credentials and does not move money, manage wallets, execute paym
 ## Current implementation
 
 - npm, PyPI, Cargo, and baseline Go module dependency discovery.
-- Recorded npm/PyPI/Cargo metadata and funding evidence providers.
+- Opt-in end-to-end orchestration for npm/PyPI/Cargo registry metadata and package funding evidence.
 - Explicit supported, ambiguous, contradictory, and unresolved relationship states.
 - Deterministic reports with evidence drill-down and limitations.
 - Secure, opt-in network primitives with bounded retries, cache controls, and offline replay.
 - TypeScript core library plus `fundgraph` CLI in three independent repositories.
-- 40 core tests and 6 CLI tests passing locally, with lint/typecheck/build/package checks.
+- 41 core tests and 6 CLI tests passing locally, with lint/typecheck/build/package checks.
 
 ## Why public-good funding would help
 
@@ -73,4 +73,4 @@ on an idea or private roadmap. Campaign-specific rules must be checked at submis
 
 The project has no claimed external adoption, usage metrics, revenue, prior funding, or acceptance. The local release
 candidate is not the same as a public release. Funding declarations are not endorsements or proof of current maintainer
-status. The CLI directory workflow is offline/local by default, and Go metadata/funding support is not yet implemented.
+status. The CLI directory workflow is offline/local by default; `--network` is an explicit public-metadata opt-in. npm packages are not yet published; Go metadata/funding support and non-GitHub repository funding-file retrieval are not yet implemented. Funding URLs remain declarations for human review, not verified identities or endorsements. Live GitHub organization/PR/ruleset status must be rechecked before submission.

@@ -27,7 +27,8 @@ Counts come from the committed synthetic fixture and are not user or adoption me
 
 The core library has separate APIs for recorded npm/PyPI/Cargo registry metadata, package funding declarations, GitHub
 `FUNDING.yml`, relationship resolution, and evidence-backed reports. These APIs are exercised with recorded fixtures in
-the core test suite. The current CLI directory command does not yet orchestrate those stages against arbitrary projects
+the core test suite. The CLI orchestrates those stages against arbitrary npm, PyPI, and Cargo projects when `--network`
+is explicitly supplied; local-only directory analysis remains the default.
 or perform live provider requests.
 
 Never present a declaration as verification of a maintainer's identity, an endorsement of a funding destination, or a

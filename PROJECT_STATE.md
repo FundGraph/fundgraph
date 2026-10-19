@@ -1,10 +1,10 @@
 # Project state
 
 ```yaml
-current_phase: 14
-current_status: public-repositories-audit-remediated
-last_completed_phase: 14
-current_objective: Decide on npm publication, branch-protection configuration, and funding-submission timing after the merged audit remediation.
+current_phase: 15
+current_status: pre-publication-release-candidate-with-end-to-end-orchestration
+last_completed_phase: 15
+current_objective: Complete maintainer-controlled publication and evidence-based funding submission preparation without overstating adoption or eligibility.
 completed:
   - Phase 0 documentation and research foundation created
   - Project charter, requirements, architecture, data/evidence/security models documented
@@ -29,6 +29,7 @@ completed:
   - Phase 12 v0.1 documentation/demo verification, release notes, final audit, local artifact installation checks, and release limitations completed
   - Phase 13 external contributor issue/PR templates, adapter and fixture guide, compatibility policy, good-first issues, and maintainer runbook completed
   - Phase 14 baseline Go module discovery, malformed-input coverage, CLI integration, compatibility documentation, and explicit future-scope boundaries completed
+  - Phase 15 explicit core orchestration and CLI --network opt-in for npm/PyPI/Cargo metadata, funding evidence, relationship resolution, and deterministic reports completed
   - Public FundGraph organization and three repositories verified on GitHub
   - Remote CLI CI verified across Ubuntu, Windows, and macOS on Node 20 and Node 22, including package artifact creation
   - Independent engineering and security audit completed; findings recorded in AUDIT_REPORT.md
@@ -36,8 +37,8 @@ completed:
   - Audit branches deleted remotely and locally after merge verification
 in_progress: []
 blocked: []
-next_phase: 15+
-next_recommended_action: Configure remaining GitHub protections, decide on npm publication, and prepare an evidence-based funding submission
+next_phase: 16+
+next_recommended_action: Run the maintainer release checklist, decide whether to publish npm packages, and prepare only verified Drips/GrantFox submission facts
 release_target: v0.1.0 by 2026-10-09T12:00:00+01:00
 known_risks:
   - Deadline leaves little time for broad ecosystem support
@@ -45,8 +46,11 @@ known_risks:
   - Lockfile formats and workspace semantics vary by ecosystem
   - Network services can rate-limit or fail
   - CLI has no committed package-lock.json until the @fundgraph/core publication dependency is resolved
-  - GitHub default branches currently have no branch protection/ruleset verified by this audit
+  - Publication, release/tag creation, and funding-program submission remain owner-controlled actions
   - GitHub repository topics and organization profile metadata remain unset
+  - npm packages remain unpublished; Go metadata/funding and non-GitHub funding-file orchestration remain out of scope
+  - Funding URLs require human review and do not establish maintainer identity or legitimacy
+  - Latest local audit pass could not inspect the live GitHub API; PR, ruleset, and organization status require re-verification
 ```
 
 State is updated after every phase. This file is both human-readable and intentionally simple to parse.
