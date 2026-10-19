@@ -136,6 +136,6 @@ FundGraph has a substantiated public-good problem statement and public source co
 
 The later local orchestration audit could not connect to the live GitHub API from the execution environment. Therefore,
 current pull requests, rulesets, organization settings, and remote synchronization must be re-verified before release.
-The release candidate also remains limited by unpublished npm packages, discovery-only Go support, and the absence of
+The published package baseline remains limited by discovery-only Go support and the absence of
 non-GitHub repository funding-file orchestration. Funding URLs remain declarations requiring human review and do not
 establish maintainer identity or legitimacy.

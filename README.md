@@ -5,7 +5,7 @@
 <p align="center">
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-56d6be?style=flat-square" alt="MIT license"></a>
   <img src="https://img.shields.io/badge/runtime-Node.js%2020%20%7C%2022-83a8ff?style=flat-square" alt="Node.js 20 and 22">
-  <img src="https://img.shields.io/badge/status-pre--publication-ffca72?style=flat-square" alt="Pre-publication release candidate">
+  <img src="https://img.shields.io/badge/status-v0.1%20published-56d6be?style=flat-square" alt="v0.1 packages published">
 </p>
 
 <p align="center"><strong>See what your dependencies declare about funding—and inspect the evidence behind each relationship.</strong></p>
@@ -45,7 +45,15 @@ funding providers remain future scope.
 
 ## Try it locally
 
-The packages are not published yet. From the workspace containing all three repositories:
+For normal use, install the published CLI package:
+
+```sh
+npm install -g fundgraph@0.1.1
+fundgraph --version
+fundgraph analyze ./my-project --format text --offline
+```
+
+For repository development, from the workspace containing all three repositories:
 
 ```sh
 cd fundgraph-core
@@ -59,13 +67,6 @@ node dist/main.js --help
 node dist/main.js analyze ../fundgraph-core/test/fixtures/npm-workspace --format text --offline
 node dist/main.js analyze ../fundgraph-core/test/fixtures/npm-workspace --format json --offline
 node dist/main.js analyze ./my-project --format json --network
-```
-
-After the maintainer publishes compatible npm packages, installation will be:
-
-```sh
-npm install -g fundgraph
-fundgraph analyze ./my-project --format text --offline
 ```
 
 ## Evidence and safety

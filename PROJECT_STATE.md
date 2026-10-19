@@ -2,9 +2,9 @@
 
 ```yaml
 current_phase: 15
-current_status: pre-publication-release-candidate-with-end-to-end-orchestration
+current_status: published-v0.1-release-with-post-publication-validation
 last_completed_phase: 15
-current_objective: Complete maintainer-controlled publication and evidence-based funding submission preparation without overstating adoption or eligibility.
+current_objective: Complete post-publication validation and prepare evidence-based Drips/GrantFox submission materials without overstating adoption or eligibility.
 completed:
   - Phase 0 documentation and research foundation created
   - Project charter, requirements, architecture, data/evidence/security models documented
@@ -35,20 +35,24 @@ completed:
   - Independent engineering and security audit completed; findings recorded in AUDIT_REPORT.md
   - Audit corrections merged through GitHub pull requests into all three main branches
   - Audit branches deleted remotely and locally after merge verification
+  - Published @fundgraph/core@0.1.0 to npm
+  - Published fundgraph@0.1.1 to npm with the Windows executable fix
+  - Merged the CLI Windows entrypoint fix through PR #9 as commit ff189c1
+  - Verified clean global installation, fundgraph --version, and fundgraph --help on Windows
 in_progress: []
 blocked: []
 next_phase: 16+
-next_recommended_action: Run the maintainer release checklist, decide whether to publish npm packages, and prepare only verified Drips/GrantFox submission facts
-release_target: v0.1.0 by 2026-10-09T12:00:00+01:00
+next_recommended_action: Prepare the factual Drips/GrantFox submission, collect real usage feedback, and define Phase 16 before adding features
+release_target: npm @fundgraph/core@0.1.0 and fundgraph@0.1.1 published; no GitHub release/tag claimed
 known_risks:
   - Deadline leaves little time for broad ecosystem support
   - Registry metadata and repository links can be stale or contradictory
   - Lockfile formats and workspace semantics vary by ecosystem
   - Network services can rate-limit or fail
   - CLI has no committed package-lock.json until the @fundgraph/core publication dependency is resolved
-  - Publication, release/tag creation, and funding-program submission remain owner-controlled actions
+  - GitHub release/tag creation and funding-program submission remain owner-controlled actions
   - GitHub repository topics and organization profile metadata remain unset
-  - npm packages remain unpublished; Go metadata/funding and non-GitHub funding-file orchestration remain out of scope
+  - Go metadata/funding and non-GitHub funding-file orchestration remain out of scope
   - Funding URLs require human review and do not establish maintainer identity or legitimacy
   - Latest local audit pass could not inspect the live GitHub API; PR, ruleset, and organization status require re-verification
 ```

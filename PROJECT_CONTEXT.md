@@ -33,10 +33,11 @@ The repositories work together as `fundgraph-cli` → `fundgraph-core`; `fundgra
 
 ## Current status
 
-Phases 0–14 are complete for a local v0.1.0/v1 expansion candidate. The implementation supports npm, PyPI, Cargo, and
-baseline Go module discovery, while metadata/funding evidence remains implemented for the original v0.1 ecosystems. The
-candidate is not published: GitHub/npm resources, remote CI execution, and publication remain maintainer-owned external
-actions. Contributor onboarding, adapter guidance, compatibility policy, and maintainer escalation are documented.
+Phases 0–15 are complete for the published v0.1 package baseline. The implementation supports npm, PyPI, Cargo, and
+baseline Go module discovery, while metadata/funding evidence remains implemented for the original v0.1 ecosystems.
+`@fundgraph/core@0.1.0` and `fundgraph@0.1.1` are published on npm, and clean Windows installation is verified.
+Contributor onboarding, adapter guidance, compatibility policy, and maintainer escalation are documented. Phase 16 is
+post-release validation and submission readiness; it is proposed, not complete.
 
 ## Relationship to other projects
 

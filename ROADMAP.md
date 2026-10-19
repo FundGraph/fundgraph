@@ -156,7 +156,7 @@ The dependency direction is `fundgraph-cli` → `fundgraph-core`. The project-le
 
 **Objectives:** complete README demo; verify docs commands; remove placeholders; update changelog; prepare release notes; run final audit; document limitations and funding positioning.
 
-**Implemented:** the project README and demo now use the current CLI contract; stale Phase 2 wording and fictional output were removed; release notes and `FINAL_AUDIT.md` record the verified local release candidate, limitations, security posture, and maintainer-owned publication work. Core and CLI package tarballs were installed in isolated temporary projects, and the documented local checks passed. GitHub organization/repository creation, remote CI execution, and publication remain explicitly pending external maintainer action. **Acceptance/exit:** `FINAL_AUDIT.md` is honest, the checklist is complete except for the explicitly re-scoped external publication prerequisite, release artifacts are installable, and no unverified product claims remain. **Artifacts:** `RELEASE_NOTES_v0.1.0.md`, `FINAL_AUDIT.md`, updated README/demo/checklist, and verified npm artifacts. **Next:** Phase 13.
+**Implemented:** the project README and demo use the current CLI contract; stale Phase 2 wording and fictional output were removed; release notes and `FINAL_AUDIT.md` record the verified package baseline, limitations, security posture, and maintainer-owned release governance. Core and CLI package tarballs were installed in isolated temporary projects, npm packages were published, and a clean Windows global CLI installation was verified. **Acceptance/exit:** `FINAL_AUDIT.md` is honest, release artifacts are installable, the published package versions are recorded, and no unverified product claims remain. **Artifacts:** `RELEASE_NOTES_v0.1.0.md`, `FINAL_AUDIT.md`, updated README/demo/checklist, and verified npm artifacts. **Next:** Phase 13.
 
 ## PHASE 13 — External Contributor Readiness — COMPLETE
 
@@ -200,7 +200,49 @@ guides. **Next:** Phase 14.
 
 **Skip/re-scope:** do not add Go metadata/funding, automatic provider endorsement, payments, or hidden network access without a separately documented decision and acceptance criteria.
 
-## PHASE 16+ — Long-Term Development
+## PHASE 16 — Post-release Validation and Submission Readiness — PROPOSED
 
-**Purpose:** derive the next phase from the mission, requirements, architecture, backlog, issues, implementation state, ecosystem changes, and user needs. **Rule:** document the proposed phase in this roadmap before implementation. Never treat the end of this list as the end of the project.
+**Purpose:** validate the first public npm package workflow with reproducible usage evidence before expanding product scope.
+
+**Why it exists:** publication is complete, but publication alone does not establish adoption, reliability across representative projects, or funding-program eligibility. This phase turns real usage feedback into evidence and a justified next engineering decision without inventing traction.
+
+**Prerequisites:** Phase 15 complete; `@fundgraph/core@0.1.0` and `fundgraph@0.1.1` published; CLI Windows installation verified; no unresolved release-blocking CI failures.
+
+**Objectives:**
+
+- Run documented clean-install and smoke-analysis workflows against selected public or owner-controlled projects without uploading private source.
+- Record reproducible usability findings, unsupported inputs, network failures, and report-quality issues.
+- Verify package/version compatibility and update release, security, and limitation records when facts change.
+- Prepare factual Drips/GrantFox submission material without claiming adoption, eligibility, acceptance, or maintainer identity.
+- Select exactly one next product expansion only after evidence supports it: non-GitHub funding-file orchestration, complete Go metadata/funding, CLI report usability, or offline registry snapshots.
+
+**Expected files/components:** project `PROJECT_STATE.md`, `FINAL_AUDIT.md`, `FUNDING_SUBMISSION.md`, `CHANGELOG.md`, release notes, compatibility records, and (only if required by verified findings) core/CLI tests and implementation files.
+
+**Implementation tasks:**
+
+1. Reproduce global installation for the published versions and record the exact commands and results.
+2. Analyze representative projects in offline mode; use `--network` only for public metadata and only with explicit review.
+3. Record findings as documentation-backed evidence; do not create contributor issues during this phase unless separately authorized.
+4. Review package metadata, repository links, security policy, and supported-version statements.
+5. Derive and document the next phase from observed evidence and the existing backlog.
+
+**Tests required:** clean npm installation, CLI version/help, offline fixture analysis, deterministic repeated output, representative-project smoke tests, core/CLI lint/typecheck/test/build, and package metadata verification. Any network or registry failure must be recorded as blocked/inconclusive rather than passed.
+
+**Documentation required:** update project state, changelog, final audit, funding brief, release notes, and decision log with verified results and remaining limitations.
+
+**Security considerations:** never send private project files to external services; keep network access opt-in; preserve URL allowlists, response bounds, cache rules, and evidence uncertainty; do not treat funding URLs or usage results as endorsements.
+
+**Acceptance criteria:** published packages install from a clean environment; documented commands work; at least one representative analysis is reproducible; any failures are classified; submission materials contain only verified facts; no new scope is selected without evidence.
+
+**Exit criteria:** results are recorded, documentation matches observed behavior, package compatibility is confirmed, and a single evidence-backed Phase 17 proposal is documented before implementation.
+
+**Expected artifacts:** validation record, updated final audit/release records, factual funding submission package, and a Phase 17 decision entry.
+
+**Immediately after:** define Phase 17 from observed demand and implement only its approved acceptance criteria.
+
+**Skip/re-scope:** skip expansion work if no representative usage evidence exists; re-scope to release correction if package installation, CLI behavior, security, or documentation defects are found.
+
+## PHASE 17+ — Long-Term Development
+
+**Purpose:** derive each later phase from the mission, requirements, architecture, backlog, verified usage evidence, ecosystem changes, and user needs. **Rule:** document the proposed phase in this roadmap before implementation. Never treat the end of this list as the end of the project.
 

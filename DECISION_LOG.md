@@ -4,6 +4,19 @@
 
 Date: 2026-10-18. The project now exposes `analyzeProject` in `@fundgraph/core` and an explicit CLI `--network` path. The orchestration composes local dependency discovery with allowlisted npm, PyPI, and Cargo registry metadata, package funding declarations, GitHub `FUNDING.yml` evidence, relationship resolution, and deterministic reports. The default CLI remains local/offline, Go remains discovery-only, and funding URLs remain published claims rather than endorsements. Network failures and missing GitHub funding files remain non-authoritative diagnostics; no human identity or legitimacy is inferred.
 
+## D-0021 - Published npm package baseline
+
+Date: 2026-10-19. `@fundgraph/core@0.1.0` and `fundgraph@0.1.1` are published to npm. The CLI patch includes a Node
+shebang required for Windows npm command shims and was merged into `fundgraph-cli/main` through PR #9. A clean Windows
+global installation verified `fundgraph --version` and `fundgraph --help`. Publication is not evidence of adoption or
+funding-program eligibility; no GitHub release/tag or application submission is implied.
+
+## D-0022 - Phase 16 post-release validation
+
+Date: 2026-10-19. The next phase is post-release validation rather than immediate ecosystem expansion. It will collect
+reproducible usage and usability evidence, keep submission claims factual, and select one future expansion only after
+verified demand. No contributor issues are created as part of this phase without separate authorization.
+
 
 ## D-0016 - Phase 11 CI and package boundaries
 
