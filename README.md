@@ -8,10 +8,11 @@
   <img src="https://img.shields.io/badge/status-v0.1%20published-56d6be?style=flat-square" alt="v0.1 packages published">
 </p>
 
-<p align="center"><strong>See what your dependencies declare about funding—and inspect the evidence behind each relationship.</strong></p>
+<p align="center"><strong>Trace dependency funding declarations to their evidence—and keep uncertainty visible.</strong></p>
 
-FundGraph is a local-first CLI and TypeScript library for dependency and funding-pathway analysis. It keeps source claims,
-conflicts, and uncertainty visible so maintainers and funders can review the result.
+FundGraph is a local-first CLI and TypeScript library for evidence-first dependency funding analysis. It follows a
+project's dependencies to declared funding pathways and preserves the source claims, provenance, conflicts, and
+uncertainty needed for human review. Dependency discovery is the input; funding evidence is the product focus.
 
 > Current scope: the CLI discovers dependency graphs locally by default. With explicit `--network`, it orchestrates
 > npm/PyPI/Cargo metadata and declared funding evidence into a deterministic report. Go remains discovery-only.
@@ -48,7 +49,7 @@ funding providers remain future scope.
 For normal use, install the published CLI package:
 
 ```sh
-npm install -g fundgraph@0.1.1
+npm install -g fundgraph@0.1.2
 fundgraph --version
 fundgraph analyze ./my-project --format text --offline
 ```

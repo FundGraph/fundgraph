@@ -2,7 +2,7 @@
 
 ## Mission
 
-FundGraph is a local-first TypeScript CLI and library that analyzes a project's dependency graph and identifies legitimate funding pathways for dependencies, with evidence explaining each relationship.
+FundGraph is a local-first TypeScript CLI and library that traces dependency funding declarations to their evidence, with provenance and uncertainty explaining each relationship.
 
 FundGraph is a multi-repository project consisting of three independent repositories contained within the `FundGraph` workspace: `fundgraph`, `fundgraph-core`, and `fundgraph-cli`.
 
@@ -35,10 +35,10 @@ The repositories work together as `fundgraph-cli` → `fundgraph-core`; `fundgra
 
 Phases 0–15 are complete for the published v0.1 package baseline. The implementation supports npm, PyPI, Cargo, and
 baseline Go module discovery, while metadata/funding evidence remains implemented for the original v0.1 ecosystems.
-`@fundgraph/core@0.1.0` and `fundgraph@0.1.1` are published on npm, and clean Windows installation is verified.
+`@fundgraph/core@0.1.1` and `fundgraph@0.1.2` are published on npm, and clean Windows installation is verified.
 Contributor onboarding, adapter guidance, compatibility policy, and maintainer escalation are documented. Phase 16
-post-release validation and submission readiness is complete; Phase 17 release metadata and compatibility hardening is
-proposed, not started.
+post-release validation and Phase 17 release metadata hardening are complete. Provider correctness fixtures now verify
+recorded registry provenance and timestamp behavior. The next phase must be driven by real usage evidence.
 
 ## Relationship to other projects
 

@@ -2,6 +2,14 @@
 
 Evidence is an immutable observation used to explain a result. It records what was observed, where, when, and how. Examples include package metadata funding fields, a repository `FUNDING.yml`, a canonical repository field, or a public provider response.
 
+## Staleness and refresh
+
+Evidence is a snapshot, not a claim that the source is current. Registry metadata, repository files, and provider
+responses can change, disappear, be withdrawn, or be replaced after `observedAt`. Reports preserve the observation
+timestamp and source. A later observation is separate evidence; it must not silently overwrite the earlier record.
+Users who need current information should run a new network-enabled analysis and compare the evidence. Offline and
+cached results must be treated as potentially stale.
+
 ## Confidence rules
 
 - **High:** multiple compatible first-party declarations support the same relationship.
