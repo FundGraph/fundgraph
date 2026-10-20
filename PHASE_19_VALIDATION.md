@@ -53,6 +53,10 @@ It changes resolved npm metadata requests to bounded version-specific endpoints.
 tests, and package dry-run passed; GitHub Actions `fundgraph-core CI` completed successfully for the PR head. The fix is
 not yet claimed as published under a new npm version.
 
+An authenticated `npm publish --access public` attempt for `@fundgraph/core@0.1.2` reached npm but was stopped by the
+account's required one-time password (`EOTP`). No publication is claimed until the owner completes that browser/2FA
+step and verifies `npm view @fundgraph/core@0.1.2 version`.
+
 ## External-user validation
 
 No independent external user, maintainer, funder, or researcher has yet supplied a reproducible workflow or confirmed

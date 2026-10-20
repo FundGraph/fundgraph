@@ -59,6 +59,7 @@ in_progress:
   - Obtain one independent reviewer and record whether a report changed a concrete funding or maintenance decision
 blocked:
   - GitHub API access was unavailable for live PR/CI verification during the latest validation attempt
+  - npm publication of @fundgraph/core@0.1.2 requires the owner's interactive 2FA/browser authentication
 next_phase: 19
 next_recommended_action: Complete PR #12 verification and collect one real external review; do not add ecosystems speculatively
 release_target: published @fundgraph/core@0.1.1 and fundgraph@0.1.2 remain the verified public baseline; no new release is claimed
