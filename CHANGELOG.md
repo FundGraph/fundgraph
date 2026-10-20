@@ -8,6 +8,7 @@ All notable changes are recorded here. The format follows Keep a Changelog conve
 - Added canonical CLI npm metadata, an explicit executable mapping, a committed registry lockfile pinned to `@fundgraph/core@0.1.1`, and package metadata regression coverage.
 - Verified CLI lint, typecheck, tests, build, package dry-run, cross-platform CI, package-artifact checks, and a clean Windows global install.
 - Completed Phase 18 provider correctness and funding-evidence positioning. Added recorded npm, PyPI, and Cargo response tests for provenance, timestamps, raw payload retention, HTTPS declarations, and staleness semantics; narrowed project narratives and submission language around evidence rather than general dependency analysis.
+- Resolved the restricted-Windows local cache-test limitation by using workspace-local test temporary directories and retaining atomic production cache replacement; the full core suite now passes 45 tests.
 
 - Added end-to-end opt-in project analysis for npm, PyPI, and Cargo: dependency discovery now composes registry metadata, package funding declarations, GitHub `FUNDING.yml` evidence, relationship resolution, and deterministic reports through `--network`.
 - Kept local/offline analysis as the CLI default and documented Go as discovery-only.

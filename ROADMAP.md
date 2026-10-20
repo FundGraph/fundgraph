@@ -278,7 +278,7 @@ guides. **Next:** Phase 14.
 
 **Completed:** provider correctness tests were added and merged in `fundgraph-core` PR #10 (`c9f3da0`). They verify recorded registry provenance, parser identity, raw payload preservation, timestamps, HTTPS declarations, and point-in-time snapshot semantics. The project evidence model, core README, CLI README, project README, context, and funding submission brief now make funding evidence the product focus and clearly describe staleness. The versioned public packages remain `@fundgraph/core@0.1.1` and `fundgraph@0.1.2`; no artificial version bump was created for documentation-only changes. CLI narrative changes merged in PR #11 (`a54b25d`).
 
-**Validation:** core provider tests pass in the normal cross-platform CI matrix and package-artifact jobs. The local restricted Windows environment still reproduces the pre-existing two atomic-cache test failures; those are environment limitations, not provider-test failures. CLI CI and package-artifact checks pass.
+**Validation:** core provider tests pass in the normal cross-platform CI matrix and package-artifact jobs. A follow-up cache-test harness fix merged in `fundgraph-core` PR #11 (`8a2cbe6`) makes the full local Windows suite pass by using workspace-local temporary directories; production cache writes retain atomic replacement. CLI CI and package-artifact checks pass.
 
 **Exit criteria:** complete. No new ecosystem, provider, payment capability, contributor issue, or funding claim was introduced.
 

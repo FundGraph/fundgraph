@@ -26,7 +26,7 @@ This audit covers the three-repository FundGraph workspace:
 
 ## Verification results
 
-- `fundgraph-core`: lint, typecheck, build, and 41 tests passed locally; two cache tests are environment-blocked under the restricted Windows sandbox because atomic rename is denied.
+- `fundgraph-core`: lint, typecheck, build, and all 45 tests passed locally. Cache tests now use workspace-local temporary directories under the restricted Windows sandbox, while production cache writes retain atomic replacement.
 - `fundgraph-cli`: lint, typecheck, build, and 6 tests passed locally.
 - Core clean installation with `npm ci` passed.
 - CLI installation through the documented sibling-core development path passed.

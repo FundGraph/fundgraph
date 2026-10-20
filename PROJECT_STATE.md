@@ -50,6 +50,7 @@ completed:
   - Phase 18 provider correctness tests merged in fundgraph-core PR #10; recorded npm, PyPI, and Cargo responses preserve provenance, timestamps, and snapshot semantics
   - Funding-evidence positioning and staleness guidance updated across project, core, CLI, evidence, and submission documentation
   - CLI narrative update merged in PR #11; no new package version was required because the public API and runtime were unchanged
+  - Restricted-Windows cache test limitation resolved in fundgraph-core PR #11; full local core suite now passes all 45 tests without weakening production atomic cache writes
 in_progress: []
 blocked: []
 next_phase: 19
