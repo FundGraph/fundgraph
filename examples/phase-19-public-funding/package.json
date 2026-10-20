@@ -1,0 +1,9 @@
+{
+  "name": "fundgraph-phase-19-public-funding",
+  "private": true,
+  "description": "A deterministic public-package funding-evidence validation input for FundGraph",
+  "dependencies": {
+    "eslint": "9.37.0",
+    "prettier": "3.6.2"
+  }
+}

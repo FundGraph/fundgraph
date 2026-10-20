@@ -104,7 +104,7 @@ Residual risks remain: hostname checks do not resolve DNS and therefore do not i
 - Git status, branch, remotes, worktrees, tags, and submodules: passed; clean `main` baseline, no tags/releases, no submodules/worktrees.
 - Authenticated GitHub organization/repository inventory: passed; exactly three accessible public repositories.
 - `fundgraph-core`: `npm ci`, `npm run lint`, `npm run typecheck`, `npm test`, `npm run build`, and `npm pack --dry-run`: passed; 40 tests passed.
-- `fundgraph-cli`: `npm run lint`, `npm run typecheck`, `npm test`, `npm run build`, and `npm pack --dry-run`: passed; 6 tests passed.
+- `fundgraph-cli`: `npm run lint`, `npm run typecheck`, `npm test`, `npm run build`, and `npm pack --dry-run`: passed; 7 tests passed.
 - CLI remote CI run `37856532742`: passed; six matrix jobs and package artifact job passed.
 - `npm audit --omit=dev --package-lock=false`: the core audit did not return a usable result in the local shell, and the CLI audit endpoint failed in the local environment. This is not reported as zero vulnerabilities. The older zero-vulnerability claim in `SECURITY_AUDIT.md` is historical and should be re-run in a functioning network environment before release.
 - Direct local `git fetch --prune origin`: unavailable during this audit because the local shell could not connect to GitHub; GitHub API metadata and cached upstream commit comparisons were available.
