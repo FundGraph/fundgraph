@@ -319,8 +319,8 @@ evidence has yet been recorded.
 **Exit criteria:** merge and verify any required correctness fix, update compatible published versions only through the
 normal release process, and record one real external review with no invented adoption claim.
 
-**Immediately after:** if complete, derive one demand-backed Phase 20 proposal; if reviewer evidence is unavailable, keep
-Phase 19 open and do not add ecosystems speculatively.
+**Immediately after:** external review is currently deferred by the owner. Keep Phase 19 partially complete, finish only
+the compatible package release work, and do not add ecosystems speculatively.
 
 **Skip/re-scope:** re-scope to a release correction if package installation or core correctness fails; re-scope to
 provider reliability only if repeated runs demonstrate a reproducible provider defect.

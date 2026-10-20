@@ -57,12 +57,12 @@ An authenticated `npm publish --access public` attempt for `@fundgraph/core@0.1.
 account's required one-time password (`EOTP`). No publication is claimed until the owner completes that browser/2FA
 step and verifies `npm view @fundgraph/core@0.1.2 version`.
 
-## External-user validation
+## External-user validation (deferred)
 
 No independent external user, maintainer, funder, or researcher has yet supplied a reproducible workflow or confirmed
 that a FundGraph report changed a funding decision. No adoption, provider reliability, or decision-impact claim is made.
-This is the remaining substantive Phase 19 acceptance gap and requires real owner-supplied feedback before Phase 19 can
-be marked complete.
+This acceptance criterion is intentionally deferred by the owner. Phase 19 therefore remains partially complete and no
+adoption, provider reliability, or decision-impact claim is made.
 
 ## Next evidence required
 
