@@ -10,8 +10,9 @@ Date: 2026-10-20. Phase 19 requires evidence beyond implementation: a reproducib
 handling of conflicts/staleness/provider failures, and independent user evidence about whether a report informs a real
 funding or maintenance decision. The pinned public npm example produced 85 package records, 10 declared funding sources,
 and 170 evidence records. GitHub API `403` responses and one npm metadata `404` remain diagnostics. No external adoption
-or decision-impact claim is made. The bounded npm metadata correction is isolated in core PR #12 and must pass normal CI
-and merge verification before a compatible publication is considered.
+or decision-impact claim is made. The bounded npm metadata correction was merged through core PR #12 after normal CI and
+merge verification as `93dc71ca25c4ab29594f5c43c01aed89063ac440`; a compatible publication remains a separate
+owner-authenticated release action.
 
 ## D-0021 - Phase 17 release metadata and compatibility hardening
 

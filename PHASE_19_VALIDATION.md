@@ -48,9 +48,10 @@ Recorded provider tests in `fundgraph-core` cover npm, PyPI, and Cargo provenanc
 observation timestamps, HTTPS funding declarations, and point-in-time snapshot semantics. Existing funding and
 relationship fixtures cover multiple sources and contradictory evidence. Cache tests cover fresh and stale observations.
 
-The npm orchestration fix is on `fundgraph-core` PR #12 (`fe43542`), changing resolved npm metadata requests to bounded
-version-specific endpoints. Local core lint, typecheck, all 45 tests, and package dry-run passed. Remote CI and merge were
-not claimed in this record because GitHub API access was unavailable during the validation attempt.
+The npm orchestration fix was merged through `fundgraph-core` PR #12 as `93dc71ca25c4ab29594f5c43c01aed89063ac440`.
+It changes resolved npm metadata requests to bounded version-specific endpoints. Local core lint, typecheck, all 45
+tests, and package dry-run passed; GitHub Actions `fundgraph-core CI` completed successfully for the PR head. The fix is
+not yet claimed as published under a new npm version.
 
 ## External-user validation
 

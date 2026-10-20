@@ -8,8 +8,8 @@ All notable changes are recorded here. The format follows Keep a Changelog conve
   funding sources, and 170 evidence records; GitHub API `403` responses and one npm metadata `404` remain explicit
   diagnostics. Independent user decision-impact evidence is still pending.
 - Added `PHASE_19_VALIDATION.md` and the pinned `examples/phase-19-public-funding` input. A bounded version-specific npm
-  metadata fix is under review in fundgraph-core PR #12; it passed local core lint, typecheck, 45 tests, and package
-  dry-run but has not been claimed merged or published.
+  metadata fix merged through fundgraph-core PR #12 as `93dc71ca25c4ab29594f5c43c01aed89063ac440` after successful
+  CI; it has not yet been claimed as published under a new npm version.
 
 - Completed Phase 17 release metadata and compatibility hardening. Published and publicly verified `@fundgraph/core@0.1.1` and `fundgraph@0.1.2`.
 - Added canonical CLI npm metadata, an explicit executable mapping, a committed registry lockfile pinned to `@fundgraph/core@0.1.1`, and package metadata regression coverage.

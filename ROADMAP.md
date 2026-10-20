@@ -312,8 +312,9 @@ one independent reviewer confirms whether the result is useful for a real fundin
 
 **Current result:** [`PHASE_19_VALIDATION.md`](PHASE_19_VALIDATION.md) records 85 package records, 10 declared funding
 sources, and 170 evidence records. GitHub API `403` responses and one npm metadata `404` were preserved as diagnostics.
-The implementation portion is validated locally, but core PR #12 still requires normal CI/merge verification and no
-independent reviewer or decision-impact evidence has been recorded.
+The bounded npm metadata fix passed local validation and GitHub Actions, then merged through core PR #12 as
+`93dc71ca25c4ab29594f5c43c01aed89063ac440`. No compatible npm publication or independent reviewer/decision-impact
+evidence has yet been recorded.
 
 **Exit criteria:** merge and verify any required correctness fix, update compatible published versions only through the
 normal release process, and record one real external review with no invented adoption claim.

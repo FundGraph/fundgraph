@@ -53,9 +53,9 @@ completed:
   - Restricted-Windows cache test limitation resolved in fundgraph-core PR #11; full local core suite now passes all 45 tests without weakening production atomic cache writes
   - Phase 19 reproducible public-package workflow recorded: 85 package records, 10 funding sources, and 170 evidence records
   - Phase 19 example project and pinned lockfile added under examples/phase-19-public-funding
-  - Local bounded npm metadata fix validated with core lint, typecheck, 45 tests, and package dry-run; fundgraph-core PR #12 is open
+  - Bounded npm metadata fix validated with core lint, typecheck, 45 tests, package dry-run, and successful GitHub Actions; core PR #12 merged as 93dc71ca25c4ab29594f5c43c01aed89063ac440
 in_progress:
-  - Verify and merge fundgraph-core PR #12 through normal CI, then publish the compatible core patch if authorized
+  - Publish the compatible core patch only through the normal owner-authenticated npm release process
   - Obtain one independent reviewer and record whether a report changed a concrete funding or maintenance decision
 blocked:
   - GitHub API access was unavailable for live PR/CI verification during the latest validation attempt
