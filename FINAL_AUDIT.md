@@ -36,6 +36,7 @@ This audit covers the three-repository FundGraph workspace:
 - Phase 16 validation repeated package installation and verified deterministic offline analysis of the shared fixture and representative repositories; the CLI repository's expected `LOCKFILE_MISSING` partial result was classified rather than treated as a failure.
 - Phase 17 published and publicly verified `@fundgraph/core@0.1.1` and `fundgraph@0.1.2`; the CLI now has canonical npm metadata, an explicit executable mapping, and a committed registry lockfile. PR #10 merged as `ed3e2e02d9b2666f4400c751c8aab7089d4d92e5`.
 - Phase 17 clean-user verification passed on Windows: global `fundgraph@0.1.2` installed `@fundgraph/core@0.1.1`, `fundgraph --version` returned `0.1.2`, and `fundgraph --help` rendered successfully.
+- Phase 18 provider correctness tests passed in cross-platform CI for recorded npm, PyPI, and Cargo responses. Project, core, CLI, evidence-model, and submission documentation now describe funding evidence as the product focus and registry/provider data as point-in-time observations that may become stale.
 - README/demo commands and CLI help/error/report behavior were checked against the current implementation.
 - CLI Go fixture smoke test passed with three discovered Go dependencies and no diagnostics.
 - Phase 9 production dependency audits reported zero vulnerabilities. A fresh audit was attempted during this handoff but

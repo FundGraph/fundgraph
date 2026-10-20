@@ -5,8 +5,8 @@ claim of eligibility, acceptance, traction, or endorsement.
 
 ## One-sentence pitch
 
-FundGraph is an open-source local-first CLI and TypeScript library that maps project dependencies to declared funding
-pathways and shows the evidence and uncertainty behind each relationship.
+FundGraph is an open-source local-first CLI and TypeScript library that traces project dependencies to declared funding
+pathways and shows the evidence, provenance, and uncertainty behind each relationship.
 
 ## Problem
 
@@ -28,7 +28,7 @@ useful without credentials and does not move money, manage wallets, execute paym
 - Deterministic reports with evidence drill-down and limitations.
 - Secure, opt-in network primitives with bounded retries, cache controls, and offline replay.
 - TypeScript core library plus `fundgraph` CLI in three independent repositories.
-- Published npm packages: `@fundgraph/core@0.1.0` and `fundgraph@0.1.1`; clean Windows global installation verified.
+- Published npm packages: `@fundgraph/core@0.1.1` and `fundgraph@0.1.2`; clean Windows global installation verified.
 - Phase 16 validation verified deterministic offline fixture analysis and representative repository analysis; no external
   adoption or maintainer-feedback claim is made.
 - 41 core tests and 6 CLI tests passing locally, with lint/typecheck/build/package checks.
@@ -78,5 +78,6 @@ The project has no claimed external adoption, usage metrics, revenue, prior fund
 available, but publication is not evidence of adoption. Funding declarations are not endorsements or proof of current
 maintainer status. The CLI directory workflow is offline/local by default; `--network` is an explicit public-metadata
 opt-in. Go metadata/funding support and non-GitHub repository funding-file retrieval are not yet implemented. Funding
-URLs remain declarations for human review, not verified identities or endorsements. Live GitHub organization, ruleset,
-and campaign requirements must be rechecked before submission.
+URLs remain declarations for human review, not verified identities or endorsements. Registry and provider responses are
+point-in-time observations and may be stale; each result retains its observation timestamp and source. Live GitHub
+organization, ruleset, and campaign requirements must be rechecked before submission.

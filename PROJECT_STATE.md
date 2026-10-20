@@ -1,9 +1,9 @@
 # Project state
 
 ```yaml
-current_phase: 17
-current_status: phase-17-complete
-last_completed_phase: 17
+current_phase: 18
+current_status: phase-18-complete
+last_completed_phase: 18
 current_objective: Collect real usage feedback and derive the next demand-backed phase without speculative ecosystem expansion.
 completed:
   - Phase 0 documentation and research foundation created
@@ -47,10 +47,13 @@ completed:
   - Published fundgraph@0.1.2 verified as the public npm latest version
   - CLI repository metadata, explicit executable mapping, registry lockfile, and metadata regression tests merged through PR #10
   - Clean Windows global installation of fundgraph@0.1.2 verified with @fundgraph/core@0.1.1
+  - Phase 18 provider correctness tests merged in fundgraph-core PR #10; recorded npm, PyPI, and Cargo responses preserve provenance, timestamps, and snapshot semantics
+  - Funding-evidence positioning and staleness guidance updated across project, core, CLI, evidence, and submission documentation
+  - CLI narrative update merged in PR #11; no new package version was required because the public API and runtime were unchanged
 in_progress: []
 blocked: []
-next_phase: 18
-next_recommended_action: Collect real usage feedback and document a demand-backed Phase 18 before implementation; do not add ecosystems speculatively
+next_phase: 19
+next_recommended_action: Collect real usage feedback and document a demand-backed Phase 19 before implementation; do not add ecosystems speculatively
 release_target: npm @fundgraph/core@0.1.1 and fundgraph@0.1.2 published and publicly verified; no GitHub release/tag claimed
 known_risks:
   - Deadline leaves little time for broad ecosystem support
