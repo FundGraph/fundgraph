@@ -56,12 +56,13 @@ completed:
   - Bounded npm metadata fix validated with core lint, typecheck, 45 tests, package dry-run, and successful GitHub Actions; core PR #12 merged as 93dc71ca25c4ab29594f5c43c01aed89063ac440
 in_progress:
   - Publish the compatible core patch only through the normal owner-authenticated npm release process
-  - Obtain one independent reviewer and record whether a report changed a concrete funding or maintenance decision
+deferred_by_owner:
+  - Independent external review and decision-impact evidence are intentionally deferred; no adoption claim is made
 blocked:
   - GitHub API access was unavailable for live PR/CI verification during the latest validation attempt
   - npm publication of @fundgraph/core@0.1.2 requires the owner's interactive 2FA/browser authentication
 next_phase: 19
-next_recommended_action: Complete PR #12 verification and collect one real external review; do not add ecosystems speculatively
+next_recommended_action: Complete the owner-authenticated npm publication and verification; external review remains deferred and no ecosystem expansion is approved
 release_target: published @fundgraph/core@0.1.1 and fundgraph@0.1.2 remain the verified public baseline; no new release is claimed
 known_risks:
   - Deadline leaves little time for broad ecosystem support

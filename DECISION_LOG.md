@@ -14,6 +14,12 @@ or decision-impact claim is made. The bounded npm metadata correction was merged
 merge verification as `93dc71ca25c4ab29594f5c43c01aed89063ac440`; a compatible publication remains a separate
 owner-authenticated release action.
 
+## D-0022 - External review deferred
+
+Date: 2026-10-20. The owner chose to defer independent external review and decision-impact evidence. FundGraph must not
+claim adoption, provider stability, or changed funding decisions without that evidence. Implementation and release
+validation may continue, but Phase 19 remains partially complete and no new ecosystem expansion is approved on this basis.
+
 ## D-0021 - Phase 17 release metadata and compatibility hardening
 
 Date: 2026-10-19. The Phase 16 package-polish findings are resolved by publishing
