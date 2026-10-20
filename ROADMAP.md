@@ -284,7 +284,47 @@ guides. **Next:** Phase 14.
 
 **Next:** derive Phase 19 from real usage feedback. Do not add ecosystems speculatively.
 
-## PHASE 19+ — Long-Term Development
+## PHASE 19 — Real Funding-Data Validation — IN PROGRESS
+
+**Purpose:** validate that FundGraph's evidence reports are useful in a real funding-data workflow before adding more
+ecosystems or providers.
+
+**Why it exists:** implementation and package publication do not establish provider stability, user need, or whether an
+evidence report changes a funding decision. Phase 19 makes those unknowns explicit and requires reproducible evidence.
+
+**Prerequisites:** Phase 18 complete; published package baseline; a network-enabled orchestration path; recorded provider,
+conflict, and staleness tests.
+
+**Objectives:** run a real multi-provider workflow against a pinned, non-sensitive project input; preserve partial
+results and classify provider failures, missing records, conflicts, and stale observations; verify package compatibility;
+and obtain at least one independent user or maintainer review recording whether the output informed a concrete decision.
+Do not infer adoption, legitimacy, maintainer identity, or funding impact from URLs or a successful run.
+
+**Expected files/components:** `PHASE_19_VALIDATION.md`, the Phase 19 example and lockfile, project state, changelog,
+decision log, final audit, and only narrowly scoped implementation/tests for confirmed defects.
+
+**Tests required:** core and CLI lint/typecheck/test/build/package dry-run; recorded npm/PyPI/Cargo provider correctness
+tests; deterministic conflict/staleness tests; and one reproducible public-package workflow with diagnostics preserved.
+
+**Acceptance criteria:** the workflow produces an inspectable report with multiple provider declarations; conflicting,
+missing, and stale observations remain explicit; provider failures are classified; package compatibility is verified; and
+one independent reviewer confirms whether the result is useful for a real funding or maintenance decision.
+
+**Current result:** [`PHASE_19_VALIDATION.md`](PHASE_19_VALIDATION.md) records 85 package records, 10 declared funding
+sources, and 170 evidence records. GitHub API `403` responses and one npm metadata `404` were preserved as diagnostics.
+The implementation portion is validated locally, but core PR #12 still requires normal CI/merge verification and no
+independent reviewer or decision-impact evidence has been recorded.
+
+**Exit criteria:** merge and verify any required correctness fix, update compatible published versions only through the
+normal release process, and record one real external review with no invented adoption claim.
+
+**Immediately after:** if complete, derive one demand-backed Phase 20 proposal; if reviewer evidence is unavailable, keep
+Phase 19 open and do not add ecosystems speculatively.
+
+**Skip/re-scope:** re-scope to a release correction if package installation or core correctness fails; re-scope to
+provider reliability only if repeated runs demonstrate a reproducible provider defect.
+
+## PHASE 20+ — Long-Term Development
 
 **Purpose:** derive each later phase from the mission, requirements, architecture, backlog, verified usage evidence, ecosystem changes, and user needs. **Rule:** document the proposed phase in this roadmap before implementation. Never treat the end of this list as the end of the project.
 

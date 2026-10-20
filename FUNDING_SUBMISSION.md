@@ -31,6 +31,9 @@ useful without credentials and does not move money, manage wallets, execute paym
 - Published npm packages: `@fundgraph/core@0.1.1` and `fundgraph@0.1.2`; clean Windows global installation verified.
 - Phase 16 validation verified deterministic offline fixture analysis and representative repository analysis; no external
   adoption or maintainer-feedback claim is made.
+- Phase 19 validation recorded a reproducible public npm workflow with 85 package records, 10 declared funding sources,
+  and 170 evidence records. GitHub API `403` responses and one npm metadata `404` were preserved as partial-result
+  diagnostics; no provider-completeness or decision-impact claim is made.
 - 41 core tests and 6 CLI tests passing locally, with lint/typecheck/build/package checks.
 
 ## Why public-good funding would help

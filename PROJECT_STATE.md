@@ -1,10 +1,10 @@
 # Project state
 
 ```yaml
-current_phase: 18
-current_status: phase-18-complete
+current_phase: 19
+current_status: phase-19-partially-complete
 last_completed_phase: 18
-current_objective: Collect real usage feedback and derive the next demand-backed phase without speculative ecosystem expansion.
+current_objective: Validate a real multi-provider funding-evidence workflow and obtain independent user feedback before selecting Phase 20.
 completed:
   - Phase 0 documentation and research foundation created
   - Project charter, requirements, architecture, data/evidence/security models documented
@@ -51,11 +51,17 @@ completed:
   - Funding-evidence positioning and staleness guidance updated across project, core, CLI, evidence, and submission documentation
   - CLI narrative update merged in PR #11; no new package version was required because the public API and runtime were unchanged
   - Restricted-Windows cache test limitation resolved in fundgraph-core PR #11; full local core suite now passes all 45 tests without weakening production atomic cache writes
-in_progress: []
-blocked: []
+  - Phase 19 reproducible public-package workflow recorded: 85 package records, 10 funding sources, and 170 evidence records
+  - Phase 19 example project and pinned lockfile added under examples/phase-19-public-funding
+  - Local bounded npm metadata fix validated with core lint, typecheck, 45 tests, and package dry-run; fundgraph-core PR #12 is open
+in_progress:
+  - Verify and merge fundgraph-core PR #12 through normal CI, then publish the compatible core patch if authorized
+  - Obtain one independent reviewer and record whether a report changed a concrete funding or maintenance decision
+blocked:
+  - GitHub API access was unavailable for live PR/CI verification during the latest validation attempt
 next_phase: 19
-next_recommended_action: Collect real usage feedback and document a demand-backed Phase 19 before implementation; do not add ecosystems speculatively
-release_target: npm @fundgraph/core@0.1.1 and fundgraph@0.1.2 published and publicly verified; no GitHub release/tag claimed
+next_recommended_action: Complete PR #12 verification and collect one real external review; do not add ecosystems speculatively
+release_target: published @fundgraph/core@0.1.1 and fundgraph@0.1.2 remain the verified public baseline; no new release is claimed
 known_risks:
   - Deadline leaves little time for broad ecosystem support
   - Registry metadata and repository links can be stale or contradictory

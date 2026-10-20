@@ -1,7 +1,7 @@
 # FundGraph v0.1.0 Final Audit
 
 Date: 2026-10-19
-Status: published npm package baseline with Phase 17 release-polish validation complete; GitHub release/tag governance remains pending
+Status: published npm package baseline with Phase 19 validation partially complete; independent user validation and GitHub release/tag governance remain pending
 
 ## Scope
 
@@ -45,6 +45,13 @@ This audit covers the three-repository FundGraph workspace:
 - CI workflows define Ubuntu, Windows, and macOS jobs on Node 20 and Node 22; repository remotes exist and remote CI status is maintained in `AUDIT_REPORT.md`.
 
 ## Incomplete or deliberately pending work
+
+- Phase 19 has not met its external-user acceptance criterion. No independent reviewer has confirmed that a report changed
+  a funding or maintenance decision.
+- The Phase 19 public workflow produced useful partial results, but GitHub API `403` responses and one npm metadata `404`
+  prevented complete provider coverage. These remain diagnostics, not evidence of absent funding.
+- Core PR #12 contains a bounded version-specific npm metadata fix. It passed local validation, but remote CI/merge and a
+  compatible npm publication have not been claimed.
 
 - npm packages are published: `@fundgraph/core@0.1.1` and `fundgraph@0.1.2`.
 - The GitHub organization and three public repositories exist, and the local repositories track their `main` branches.

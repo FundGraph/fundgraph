@@ -4,6 +4,15 @@
 
 Date: 2026-10-18. The project now exposes `analyzeProject` in `@fundgraph/core` and an explicit CLI `--network` path. The orchestration composes local dependency discovery with allowlisted npm, PyPI, and Cargo registry metadata, package funding declarations, GitHub `FUNDING.yml` evidence, relationship resolution, and deterministic reports. The default CLI remains local/offline, Go remains discovery-only, and funding URLs remain published claims rather than endorsements. Network failures and missing GitHub funding files remain non-authoritative diagnostics; no human identity or legitimacy is inferred.
 
+## D-0021 - Phase 19 validation remains open
+
+Date: 2026-10-20. Phase 19 requires evidence beyond implementation: a reproducible multi-provider workflow, explicit
+handling of conflicts/staleness/provider failures, and independent user evidence about whether a report informs a real
+funding or maintenance decision. The pinned public npm example produced 85 package records, 10 declared funding sources,
+and 170 evidence records. GitHub API `403` responses and one npm metadata `404` remain diagnostics. No external adoption
+or decision-impact claim is made. The bounded npm metadata correction is isolated in core PR #12 and must pass normal CI
+and merge verification before a compatible publication is considered.
+
 ## D-0021 - Phase 17 release metadata and compatibility hardening
 
 Date: 2026-10-19. The Phase 16 package-polish findings are resolved by publishing
