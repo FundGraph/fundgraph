@@ -28,7 +28,8 @@ useful without credentials and does not move money, manage wallets, execute paym
 - Deterministic reports with evidence drill-down and limitations.
 - Secure, opt-in network primitives with bounded retries, cache controls, and offline replay.
 - TypeScript core library plus `fundgraph` CLI in three independent repositories.
-- Published npm packages: `@fundgraph/core@0.1.1` and `fundgraph@0.1.2`; clean Windows global installation verified.
+- Published npm packages: `@fundgraph/core@0.1.2` and `fundgraph@0.1.2`; `fundgraph@0.1.3` is prepared but awaits npm
+  re-authentication and publication. Clean Windows global installation was previously verified for the CLI baseline.
 - Phase 16 validation verified deterministic offline fixture analysis and representative repository analysis; no external
   adoption or maintainer-feedback claim is made.
 - Phase 19 validation recorded a reproducible public npm workflow with 85 package records, 10 declared funding sources,

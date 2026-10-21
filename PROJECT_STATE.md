@@ -55,15 +55,15 @@ completed:
   - Phase 19 example project and pinned lockfile added under examples/phase-19-public-funding
   - Bounded npm metadata fix validated with core lint, typecheck, 45 tests, package dry-run, and successful GitHub Actions; core PR #12 merged as 93dc71ca25c4ab29594f5c43c01aed89063ac440
 in_progress:
-  - Publish the compatible core patch only through the normal owner-authenticated npm release process
+  - Re-authenticate npm, publish fundgraph@0.1.3, and verify it with npm view
 deferred_by_owner:
   - Independent external review and decision-impact evidence are intentionally deferred; no adoption claim is made
 blocked:
   - GitHub API access was unavailable for live PR/CI verification during the latest validation attempt
-  - npm publication of @fundgraph/core@0.1.2 requires the owner's interactive 2FA/browser authentication
+  - CLI npm publication is blocked by the current npm session returning 401 Unauthorized
 next_phase: 19
 next_recommended_action: Complete the owner-authenticated npm publication and verification; external review remains deferred and no ecosystem expansion is approved
-release_target: published @fundgraph/core@0.1.1 and fundgraph@0.1.2 remain the verified public baseline; no new release is claimed
+release_target: @fundgraph/core@0.1.2 is verified public; fundgraph@0.1.2 remains the verified CLI baseline; fundgraph@0.1.3 is prepared but unpublished
 known_risks:
   - Deadline leaves little time for broad ecosystem support
   - Registry metadata and repository links can be stale or contradictory
