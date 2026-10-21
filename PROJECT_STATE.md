@@ -54,16 +54,16 @@ completed:
   - Phase 19 reproducible public-package workflow recorded: 85 package records, 10 funding sources, and 170 evidence records
   - Phase 19 example project and pinned lockfile added under examples/phase-19-public-funding
   - Bounded npm metadata fix validated with core lint, typecheck, 45 tests, package dry-run, and successful GitHub Actions; core PR #12 merged as 93dc71ca25c4ab29594f5c43c01aed89063ac440
-in_progress:
-  - Re-authenticate npm, publish fundgraph@0.1.3, and verify it with npm view
+  - Published @fundgraph/core@0.1.2 and verified it in the public npm registry
+  - Updated, CI-verified, and merged fundgraph@0.1.3 through CLI PR #12 as b0693f51ad5d221c5f3a934e8fd14e086edefcdd
+  - Published fundgraph@0.1.3 and verified npm registry visibility and clean Windows global installation
+in_progress: []
 deferred_by_owner:
   - Independent external review and decision-impact evidence are intentionally deferred; no adoption claim is made
-blocked:
-  - GitHub API access was unavailable for live PR/CI verification during the latest validation attempt
-  - CLI npm publication is blocked by the current npm session returning 401 Unauthorized
+blocked: []
 next_phase: 19
-next_recommended_action: Complete the owner-authenticated npm publication and verification; external review remains deferred and no ecosystem expansion is approved
-release_target: @fundgraph/core@0.1.2 is verified public; fundgraph@0.1.2 remains the verified CLI baseline; fundgraph@0.1.3 is prepared but unpublished
+next_recommended_action: Maintain the published release; external review remains deferred and no ecosystem expansion is approved
+release_target: @fundgraph/core@0.1.2 and fundgraph@0.1.3 published and publicly verified; no GitHub release/tag claimed
 known_risks:
   - Deadline leaves little time for broad ecosystem support
   - Registry metadata and repository links can be stale or contradictory

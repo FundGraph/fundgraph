@@ -313,8 +313,9 @@ one independent reviewer confirms whether the result is useful for a real fundin
 **Current result:** [`PHASE_19_VALIDATION.md`](PHASE_19_VALIDATION.md) records 85 package records, 10 declared funding
 sources, and 170 evidence records. GitHub API `403` responses and one npm metadata `404` were preserved as diagnostics.
 The bounded npm metadata fix passed local validation and GitHub Actions, then merged through core PR #12 as
-`93dc71ca25c4ab29594f5c43c01aed89063ac440`. No compatible npm publication or independent reviewer/decision-impact
-evidence has yet been recorded.
+`93dc71ca25c4ab29594f5c43c01aed89063ac440`. `@fundgraph/core@0.1.2` and `fundgraph@0.1.3` are publicly verified,
+and the clean Windows CLI installation passed. Independent reviewer/decision-impact evidence remains deferred by the
+owner.
 
 **Exit criteria:** merge and verify any required correctness fix, update compatible published versions only through the
 normal release process, and record one real external review with no invented adoption claim.

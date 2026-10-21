@@ -54,9 +54,8 @@ tests, and package dry-run passed; GitHub Actions `fundgraph-core CI` completed 
 The package is now publicly visible as `@fundgraph/core@0.1.2`; this was verified with `npm view @fundgraph/core@0.1.2
 version`.
 
-The follow-up CLI release is prepared as `fundgraph@0.1.3`, but its publish attempt was rejected because the npm session
-returned `401 Unauthorized` from `npm whoami`. The registry still reports `fundgraph@0.1.2`; no CLI `0.1.3` publication
-is claimed.
+The follow-up CLI release was published as `fundgraph@0.1.3`. A clean Windows global installation returned version
+`0.1.3` and rendered the help contract; both package versions are registry-verified.
 
 ## External-user validation (deferred)
 
