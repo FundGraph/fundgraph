@@ -51,11 +51,12 @@ relationship fixtures cover multiple sources and contradictory evidence. Cache t
 The npm orchestration fix was merged through `fundgraph-core` PR #12 as `93dc71ca25c4ab29594f5c43c01aed89063ac440`.
 It changes resolved npm metadata requests to bounded version-specific endpoints. Local core lint, typecheck, all 45
 tests, and package dry-run passed; GitHub Actions `fundgraph-core CI` completed successfully for the PR head. The fix is
-not yet claimed as published under a new npm version.
+The package is now publicly visible as `@fundgraph/core@0.1.2`; this was verified with `npm view @fundgraph/core@0.1.2
+version`.
 
-An authenticated `npm publish --access public` attempt for `@fundgraph/core@0.1.2` reached npm but was stopped by the
-account's required one-time password (`EOTP`). No publication is claimed until the owner completes that browser/2FA
-step and verifies `npm view @fundgraph/core@0.1.2 version`.
+The follow-up CLI release is prepared as `fundgraph@0.1.3`, but its publish attempt was rejected because the npm session
+returned `401 Unauthorized` from `npm whoami`. The registry still reports `fundgraph@0.1.2`; no CLI `0.1.3` publication
+is claimed.
 
 ## External-user validation (deferred)
 

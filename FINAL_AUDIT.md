@@ -50,9 +50,9 @@ This audit covers the three-repository FundGraph workspace:
   a funding or maintenance decision.
 - The Phase 19 public workflow produced useful partial results, but GitHub API `403` responses and one npm metadata `404`
   prevented complete provider coverage. These remain diagnostics, not evidence of absent funding.
-- Core PR #12 merged as `93dc71ca25c4ab29594f5c43c01aed89063ac440` after successful `fundgraph-core CI`. A compatible npm
-  publication for the fix has not been claimed; an authenticated publish attempt was stopped by npm's required 2FA
-  one-time password.
+- Core PR #12 merged as `93dc71ca25c4ab29594f5c43c01aed89063ac440` after successful `fundgraph-core CI`, and
+  `@fundgraph/core@0.1.2` is publicly verified. The compatible CLI `0.1.3` change is merged and validated, but its npm
+  publication was blocked by an expired npm authentication session (`npm whoami` returned `401`).
 
 - npm packages are published: `@fundgraph/core@0.1.1` and `fundgraph@0.1.2`.
 - The GitHub organization and three public repositories exist, and the local repositories track their `main` branches.
