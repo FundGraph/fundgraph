@@ -30,7 +30,7 @@ documentation.
 
 **Role**
 
-Reusable library and domain logic. The `@fundgraph/core` package is prepared locally and has not been published.
+Reusable library and domain logic. The published package is [`@fundgraph/core`](https://www.npmjs.com/package/@fundgraph/core).
 
 ## `fundgraph-cli`
 
@@ -44,7 +44,8 @@ Reusable library and domain logic. The `@fundgraph/core` package is prepared loc
 
 **Role**
 
-The `fundgraph` executable. It depends on the independently versioned `@fundgraph/core` package.
+The published [`fundgraph`](https://www.npmjs.com/package/fundgraph) executable. It depends on the independently
+versioned [`@fundgraph/core`](https://www.npmjs.com/package/@fundgraph/core) package.
 
 ## Repository page presentation
 
