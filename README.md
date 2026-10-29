@@ -1,5 +1,7 @@
+# FundGraph
+
 <p align="center">
-  <img src="assets/fundgraph-project.svg" alt="FundGraph: follow dependencies to funding declarations, with evidence" width="100%">
+  <img src="assets/fundgraph-project-v1.svg" alt="FundGraph: follow dependencies to funding declarations, with evidence" width="100%">
 </p>
 
 <p align="center">
@@ -17,13 +19,13 @@ uncertainty needed for human review. Dependency discovery is the input; funding 
 > Current scope: the CLI discovers dependency graphs locally by default. With explicit `--network`, it orchestrates
 > npm/PyPI/Cargo metadata and declared funding evidence into a deterministic report. Go remains discovery-only.
 
-## At a glance
+## Repository role
 
 | Repository | Owns | Start here when you are… |
 |---|---|---|
-| `fundgraph` | Product definition, roadmap, governance, cross-repository docs, and release coordination | deciding scope or understanding the whole project |
-| `fundgraph-core` | Models, dependency discovery, evidence parsers, resolution, reports, and library tests | changing library behavior or adding a fixture/provider |
-| `fundgraph-cli` | The `fundgraph` command, output, exit codes, packaging, and CLI tests | changing command behavior or terminal output |
+| [`fundgraph`](https://github.com/FundGraph/fundgraph) | Product definition, roadmap, governance, cross-repository docs, and release coordination | deciding scope or understanding the whole project |
+| [`fundgraph-core`](https://github.com/FundGraph/fundgraph-core) | Models, dependency discovery, evidence parsers, resolution, reports, and library tests | changing library behavior or adding a fixture/provider |
+| [`fundgraph-cli`](https://github.com/FundGraph/fundgraph-cli) | The `fundgraph` command, output, exit codes, packaging, and CLI tests | changing command behavior or terminal output |
 
 These are three independent repositories in the `FundGraph` workspace. `fundgraph-cli` depends on the published
 `@fundgraph/core` package. The workspace parent is not a Git repository.
@@ -84,6 +86,10 @@ Start with [`PROJECT_CONTEXT.md`](PROJECT_CONTEXT.md), [`PROJECT_STATE.md`](PROJ
 The product contract is in [`docs/PROJECT_CHARTER.md`](docs/PROJECT_CHARTER.md) and [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md).
 The local release status is in [`FINAL_AUDIT.md`](FINAL_AUDIT.md); the factual funding brief is in
 [`FUNDING_SUBMISSION.md`](FUNDING_SUBMISSION.md).
+
+Repository governance is linked from [`CONTRIBUTING.md`](CONTRIBUTING.md), [`SECURITY.md`](SECURITY.md),
+[`CODE_OF_CONDUCT.md`](CODE_OF_CONDUCT.md), and [`CHANGELOG.md`](CHANGELOG.md). The repository-specific
+development model is documented in [`docs/DEVELOPMENT_MODEL.md`](docs/DEVELOPMENT_MODEL.md).
 
 ## Contributing
 
