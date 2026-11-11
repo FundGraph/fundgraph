@@ -51,7 +51,7 @@ funding providers remain future scope.
 For normal use, install the published CLI package:
 
 ```sh
-npm install -g fundgraph@0.1.2
+npm install -g fundgraph@0.1.3
 fundgraph --version
 fundgraph analyze ./my-project --format text --offline
 ```
@@ -99,3 +99,7 @@ for fixture-first core contributions. See [`PUBLISHING_HANDOFF.md`](PUBLISHING_H
 GitHub release steps.
 
 For repository descriptions and GitHub topic tags, use [`GITHUB_REPOSITORY_METADATA.md`](GITHUB_REPOSITORY_METADATA.md).
+
+## Public verification
+
+The [public verification guide](PUBLIC_VERIFICATION.md) provides direct links to the core and CLI repositories, verified npm package versions, a copy-paste clean-user command, and a committed fixture/report showing provenance and contradictory funding evidence.

@@ -1,0 +1,203 @@
+{
+  "models": [
+    {
+      "schemaVersion": "1.0",
+      "kind": "Project",
+      "id": "project:public-verification",
+      "name": "public-verification-fixture",
+      "rootPath": ".",
+      "ecosystems": ["npm"],
+      "dependencyIds": ["dependency:demo-package"]
+    },
+    {
+      "schemaVersion": "1.0",
+      "kind": "Dependency",
+      "id": "dependency:demo-package",
+      "packageId": "package:demo-package",
+      "requestedVersion": "^1.2.3",
+      "resolvedVersion": "1.2.3",
+      "dependencyType": "runtime",
+      "source": {
+        "path": "package.json",
+        "locator": "dependencies.demo-package"
+      },
+      "parentIds": []
+    },
+    {
+      "schemaVersion": "1.0",
+      "kind": "Registry",
+      "id": "registry:npm",
+      "ecosystem": "npm",
+      "name": "npm",
+      "baseUrl": "https://registry.npmjs.org",
+      "packageUrlTemplate": "https://registry.npmjs.org/{name}"
+    },
+    {
+      "schemaVersion": "1.0",
+      "kind": "Package",
+      "id": "package:demo-package",
+      "ecosystem": "npm",
+      "name": "demo-package",
+      "version": "1.2.3",
+      "registryId": "registry:npm",
+      "repositoryId": "repository:demo-package",
+      "evidenceIds": ["evidence:registry-funding"]
+    },
+    {
+      "schemaVersion": "1.0",
+      "kind": "Repository",
+      "id": "repository:demo-package",
+      "url": "https://github.com/example/demo-package",
+      "host": "github.com",
+      "owner": "example",
+      "name": "demo-package",
+      "evidenceIds": [
+        "evidence:registry-funding",
+        "evidence:repository-funding",
+        "evidence:conflicting-funding"
+      ]
+    },
+    {
+      "schemaVersion": "1.0",
+      "kind": "FundingSource",
+      "id": "funding:github-sponsors",
+      "provider": "github-sponsors",
+      "url": "https://github.com/sponsors/example",
+      "label": "Synthetic GitHub Sponsors declaration",
+      "evidenceIds": ["evidence:registry-funding", "evidence:repository-funding"]
+    },
+    {
+      "schemaVersion": "1.0",
+      "kind": "FundingSource",
+      "id": "funding:open-collective",
+      "provider": "open-collective",
+      "url": "https://opencollective.com/example",
+      "label": "Synthetic Open Collective declaration",
+      "evidenceIds": ["evidence:conflicting-funding"]
+    },
+    {
+      "schemaVersion": "1.0",
+      "kind": "Evidence",
+      "id": "evidence:registry-funding",
+      "evidenceKind": "package-metadata",
+      "source": "https://registry.example.test/demo-package/1.2.3",
+      "observedAt": "2026-10-08T12:00:00.000Z",
+      "parser": "public-verification-fixture",
+      "value": {
+        "package": "demo-package",
+        "version": "1.2.3",
+        "repository": "https://github.com/example/demo-package",
+        "funding": [
+          {
+            "type": "github-sponsors",
+            "url": "https://github.com/sponsors/example"
+          }
+        ]
+      }
+    },
+    {
+      "schemaVersion": "1.0",
+      "kind": "Evidence",
+      "id": "evidence:repository-funding",
+      "evidenceKind": "funding-file",
+      "source": "https://github.com/example/demo-package/blob/main/.github/FUNDING.yml",
+      "observedAt": "2026-10-08T12:00:00.000Z",
+      "parser": "public-verification-fixture",
+      "value": {
+        "github": ["example"]
+      }
+    },
+    {
+      "schemaVersion": "1.0",
+      "kind": "Evidence",
+      "id": "evidence:conflicting-funding",
+      "evidenceKind": "provider-response",
+      "source": "https://registry.example.test/demo-package/alternate-funding",
+      "observedAt": "2026-10-08T12:00:00.000Z",
+      "parser": "public-verification-fixture",
+      "value": {
+        "package": "demo-package",
+        "funding": [
+          {
+            "type": "open-collective",
+            "url": "https://opencollective.com/example"
+          }
+        ],
+        "note": "Intentionally conflicts with the package metadata declaration."
+      }
+    },
+    {
+      "schemaVersion": "1.0",
+      "kind": "Confidence",
+      "id": "confidence:medium",
+      "level": "medium",
+      "rationale": "Two independent synthetic declarations support the same funding endpoint.",
+      "evidenceIds": ["evidence:registry-funding", "evidence:repository-funding"]
+    },
+    {
+      "schemaVersion": "1.0",
+      "kind": "Confidence",
+      "id": "confidence:unknown",
+      "level": "unknown",
+      "rationale": "The synthetic provider response conflicts with package metadata; no identity or legitimacy conclusion is made.",
+      "evidenceIds": ["evidence:registry-funding", "evidence:conflicting-funding"]
+    },
+    {
+      "schemaVersion": "1.0",
+      "kind": "Relationship",
+      "id": "relationship:package-repository",
+      "type": "package-repository",
+      "fromId": "package:demo-package",
+      "toId": "repository:demo-package",
+      "confidence": {
+        "schemaVersion": "1.0",
+        "kind": "Confidence",
+        "id": "confidence:medium-repository",
+        "level": "medium",
+        "rationale": "The package metadata declares the repository URL.",
+        "evidenceIds": ["evidence:registry-funding"]
+      },
+      "evidenceIds": ["evidence:registry-funding"],
+      "ruleId": "package-metadata.repository",
+      "status": "supported"
+    },
+    {
+      "schemaVersion": "1.0",
+      "kind": "Relationship",
+      "id": "relationship:supported-funding",
+      "type": "repository-funding",
+      "fromId": "repository:demo-package",
+      "toId": "funding:github-sponsors",
+      "confidence": {
+        "schemaVersion": "1.0",
+        "kind": "Confidence",
+        "id": "confidence:medium-funding",
+        "level": "medium",
+        "rationale": "Package metadata and the repository funding file agree on the declared endpoint.",
+        "evidenceIds": ["evidence:registry-funding", "evidence:repository-funding"]
+      },
+      "evidenceIds": ["evidence:registry-funding", "evidence:repository-funding"],
+      "ruleId": "funding.sources-agree",
+      "status": "supported"
+    },
+    {
+      "schemaVersion": "1.0",
+      "kind": "Relationship",
+      "id": "relationship:conflicting-funding",
+      "type": "repository-funding",
+      "fromId": "repository:demo-package",
+      "toId": "funding:open-collective",
+      "confidence": {
+        "schemaVersion": "1.0",
+        "kind": "Confidence",
+        "id": "confidence:unknown-conflict",
+        "level": "unknown",
+        "rationale": "Evidence sources disagree, so the relationship remains visible but unresolved for human review.",
+        "evidenceIds": ["evidence:registry-funding", "evidence:conflicting-funding"]
+      },
+      "evidenceIds": ["evidence:registry-funding", "evidence:conflicting-funding"],
+      "ruleId": "funding.conflict-preserved",
+      "status": "contradictory"
+    }
+  ]
+}
