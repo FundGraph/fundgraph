@@ -1,0 +1,26 @@
+{
+  "fixture": "funding-evidence-model.json",
+  "inputMode": "stdin",
+  "expectedModelCounts": {
+    "Project": 1,
+    "Dependency": 1,
+    "Registry": 1,
+    "Package": 1,
+    "Repository": 1,
+    "FundingSource": 2,
+    "Evidence": 3,
+    "Confidence": 2,
+    "Relationship": 3
+  },
+  "expectedRelationshipStatuses": ["contradictory", "supported"],
+  "expectedProperties": [
+    "dependency discovery",
+    "package metadata funding evidence",
+    "repository funding-file evidence",
+    "evidence provenance and observedAt timestamps",
+    "contradictory evidence preserved as a visible relationship status",
+    "deterministic offline JSON output",
+    "limitations explaining that declarations are not legitimacy or identity verification"
+  ],
+  "fixtureNotice": "All URLs and identities in this fixture are synthetic examples and are not funding endorsements."
+}
